@@ -6,31 +6,50 @@
     <title>Polyphonic Shimmering</title>
 </head>
 <style>
+    @import url("https://use.typekit.net/lcz4kdr.css");
+
     @font-face {
         font-family: EditorialNew;
         src: url(ED-R.otf);
     }
 
+    body {
+        background-color: #404040;
+    }
+
+    #header {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        display: flex;
+        margin: 24px;
+        align-items: center;
+        justify-content: center;
+    }
+
     h1 {
-        color: white;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        color: #f0f0f0;
         z-index: -1;
-        margin-top: 36px;
+        margin: 0 auto;
         font-size: 96px;
         font-family: EditorialNew;
     }
 
     .glitter {
-        position: relative;
-        width: 300px;
-        height: 200px;
-        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        margin: 0 auto;
+        height: 100%;
         z-index: 1;
     }
 
     .dot {
         position: absolute;
-        width: 6px;
-        height: 6px;
+        width: 5px;
+        height: 5px;
         border-radius: 50%;
         background-color: transparent;
         animation: glitterAnimation 1s linear infinite;
@@ -55,16 +74,16 @@
 </style>
 
 <body>
-    <center>
+    <div id="header">
         <h1>Polyphonic<br>Shimmering</h1>
         <div class="glitter"></div>
-    </center>
+    </div>
     <script>
         function createDot() {
             const dot = document.createElement('div');
             dot.classList.add('dot');
             dot.style.backgroundColor = getRandomColor();
-            dot.style.left = `${getRandomNumber(0, 250)}px`;
+            dot.style.left = `${getRandomNumber(0, 500)}px`;
             dot.style.top = `${getRandomNumber(0, 250)}px`;
             dot.style.animationDuration = `${getRandomNumber(1, 3)}s`;
 
