@@ -38,6 +38,51 @@
         font-family: EditorialNew;
     }
 
+    h2 {
+        overflow: hidden;
+        color: #a2a2a2;
+        width: 500px;
+        margin-top: 48px;
+        margin-left: 24px;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+    }
+
+    h3 {
+        position:fixed;
+        right: 24px;
+        bottom: 0px;
+        color: #a2a2a2;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+    }
+
+    a {
+        color: #a2a2a2;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .list {
+        margin: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+    }
+
+    .list-item {
+        color: #c6c6c6;
+        font-size: 36px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+    }
+
     .glitter {
         position: absolute;
         width: 100%;
@@ -78,6 +123,28 @@
         <h1>Polyphonic<br>Shimmering</h1>
         <div class="glitter"></div>
     </div>
+    <h2><i>Polyphonic Shimmering</i> was authored, edited, and designed by the participants of this seminar: Jalen
+        Adams, Rasim Bayramov, Kai Chu Chuang, Molly Garrett, Tariye George-Phillips, Aya Khalife, Bradley Sinanan,
+        Quinn Standley, Weitong Sun, Taehee, Yuan Xin, and Yangyang Zhang. All of their pieces are richly
+        rendered, beautifully described; their research and experience gives depth and fascinating texture. These pieces
+        shimmer and hum, they play with duration and pacing and expand language beyond its conventional encasements.
+        They allow us to see what they see, in ways both visual and textual, but mostly through language that blurs the
+        distinction between the two. </h2>
+    <h3><a href="/about.html">About</a></h3>
+    <div class="list">
+        <div class="list-item">Jalen Adams / Notes Toward A Personal Afrofuturism</div>
+        <div class="list-item">Rasim Bayramov / one roll, flip, two roll, 20x35, hand in an intimate grid</div>
+        <div class="list-item">Kai Chu Chuang / a cursor is a kite is a cursor</div>
+        <div class="list-item">Molly Garrett / A view is considered three seconds</div>
+        <div class="list-item">Tariye George-Phillips / In Sleep Her Hair Reached Towards the Sun</div>
+        <div class="list-item">Aya Khalife / through signals and memory </div>
+        <div class="list-item">Bradley Sinanan / With, Holding</div>
+        <div class="list-item">Quinn Standley / Somewhere Between Here and Eternity</div>
+        <div class="list-item">Weitong Sun / Earth's Rotation Vertigo</div>
+        <div class="list-item">Taehee / I’m the voice inside you.</div>
+        <div class="list-item">Yuan Xin / Infinitely noncyclic chain</div>
+        <div class="list-item">Yangyang Zhang / Pink Quilt Sac - My Greenhouse</div>
+    </div>
     <script>
         function createDot() {
             const dot = document.createElement('div');
@@ -100,7 +167,7 @@
         }
 
         function getRandomColor() {
-            const colors = ['#FAF0CA', '#F7E294', '#F4D35E', '#EE964B', '#FEDDD8', '#000000'];
+            const colors = ['#FAF0CA', '#F7E294', '#F4D35E', '#EE964B', '#FEDDD8', '#000000', '#F28e25'];
             return colors[Math.floor(Math.random() * colors.length)];
         }
 
