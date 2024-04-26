@@ -1,0 +1,104 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polyphonic Shimmering</title>
+</head>
+<style>
+    @font-face {
+        font-family: EditorialNew;
+        src: url(ED-R.otf);
+    }
+
+    h1 {
+        color: white;
+        z-index: -1;
+        margin-top: 36px;
+        font-size: 96px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: EditorialNew;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #404040;
+    }
+
+    .glitter {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .dot {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: transparent;
+        animation: glitterAnimation 1s linear infinite;
+    }
+
+    @keyframes glitterAnimation {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        50% {
+            transform: scale(1.5);
+            opacity: 0.7;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+</style>
+
+<body>
+    <center>
+        <h1>Polyphonic<br>Shimmering</h1>
+        <div class="glitter"></div>
+    </center>
+    <script>
+        function createDot() {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            dot.style.backgroundColor = getRandomColor();
+            dot.style.left = `${getRandomNumber(0, 250)}px`;
+            dot.style.top = `${getRandomNumber(0, 250)}px`;
+            dot.style.animationDuration = `${getRandomNumber(1, 3)}s`;
+
+            const glitterContainer = document.querySelector('.glitter');
+            glitterContainer.appendChild(dot);
+
+            setTimeout(() => {
+                dot.remove();
+            }, getRandomNumber(1000, 3000));
+        }
+
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function getRandomColor() {
+            const colors = ['#FAF0CA', '#F7E294', '#F4D35E', '#EE964B', '#FEDDD8', '#000000'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        setInterval(createDot, 150);
+    </script>
+</body>
+
+</html>
