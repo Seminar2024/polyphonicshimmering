@@ -76,6 +76,7 @@
 
     }
 
+/* Change name to title on hover @Weitong */
     .list span{
         color: #c6c6c6;
         font-size: 24px;
@@ -146,6 +147,8 @@
         content: "Pink Quilt Sac - My Greenhouse";
     }
 
+
+/* glitter animation under Header @Rasim*/
     .glitter {
         position: absolute;
         width: 100%;
@@ -153,7 +156,6 @@
         height: 100%;
         z-index: 1;
     }
-
     .dot {
         position: absolute;
         width: 5px;
@@ -162,7 +164,6 @@
         background-color: transparent;
         animation: glitterAnimation 1s linear infinite;
     }
-
     @keyframes glitterAnimation {
         0% {
             transform: scale(1);
@@ -180,6 +181,21 @@
         }
     }
 
+/* Egg rotation above the “about” element @Weitong*/
+    img{
+        position:fixed;
+        right: 24px;
+        bottom: 32px;
+        animation: rotation 6s infinite linear;
+    }
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
     
 </style>
 
@@ -195,7 +211,10 @@
         shimmer and hum, they play with duration and pacing and expand language beyond its conventional encasements.
         They allow us to see what they see, in ways both visual and textual, but mostly through language that blurs the
         distinction between the two. </h2>
-    <h3><a href="/about.html">About</a></h3>
+    <div> 
+        <img src="img/Web_Egg_Motif_08.png" alt="Rotating Egg" width="40" height="40">    
+        <h3><a href="/about.html">About</a></h3>
+    </div>
 
     <!-- TODO: change the URL to their individual page-->
     <div class="list">
@@ -212,6 +231,7 @@
         <div class="list-item11"><a href="https://www.w3schools.com"><span>Yuan Xin</span></a></div>
         <div class="list-item12"><a href="https://www.w3schools.com"><span>Yangyang Zhang</span></a></div>
     </div>
+
     <script>
         function createDot() {
             const dot = document.createElement('div');
