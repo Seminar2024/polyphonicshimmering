@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.26/Tone.js"></script>
 </head>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
     body {
         background-color: #f8f8f8;
     }
@@ -19,8 +21,9 @@
         bottom: 24px;
         color: #000000;
         font-size: 16px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: "Nanum Myeongjo", serif;
         font-weight: 100;
+
     }
 
     video {
@@ -37,7 +40,7 @@
     a:hover {
         cursor: pointer;
         text-decoration: underline;
-}
+    }
 </style>
 
 <body>
@@ -94,10 +97,11 @@
         brought in multiple voices and perspectives, as carried forth by Taehee and Yuan’s writings (and echoed in the
         first part of this publication’s title).
         <br><br>
-        <a onclick="history.back()">Polyphonic Shimmering&#8592;</a> was authored, edited, and designed by the participants of this seminar: <span
-            style="color: #76c155;">Jalen Adams</span>, <span style="color: #e4829d;"> Rasim Bayramov</span>, <span
-            style="color: #d8e038;">Kai Chu Chuang</span> , <span style="color: #f26830;">Molly Garrett</span>, <span
-            style="color: #be519e;">Tariye George-Phillips</span>, <span style="color: #f28e25;">Aya Khalife</span>,
+        <a onclick="history.back()">Polyphonic Shimmering&#8592;</a> was authored, edited, and designed by the
+        participants of this seminar: <span style="color: #76c155;">Jalen Adams</span>, <span style="color: #e4829d;">
+            Rasim Bayramov</span>, <span style="color: #d8e038;">Kai Chu Chuang</span> , <span
+            style="color: #f26830;">Molly Garrett</span>, <span style="color: #be519e;">Tariye George-Phillips</span>,
+        <span style="color: #f28e25;">Aya Khalife</span>,
         <span style="color: #a2ce4f;">Bradley Sinanan</span>, <span style="color: #f89b64;">Quinn Standley</span>, <span
             style="color: #f2d723;">Weitong Sun</span>, <span style="color: #de658a;">Taehee</span>, <span
             style="color: #f15f26;">Yuan Xin</span>, and <span style="color: #f25f25;">Yangyang Zhang</span>. All of
@@ -113,7 +117,35 @@
             glare: true,
             "max-glare": 4,
         });
-    </script>    
+
+        Tone.start();
+
+        // Array of tones or notes corresponding to each span
+        const tones = [
+            'G3', // Jalen Adams
+            'F3', // Rasim Bayramov
+            'D3', // Kai Chu Chuang
+            'C3', // Molly Garrett
+            'B3', // Tariye George-Phillips
+            'F3', // Aya Khalife
+            'G3', // Bradley Sinanan
+            'A3', // Quinn Standley
+            'D#3', // Weitong Sun
+            'G3', // Taehee
+            'F3', // Yuan Xin
+            'C3',  // Yangyang Zhang
+        ];
+        // Add event listeners to each span to play the corresponding tone on hover
+        const spans = document.querySelectorAll('span');
+
+        spans.forEach((span, index) => {
+            span.addEventListener('mouseenter', () => {
+                const synth = new Tone.Synth().toDestination();
+                synth.triggerAttackRelease(tones[index], '8n');
+            });
+        });
+    </script>
+    </script>
 </body>
 
 </html>
