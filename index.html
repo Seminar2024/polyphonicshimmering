@@ -27,15 +27,20 @@
         justify-content: center;
     }
 
-    h1 {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        color: #f0f0f0;
-        z-index: -1;
-        margin: 0 auto;
+    .h1shimmer {
+        --x: 50%;
+        --y: 50%;
+        --width: 70%;
+        background: radial-gradient(var(--width) 100% at var(--x) var(--y), #fff2e4 30%, hsla(0, 0%, 100%, 0.396) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         font-size: 96px;
         font-family: EditorialNew;
+        position: absolute;
+        z-index: 1;
+        margin-top: 120px;
+        left: 0px;
     }
 
     h2 {
@@ -50,7 +55,7 @@
     }
 
     h3 {
-        position:fixed;
+        position: fixed;
         right: 24px;
         bottom: 0px;
         color: #a2a2a2;
@@ -76,79 +81,104 @@
 
     }
 
-/* Change name to title on hover @Weitong */
-    .list span{
+    /* Change name to title on hover @Weitong */
+    .list span {
         color: #c6c6c6;
         font-size: 24px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 100;
     }
+
     a:hover span {
         display: none;
     }
+
     .list-item1 a:hover:before {
         color: #c6c6c6;
         font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
         content: "Notes Toward A Personal Afrofuturis";
     }
+
     .list-item2 a:hover:before {
         color: #c6c6c6;
         font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
         content: "one roll, flip, two roll, 20x35, hand in an intimate grid";
     }
+
     .list-item3 a:hover:before {
         color: #c6c6c6;
         font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
         content: "a cursor is a kite is a cursor";
     }
+
     .list-item4 a:hover:before {
         color: #c6c6c6;
         font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
         content: "A view is considered three seconds";
     }
+
     .list-item5 a:hover:before {
         color: #c6c6c6;
         font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
         content: "In Sleep Her Hair Reached Towards the Sun";
     }
+
     .list-item6 a:hover:before {
         color: #c6c6c6;
         font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
         content: "through signals and memory";
     }
+
     .list-item7 a:hover:before {
         color: #c6c6c6;
         font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
         content: "With, Holding";
     }
+
     .list-item8 a:hover:before {
         color: #c6c6c6;
         font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
         content: "Somewhere Between Here and Eternity";
     }
+
     .list-item9 a:hover:before {
         color: #c6c6c6;
         font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
         content: "Earth's Rotation Vertigo";
     }
+
     .list-item10 a:hover:before {
         color: #c6c6c6;
         font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
         content: "I’m the voice inside you.";
     }
+
     .list-item11 a:hover:before {
         color: #c6c6c6;
         font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
         content: "Infinitely noncyclic chain";
     }
+
     .list-item12 a:hover:before {
         color: #c6c6c6;
         font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
         content: "Pink Quilt Sac - My Greenhouse";
     }
 
 
-/* glitter animation under Header @Rasim*/
+    /* glitter animation under Header @Rasim*/
     .glitter {
         position: absolute;
         width: 100%;
@@ -156,6 +186,7 @@
         height: 100%;
         z-index: 1;
     }
+
     .dot {
         position: absolute;
         width: 5px;
@@ -164,6 +195,7 @@
         background-color: transparent;
         animation: glitterAnimation 1s linear infinite;
     }
+
     @keyframes glitterAnimation {
         0% {
             transform: scale(1);
@@ -181,27 +213,28 @@
         }
     }
 
-/* Egg rotation above the “about” element @Weitong*/
-    img{
-        position:fixed;
+    /* Egg rotation above the “about” element @Weitong*/
+    img {
+        position: fixed;
         right: 24px;
         bottom: 32px;
         animation: rotation 6s infinite linear;
     }
+
     @keyframes rotation {
         from {
             transform: rotate(0deg);
         }
+
         to {
             transform: rotate(360deg);
         }
     }
-    
 </style>
 
 <body>
     <div id="header">
-        <h1>Polyphonic<br>Shimmering</h1>
+        <h1 class="h1shimmer" style="width: auto;">Polyphonic<br>Shimmering</h1>
         <div class="glitter"></div>
     </div>
     <h2><i>Polyphonic Shimmering</i> was authored, edited, and designed by the participants of this seminar: Jalen
@@ -211,14 +244,14 @@
         shimmer and hum, they play with duration and pacing and expand language beyond its conventional encasements.
         They allow us to see what they see, in ways both visual and textual, but mostly through language that blurs the
         distinction between the two. </h2>
-    <div> 
-        <img src="img/Web_Egg_Motif_08.png" alt="Rotating Egg" width="40" height="40">    
+    <div>
+        <img src="img/Web_Egg_Motif_08.png" alt="Rotating Egg" width="40" height="40">
         <h3><a href="/about.html">About</a></h3>
     </div>
 
     <!-- TODO: change the URL to their individual page-->
     <div class="list">
-        <div class="list-item1"><a href="https://www.w3schools.com"><span>Jalen Adams</span></a> </div>
+        <div class="list-item1"><a href="writing.html"><span>Jalen Adams</span></a> </div>
         <div class="list-item2"><a href="https://www.w3schools.com"><span>Rasim Bayramov</span></a></div>
         <div class="list-item3"><a href="https://www.w3schools.com"><span>Kai Chu Chuang</span></a></div>
         <div class="list-item4"><a href="https://www.w3schools.com"><span>Molly Garrett</span></a></div>
@@ -259,6 +292,17 @@
         }
 
         setInterval(createDot, 150);
+
+        const h1 = document.querySelector('.h1shimmer');
+
+        document.addEventListener('mousemove', (e) => {
+            const rect = h1.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            h1.style.setProperty('--x', `${x}px`);
+            h1.style.setProperty('--y', `${y}px`);
+        });
     </script>
 </body>
 
