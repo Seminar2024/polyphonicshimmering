@@ -12,39 +12,50 @@
 
     body {
         background-color: #f8f8f8;
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
     }
 
     h3 {
-        width: 90%;
-        position: absolute;
+        max-width: 90vw;
+        position: relative;
         left: 24px;
-        bottom: 24px;
         color: #000000;
         font-size: 16px;
         font-family: "Nanum Myeongjo", serif;
         font-weight: 100;
-
+        max-height: 80vh;
     }
 
-    video {
-        position: absolute;
+    .tilt-video {
+        position: relative;
         object-fit: cover;
         border-radius: 12px;
         background-size: cover;
         left: 24px;
         top: 24px;
-        width: 90%;
-        height: 300px;
+        max-width: 90vw;
+        max-height: 20vh;
+        filter: drop-shadow(0 0 15px #ffdbba);
     }
 
+    a {
+        text-decoration: none;
+    }
     a:hover {
         cursor: pointer;
         text-decoration: underline;
     }
+    
+    a:visited {
+        text-decoration: none;
+        color: #000;
+    }
 </style>
 
 <body>
-    <video preload muted loop autoplay class="tilt-video" src="/img/shimmer-1.mp4"></video>
+    <video preload muted loop autoplay class="tilt-video" src="/polyphonicshimmering/img/shimmer-1.mp4"></video>
     <h3>We Have to Write While It’s Still Shimmering <br>
         By <span style="color: #9a82e4;">Meg Miller</span>
         <br><br>
@@ -97,7 +108,7 @@
         brought in multiple voices and perspectives, as carried forth by Taehee and Yuan’s writings (and echoed in the
         first part of this publication’s title).
         <br><br>
-        <a onclick="history.back()">Polyphonic Shimmering&#8592;</a> was authored, edited, and designed by the
+        <a href="/polyphonicshimmering/index.html">Polyphonic Shimmering</a>&#8592; was authored, edited, and designed by the
         participants of this seminar: <span style="color: #76c155;">Jalen Adams</span>, <span style="color: #e4829d;">
             Rasim Bayramov</span>, <span style="color: #d8e038;">Kai Chu Chuang</span> , <span
             style="color: #f26830;">Molly Garrett</span>, <span style="color: #be519e;">Tariye George-Phillips</span>,
@@ -122,6 +133,7 @@
 
         // Array of tones or notes corresponding to each span
         const tones = [
+            'E3', // Meg Miller
             'G3', // Jalen Adams
             'F3', // Rasim Bayramov
             'D3', // Kai Chu Chuang
