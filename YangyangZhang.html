@@ -61,6 +61,25 @@
         background-color: #ccc;
         cursor: pointer;
     }
+    img {
+        z-index: -10;
+    } 
+
+    #image-container {
+        position: fixed;
+        top:28%;
+        right:12%;
+        width: 50%; /* Make width smaller to ensure it doesn't take too much screen */
+        height: 600px; /* Use viewport height to make it responsive */
+        overflow-y: auto;
+    }
+
+    #image-container img {
+        position: absolute;
+        display: flex;
+        width: 400px; /* Adjust based on your image size */
+        height: auto;
+    }
 </style>
 
 <body>
@@ -88,32 +107,61 @@
         Yangyang Zhang(She/her) is a designer whose work records some cultural symbols left behind in the context of the rapid economic development of contemporary China.  She recorded and enjoyed paying attention to these cultural symbols, exploring the reasons behind them, constructing a narrative about contemporary Chinese cultural symbols by creating a special visual atmosphere in a special period in China, and thus started a discussion on consumerism,tradition and political issues.  She is currently majoring in MFA Graphic design in Virginia Commonwealth University(VCUarts).
     </h3>
 
-    <div id="imageContainer" style="position: fixed; top: 70%; right: 10%; transform: translateY(-50%);">
-        <img id="currentImage" src="img/tae.JPG" alt="Current Image"
-            style="width: 250px; max-width: 100%; height:auto">
+    <div id="image-container">
+        <img class="randImg" class="img1" src="" alt="Random image" />
+      
     </div>
 
     <script>
-        window.addEventListener('scroll', function () {
-            const threshold = 0; // Adjust this value as needed
-            const scrollPosition = window.scrollY || window.pageYOffset;
-            const imageContainer = document.getElementById('imageContainer');
-            const currentImage = document.getElementById('currentImage');
-    
-            if (scrollPosition < threshold) {
-                currentImage.src='img/tae.JPG';
-            } else if (scrollPosition < 2 * threshold) {
-                currentImage.src = 'img/tae.JPG';
-            } else if (scrollPosition < 3 * threshold) {
-                currentImage.src = 'img/tae.JPGg';
-            } else {
-                currentImage.src = 'img/tae.JPG';
-            }
-    
-            // Adjust image container size if needed
-            // imageContainer.style.width = currentImage.width + 'px';
-            // imageContainer.style.height = currentImage.height + 'px';
+       const images = [
+        'img/yy/1.jpg','img/yy/2.jpg','img/yy/3.jpg','img/yy/4.jpg'
+    ];
+  document.addEventListener('DOMContentLoaded', _ => {
+  [...document.getElementsByClassName('randImg')].forEach(e => {
+    const randImageIndex = ~~(Math.random() * images.length);
+    e.src = images[randImageIndex];
+  }); 
+});
+
+window.onload = function() {
+    const container = document.getElementById('image-container');
+    const images = container.getElementsByTagName('img');
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
+
+    Array.from(images).forEach(image => {
+        // Calculate half of the container width and adjust the position
+        const halfWidth = containerWidth / 2;
+        const x = halfWidth + Math.random() * (halfWidth - image.clientWidth); // Ensures placement in the right half
+        const y = Math.random() * (containerHeight - image.clientHeight);
+
+        image.style.left = x + 'px';
+        image.style.top = y + 'px';
+    });
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    const imgContainer = document.getElementById('image-container');
+    const images = [
+        'img/yy/1.jpg','img/yy/2.jpg','img/yy/3.jpg','img/yy/4.jpg'
+    ];
+
+    // Function to refresh images
+    function refreshImages() {
+        const allImages = imgContainer.getElementsByTagName('img');
+        Array.from(allImages).forEach((img, index) => {
+            const newImageIndex = Math.floor(Math.random() * images.length);
+            img.src = images[newImageIndex];
         });
+    }
+
+    // Add scroll event listener with throttling
+    let timeout;
+    window.addEventListener('scroll', function() {
+        clearTimeout(timeout);
+        timeout = setTimeout(refreshImages, 100);  // Adjust time for performance
+    });
+});
     </script>
 
 
