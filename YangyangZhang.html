@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>"Notes Toward A Personal Afrofuturis"</title>
+    <title>"Yangyang Zhang / Pink Quilt Sac – My Greenhouse"</title>
 </head>
 <style>
     @import url("https://use.typekit.net/lcz4kdr.css");
@@ -87,4 +87,34 @@
     <h3 style="color: #9c9c9c; font-size: 16px;">
         Yangyang Zhang(She/her) is a designer whose work records some cultural symbols left behind in the context of the rapid economic development of contemporary China.  She recorded and enjoyed paying attention to these cultural symbols, exploring the reasons behind them, constructing a narrative about contemporary Chinese cultural symbols by creating a special visual atmosphere in a special period in China, and thus started a discussion on consumerism,tradition and political issues.  She is currently majoring in MFA Graphic design in Virginia Commonwealth University(VCUarts).
     </h3>
+
+    <div id="imageContainer" style="position: fixed; top: 70%; right: 10%; transform: translateY(-50%);">
+        <img id="currentImage" src="img/tae.JPG" alt="Current Image"
+            style="width: 250px; max-width: 100%; height:auto">
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const threshold = 0; // Adjust this value as needed
+            const scrollPosition = window.scrollY || window.pageYOffset;
+            const imageContainer = document.getElementById('imageContainer');
+            const currentImage = document.getElementById('currentImage');
+    
+            if (scrollPosition < threshold) {
+                currentImage.src='img/tae.JPG';
+            } else if (scrollPosition < 2 * threshold) {
+                currentImage.src = 'img/tae.JPG';
+            } else if (scrollPosition < 3 * threshold) {
+                currentImage.src = 'img/tae.JPGg';
+            } else {
+                currentImage.src = 'img/tae.JPG';
+            }
+    
+            // Adjust image container size if needed
+            // imageContainer.style.width = currentImage.width + 'px';
+            // imageContainer.style.height = currentImage.height + 'px';
+        });
+    </script>
+
+
 </body>
