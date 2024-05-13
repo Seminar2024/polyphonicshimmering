@@ -16,16 +16,17 @@
 
     body {
         background-color: #404040;
+        margin: 24px;
+        overflow: hidden;
     }
 
     #header {
-        position: relative;
-        width: 300px;
-        height: 200px;
-        display: flex;
-        margin: 24px;
-        align-items: center;
-        justify-content: center;
+        position: absolute;
+        width: 500px;
+        height: 300px;
+        /* margin-left: 24px; */
+        /* margin-top: 24px; */
+        /* display: flex; */
     }
 
     .h1shimmer {
@@ -36,31 +37,50 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-size: 96px;
+        font-size: 108px;
         font-family: EditorialNew;
+        line-height: 115px;
         position: absolute;
+        margin-top: 24px;
         z-index: 1;
-        margin-top: 120px;
-        left: 0px;
+    }
+
+    .right {
+        position: absolute;
+        right: 24px;
+        top: 50px;
+        width: 600px;
+        height: 100vh;
     }
 
     h2 {
+        /* position: absolute; */
+        /* margin-top:0px; */
         overflow: hidden;
         color: #a2a2a2;
-        width: 500px;
-        margin-top: 48px;
-        margin-left: 24px;
         font-size: 16px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 100;
+        line-height: 22px;
+        text-align: justify;
     }
 
-    h3 {
-        position: fixed;
-        right: 24px;
-        bottom: 0px;
+    .list {
+        position: absolute;
+        margin-top: 24px;
+        left: 50%;
+        transform: translate(-50%,0);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: left;
         color: #a2a2a2;
-        font-size: 16px;
+    }
+
+    /* Change name to title on hover @Weitong */
+    .list span {
+        /* color: #c6c6c6; */
+        font-size: 24px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 100;
     }
@@ -70,112 +90,87 @@
         text-decoration: none;
     }
 
-    a:hover {
+    a:hover span {
+        display: none;
         text-decoration: none;
     }
 
-    .list {
-        margin: 24px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
+    .list-item {
+        /* color: #c6c6c6; */
+        width: 600px;
+        font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
-    /* Change name to title on hover @Weitong */
-    .list span {
-        color: #c6c6c6;
-        font-size: 24px;
+    .list-item a:hover:before {
+        text-shadow: 0 0 15px #f5a963;        
+        /* color: #f5a963; */
+    }
+
+    #list-item0 {
+        /* margin-bottom: 96px; */
+        font-size: 16px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 100;
     }
 
-    a:hover span {
-        display: none;
+    #list-item0 span {
+        color: #a2a2a2;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
     }
 
-    .list-item1 a:hover:before {
-        color: #c6c6c6;
-        font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
+    #list-item0 a:hover:before {
+        content: "We Have to Write While It's Still Shimmering";
+    }
+
+
+    #list-item1 a:hover:before {
         content: "Notes Toward A Personal Afrofuturis";
     }
 
-    .list-item2 a:hover:before {
-        color: #c6c6c6;
-        font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
+    #list-item2 a:hover:before {
         content: "one roll, flip, two roll, 20x35, hand in an intimate grid";
     }
 
-    .list-item3 a:hover:before {
-        color: #c6c6c6;
-        font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
+    #list-item3 a:hover:before {
         content: "a cursor is a kite is a cursor";
     }
 
-    .list-item4 a:hover:before {
-        color: #c6c6c6;
-        font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
+    #list-item4 a:hover:before {
         content: "A view is considered three seconds";
     }
 
-    .list-item5 a:hover:before {
-        color: #c6c6c6;
-        font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
+    #list-item5 a:hover:before {
         content: "In Sleep Her Hair Reached Towards the Sun";
-
     }
 
-    .list-item6 a:hover:before {
-        color: #c6c6c6;
-        font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
+    #list-item6 a:hover:before {
         content: "through signals and memory";
     }
 
-    .list-item7 a:hover:before {
-        color: #c6c6c6;
-        font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
+    #list-item7 a:hover:before {
         content: "With, Holding";
     }
 
-    .list-item8 a:hover:before {
-        color: #c6c6c6;
-        font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
+    #list-item8 a:hover:before {
         content: "Somewhere Between Here and Eternity";
     }
 
-    .list-item9 a:hover:before {
-        color: #c6c6c6;
-        font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
+    #list-item9 a:hover:before {
         content: "Earth's Rotation Vertigo";
     }
 
-    .list-item10 a:hover:before {
-        color: #c6c6c6;
-        font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
+    #list-item10 a:hover:before {
         content: "Your voice 06:14";
     }
 
-    .list-item11 a:hover:before {
-        color: #c6c6c6;
-        font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
+    #list-item11 a:hover:before {
         content: "Infinitely Noncyclic Chain";
     }
 
-    .list-item12 a:hover:before {
-        color: #c6c6c6;
-        font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
+    #list-item12 a:hover:before {
         content: "Pink Quilt Sac - My Greenhouse";
     }
 
@@ -184,7 +179,7 @@
     .glitter {
         position: absolute;
         width: 100%;
-        margin: 0 auto;
+        /* margin: 0; */
         height: 100%;
         z-index: 1;
     }
@@ -215,11 +210,18 @@
         }
     }
 
+    .egg {
+        position: fixed;
+        right: 70px;
+        top: 330px;
+        opacity: 0.7;
+    }
+
+
     /* Egg rotation above the “about” element @Weitong*/
     img {
-        position: fixed;
-        right: 24px;
-        bottom: 32px;
+        width: 125px; 
+        height: 140px;
         animation: rotation 6s infinite linear;
         filter: drop-shadow(0px 0px 8px #fac390);
     }
@@ -240,33 +242,44 @@
         <h1 class="h1shimmer" style="width: auto;">Polyphonic<br>Shimmering</h1>
         <div class="glitter"></div>
     </div>
-    <h2><i>Polyphonic Shimmering</i> was authored, edited, and designed by the participants of this seminar: Jalen
-        Adams, Rasim Bayramov, Kai Chu Chuang, Molly Garrett, Tariye George-Phillips, Aya Khalife, Bradley Sinanan,
+
+    <div class="right">
+    
+    <h2><i>Polyphonic Shimmering</i> was authored, edited, and designed by the participants of a seminar led by Meg Miller 
+        in VCU's School of the Arts in spring, 2024. They are Jalen Adams, Rasim Bayramov, Kai Chuang, Molly Garrett, Tariye George-Phillips, Aya Khalife, Bradley Sinanan,
         Quinn Standley, Weitong Sun, Taehee, Yuan Xin, and Yangyang Zhang. All of their pieces are richly
         rendered, beautifully described; their research and experience gives depth and fascinating texture. These pieces
         shimmer and hum, they play with duration and pacing and expand language beyond its conventional encasements.
         They allow us to see what they see, in ways both visual and textual, but mostly through language that blurs the
         distinction between the two. </h2>
-    <div>
-        <img src="img/Web_Egg_Motif_08.png" alt="Rotating Egg" width="45" height="60">
-        <h3><a href="/polyphonicshimmering/about.html">About</a></h3>
-    </div>
+
+
 
     <!-- TODO: change the URL to their individual page-->
     <div class="list">
-        <div class="list-item1"><a href="JalenAdams.html"><span>Jalen Adams</span></a> </div>
-        <div class="list-item2"><a href="RasimBayramov.html"><span>Rasim Bayramov</span></a></div>
-        <div class="list-item3"><a href="KaiChuang.html"><span>Kai Chu Chuang</span></a></div>
-        <div class="list-item4"><a href="MollyGarrett.html"><span>Molly Garrett</span></a></div>
-        <div class="list-item5"><a href="TariyePhillips"><span>Tariye George-Phillips</span></a></div>
-        <div class="list-item6"><a href="AyaKhalife"><span>Aya Khalife</span></a> </div>
-        <div class="list-item7"><a href="BradleySinanan"><span>Bradley Sinanan</span></a></div>
-        <div class="list-item8"><a href="QuinnStandley.html"><span>Quinn Standley</span></a></div>
-        <div class="list-item9"><a href="WeitongSun.html"><span>Weitong Sun</span></a></div>
-        <div class="list-item10"><a href="Taehee.html"><span>Taehee</span></a></div>
-        <div class="list-item11"><a href="YuanXin.html"><span>Yuan Xin</span></a></div>
-        <div class="list-item12"><a href="YangyangZhang.html"><span>Yangyang Zhang</span></a></div>
+        <div class="list-item" id="list-item0"><a href="about.html"><span>Intro by Meg Miller</span></a></div>
+        <span>&#10036;</span>
+        <div class="list-item" id="list-item1"><a href="JalenAdams.html"><span>Jalen Adams</span></a></div>
+        <div class="list-item" id="list-item2"><a href="RasimBayramov.html"><span>Rasim Bayramov</span></a></div>
+        <div class="list-item" id="list-item3"><a href="KaiChuang.html"><span>Kai Chuang</span></a></div>
+        <div class="list-item" id="list-item4"><a href="MollyGarrett.html"><span>Molly Garrett</span></a></div>
+        <div class="list-item" id="list-item5"><a href="TariyePhillips"><span>Tariye George-Phillips</span></a></div>
+        <div class="list-item" id="list-item6"><a href="AyaKhalife"><span>Aya Khalife</span></a> </div>
+        <div class="list-item" id="list-item7"><a href="BradleySinanan"><span>Bradley Sinanan</span></a></div>
+        <div class="list-item" id="list-item8"><a href="QuinnStandley.html"><span>Quinn Standley</span></a></div>
+        <div class="list-item" id="list-item9"><a href="WeitongSun.html"><span>Weitong Sun</span></a></div>
+        <div class="list-item" id="list-item10"><a href="Taehee.html"><span>Taehee</span></a></div>
+        <div class="list-item" id="list-item11"><a href="YuanXin.html"><span>Yuan Xin</span></a></div>
+        <div class="list-item" id="list-item12"><a href="YangyangZhang.html"><span>Yangyang Zhang</span></a></div>
     </div>
+    </div>
+
+    <div class="egg">
+        <img src="img/Web_Egg_Motif_08.png" alt="Rotating Egg">
+    </div>
+
+
+
 
     <script>
         function createDot() {
@@ -274,7 +287,7 @@
             dot.classList.add('dot');
             dot.style.backgroundColor = getRandomColor();
             dot.style.left = `${getRandomNumber(0, 500)}px`;
-            dot.style.top = `${getRandomNumber(0, 250)}px`;
+            dot.style.top = `${getRandomNumber(0, 300)}px`;
             dot.style.animationDuration = `${getRandomNumber(1, 3)}s`;
 
             const glitterContainer = document.querySelector('.glitter');
