@@ -55,12 +55,16 @@
         line-height: 24px;
     }
 
-    .number {
+    .number1, .number2, .number3,.number4 {
         color: #f26830;
     }
 
-    .number:hover {
-        cursor: grab;
+    .number1:hover, .number2:hover, .number3:hover,.number4:hover {
+        cursor:pointer;
+    }
+
+    .footnote1:hover, .footnote2:hover, .footnote3:hover,.footnote4:hover {
+        cursor:pointer;
     }
 
     button {
@@ -184,7 +188,8 @@
         acclimatized to that environment. I had learned how to swim upstream, keeping my head above water, despite cause
         for overwhelming dread and despair. There had been big wins and big losses, and I had learned a lot from my
         coworkers &ndash; a hardened group of young adults ranging from progressive to radical, all faced with the
-        reality of living in a very red state. We moved like a well-oiled machine <span class="number">[1]</span> most
+        reality of living in a very red state. We moved like a well-oiled machine <span class="number1"
+            onclick="scrollToElement('.footnote1')">[1]</span> most
         of
         the time, and I found my
         place. I often disagreed with platforms or tactics, but progressive politics in Kansas and Missouri isn&rsquo;t
@@ -200,7 +205,8 @@
         Gatorade and Nike.<br>
         <br>
         In the summer of 2022, all of my work shifted to abortion access preservation and protection. I was working for
-        Kansans For Constitutional Freedom <span class="number">[2]</span>, the coalition leading the charge. My
+        Kansans For Constitutional Freedom <span class="number2" onclick="scrollToElement('.footnote2')">[2]</span>, the
+        coalition leading the charge. My
         colleague,
         Meg, had designed the yard
         signs strewn across the city. My manager, Ryan, a longtime Midwestern political analyst who had become a great
@@ -259,10 +265,12 @@
         <br>
         I wasn&rsquo;t raised religious. In midwestern America, that meant Easter was a holiday about candy and bunnies.
         In English class, literary biblical references would go over my head (what is a millstone and how is it around a
-        throat?) <span class="number">[3]</span> The summer of 2008, I accidentally took communion while nannying for a
+        throat?) <span class="number3" onclick="scrollToElement('.footnote3')">[3]</span> The summer of 2008, I
+        accidentally took communion while nannying for a
         family&rsquo;s children at
         church. I&rsquo;ve never understood the extreme conviction that religion inspires, the unwavering and
-        unforgiving rules, and how it can turn someone into a single-issue voter. <span class="number">[4]</span> <br>
+        unforgiving rules, and how it can turn someone into a single-issue voter. <span class="number4"
+            onclick="scrollToElement('.footnote4')">[4]</span> <br>
         <br>
         It takes less than three seconds to reference the bible, and perhaps that&rsquo;s the secret to conservative
         groups&rsquo; eternally sharpened edge. Jesus is their messaging director and it&rsquo;s airtight. Who wants to
@@ -279,18 +287,21 @@
         longer than a few seconds. <br>
     </h3>
     <h3 style="color: #9c9c9c; font-size: 16px;">
-        <span class="footnotes" style="color: #da9377;">1</span> - Albeit a very loud machine. Men in politics
+        <span class="footnote1" style="color: #da9377;" onclick="scrollToElement('.number1')">1</span> - Albeit a very
+        loud machine. Men in politics
         love to hear themselves yell, even when they are on the right
         side of things.<br>
-        <span class="footnotes" style="color: #da9377;">2</span> - A name so Republican-sounding it should come as no
+        <span class="footnote2" style="color: #da9377;" onclick="scrollToElement('.number2')">2</span> - A name so
+        Republican-sounding it should come as no
         surprise that the main messaging goal was to appear
         as
         bi-partisan as possible. In their own words, KCF was a “bipartisan coalition of reproductive rights
         advocates
         and allied organizations committed to protecting the constitutional rights of Kansans and the right to safe,
         legal abortion.” I pulled that language from their website.<br>
-        <span class="footnotes" style="color: #da9377;">3</span> - Oliver Twist<br>
-        <span class="footnotes" style="color: #da9377;">4</span> - My maternal grandmother was a single issue voter. She
+        <span class="footnote3" style="color: #da9377;" onclick="scrollToElement('.number3')">3</span> - Oliver Twist<br>
+        <span class="footnote4" style="color: #da9377;" onclick="scrollToElement('.number4')">4</span> - My maternal
+        grandmother was a single issue voter. She
         was an incredible, independent woman with a sharp
         sense of humor. She was a nurse in WWII and raised nine kids on her own after her husband died very young.
         Although a feminist in many ways, she was also a devout Catholic — she just couldn’t stomach voting for
@@ -304,13 +315,17 @@
     </h3>
 </body>
 <script>
+    function scrollToElement(selector) {
+        const element = document.querySelector(selector);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest'});
+        }
+    }
     window.addEventListener('scroll', function () {
         const threshold = 500; // Adjust this value as needed
         const scrollPosition = window.scrollY || window.pageYOffset;
         const imageContainer = document.getElementById('imageContainer');
         const currentImage = document.getElementById('currentImage');
-        const spanElements = document.querySelectorAll('.number');
-        const elementToScrollTo = document.querySelector('.footnotes');
 
         if (scrollPosition < threshold) {
             currentImage.src = '/polyphonicshimmering/img/molly-1.jpeg';
@@ -329,13 +344,5 @@
         // Adjust image container size if needed
         imageContainer.style.width = currentImage.width + 'px';
         imageContainer.style.height = currentImage.height + 'px';
-
-        // Add click event listener to the span element
-        spanElements.forEach(span => {
-            span.addEventListener('click', () => {
-                // Scroll to the element
-                elementToScrollTo.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
     });
 </script>
