@@ -1,0 +1,842 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With, Holding</title>
+    <link rel="icon" href="img/star.gif" type="image/gif" />
+
+</head>
+<style>
+    @import url("https://use.typekit.net/lcz4kdr.css");
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
+    @font-face {
+        font-family: EditorialNew;
+        src: url(ED-R.otf);
+    }
+
+    body {
+        background-color: #eee;
+        display: flex;
+        flex-direction: column;
+        margin: 24px;
+    }
+
+    /* title and name */
+    h1 {
+        width: 90%;
+        position: relative;
+        color: #000000;
+        font-size: 100px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        line-height: 100px;
+    }
+
+    h2 {
+        position: relative;
+        margin-top: -55px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        font-weight: 100;
+        margin-bottom: 48px;
+    }
+
+    /* bio and text */
+    h3 {
+        width: 50%;
+        position: relative;
+        color: #000000;
+        font-size: 18px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 100;
+        line-height: 24px;
+    }
+
+    h3 span {
+        font-weight: 700;
+        font-size: 22px;
+    }
+
+    table {
+        position: relative;
+        width: 50%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 2px solid rgb(140 140 140);
+        font-size: 18px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 100;
+        line-height: 24px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        border: 1px solid rgb(160 160 160);
+        padding: 6px 10px;
+    }
+
+    td {
+        vertical-align: text-top;
+    }
+
+
+    h4 {
+        width: 50%;
+        position: relative;
+        margin-top: 48px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 100;
+        color: #9c9c9c;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    button {
+        background-color: transparent;
+        position: absolute;
+        border: none;
+        cursor: default;
+    }
+
+    button:hover {
+        cursor: pointer;
+        font-style: italic;
+    }
+
+    .back_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        text-transform: uppercase;
+        text-decoration: underline;
+        color: #ff9129;
+    }
+
+    /* Egg rotation above the “about” element @Weitong*/
+    .back_btn img {
+        width: 55px;
+        height: 40px;
+        animation: rotation 6s infinite linear;
+        filter: drop-shadow(0px 0px 8px #fac390);
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    #imageContainer {
+        position: fixed;
+        top: 50%;
+        right: 15%;
+        transform: translateY(-50%);
+        z-index: -1;
+        display: none;
+    }
+
+    #currentImage {
+        width: 300px;
+        height: 200px;
+    }
+
+    @media screen and (max-width: 700px) {
+        body {
+            margin: 10px;
+            gap: 10px;
+        }
+
+        h1 {
+            font-size: 36px;
+            line-height: 40px;
+            /* Increase line height for better readability */
+            /* text-align: center; */
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            /* Adjust font size for smaller screens */
+            /* text-align: center; */
+            margin-bottom: 20px;
+            margin-top: 0px;
+
+        }
+
+        h3 {
+            width: 95%;
+            /* text-align: justify; */
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        table {
+        position: relative;
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 2px solid rgb(140 140 140);
+        font-size: 13px;
+        line-height: 15px;
+        table-layout: fixed;
+        }
+
+        h4 {
+            width: 95%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            /* text-align: justify; */
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        button {
+            position: relative;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back_btn {
+            font-size: 12px;
+            /* Adjust font size for smaller screens */
+        }
+    }
+
+    .back_btn img {
+        width: 20px;
+        height: 15px;
+        animation: rotation 6s infinite linear;
+        filter: drop-shadow(0px 0px 8px #fac390);
+    }
+
+    /* #imageContainer {
+            position: fixed; 
+            top: 60%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.5;
+        } */
+
+    /* #currentImage {
+            width: 0px; 
+            height: 0px;
+        } */
+</style>
+
+<body>
+    <button type="button" onclick="window.location.href = 'index.html';">
+        <div class="back_btn">
+            <img src="img/Web_Egg_Motif_08.png" alt="Rotating Egg">
+            <p>back to index</p>
+        </div>
+    </button>
+
+    <h1>With, Holding</h1>
+
+    <h2>Bradley Sinanan</h2>
+
+    <div id="imageContainer">
+        <img id="currentImage" src="" alt="Current Image">
+    </div>
+
+    <h3>
+        INT. GALLERY H, THE ANDERSON, RICHMOND, VA
+    </h3>
+    <h3><span>Overture</span></h3>
+    <h3>
+        <i>On the floor, in the relative center of the room, lies six white wooden panels to form a 12x18’ rectangle
+            placed
+            together. a grid following the pattern of a W-2 tax form is marked out in black tape. In the top-left corner
+            of
+            the grid, there are a few Bankers Boxes arranged with a white wooden stand and amplifier to the left and
+            right
+            of them. Golden hooks hang from the ceiling with transparent fishing lines; they forebode future action. The
+            DOCUMENTER is here already, he’s setting up his camera. The audience is here. The projector is on, the
+            speakers
+            are on, a camera is rigged above and it’s recording. Bradley walks behind a door in the corner of the
+            gallery.
+            The video plays.</i>
+    </h3>
+    <table>
+        <tr>
+            <th>Bradley as Bradley</th>
+            <th>Video/Audio</th>
+            <th>Documenter</th>
+        </tr>
+        <tr>
+            <td>Behind the door in the gallery, becoming himself.</td>
+            <td>Black screen.
+                <br>
+                <i>Gil-Scott Heron’s “Pieces of a Man” is remixed. He sings: Jagged, jigsaw pieces… tossed about the
+                    room…</i>
+            </td>
+            <td>Unceremoniously Present. Camera at the ready. Camcorder above is recording.</td>
+        </tr>
+    </table>
+
+    <h3><span>Layer 1</span></h3>
+
+    <table>
+        <tr>
+            <th>Bradley as Bradley</th>
+            <th>Video/Audio</th>
+            <th>Documenter</th>
+        </tr>
+        <tr>
+            <td>Emerges and traces grid with hands. Prepares to begin his walk.</td>
+            <td>Fade-in to white from black.
+                <br>
+                Bureaucracy soundscape begins.
+            </td>
+            <td>Watching / Capturing</td>
+        </tr>
+        <tr>
+            <td>Slowly marching through fields of the grid, with a sense of duty and trepidation.</td>
+            <td>Bright white screen is sustained.
+                <br>
+                The sound of pen clicks and paper flicks.
+            </td>
+            <td>Watching / Capturing</td>
+        </tr>
+        <tr>
+            <td>Takes cover from the rain, flicks off the drops.</td>
+            <td>White rain on gray background.
+                <br>
+                The sound of a pen click rainstorm.
+            </td>
+            <td>Watching / Capturing</td>
+        </tr>
+        <tr>
+            <td>Approaches the boundary of the grid and prepares to take a step off, but…</td>
+            <td>The rain passes, a bright white screen persists.
+                <br>
+                The sound of pen clicks and paper flicks.
+            </td>
+            <td>Watching / Capturing</td>
+        </tr>
+        <tr>
+            <td>A siren of alarm is triggered. He falls back into a cowering huddle in the middle of the row.</td>
+            <td>Screen flooded with red.
+                <br>
+                The sound of a deep dissonant sine wave punctuated by hollow buzzing.
+            </td>
+            <td>Watching / Capturing</td>
+        </tr>
+        <tr>
+            <td>Sneaks through the grid under the brief reprieves of darkness.</td>
+            <td>Nine dips from white to black.
+                <br>
+                The sound of a pen clicking with a delay on it.
+            </td>
+            <td>Watching / Capturing</td>
+        </tr>
+        <tr>
+            <td>Walks on his tip-toes, balancing inside the form fields.</td>
+            <td>Scans of tax forms appear on screen. A black line made of a soft brush begins to squiggle along the
+                form, its shape is his walking path.
+                <br>
+                The sound of a pen tip impressing upon the fibers of paper; a scratching, an imperceptible cutting.
+            </td>
+            <td>Watching / Capturing</td>
+        </tr>
+        <tr>
+            <td>Reaches the second large row on the grid. Begins to gesture legs in sweeping motions, his feet brushing
+                against the surface. It’s like dancing. He turns his wrists like he’s seen his aunties and uncles do
+                when they dance to Chutney music at parties.
+            </td>
+            <td>Scans of tax forms continue to appear on screen. The black line continues to grow.
+                <br>
+                The sound of a pen tip scribbling continues, a cacophony of metallic swishing emerges.
+            </td>
+            <td>Watching / Capturing</td>
+        </tr>
+        <tr>
+            <td>Another attempt — approaches the boundary of the grid and prepares to walk off, but…
+            </td>
+            <td>Scans of tax forms continue to appear on screen. The black line continues to grow.
+                <br>
+                The sound of a pen tip scribbling continues, a cacophony of metal, unnerving and plucky.
+            </td>
+            <td>Watching / Capturing</td>
+        </tr>
+        <tr>
+            <td>Another siren of an alarm is triggered–he falls back into the same stance hiding from the beam of red
+                light.
+            </td>
+            <td>Screen floods red.
+                <br>
+                Sirens bellow from the deep.
+            </td>
+            <td>Watching / Capturing</td>
+        </tr>
+        <tr>
+            <td>Runs through the rest of the grid, heavy breathing–wanting to escape. Reaches the other corner of the
+                grid from where he began.
+            </td>
+            <td>Video of Bradley shredding documents is played. The sound is of the machinic teeth pulling on the paper
+                fibers.
+            </td>
+            <td>Watching / Capturing</td>
+        </tr>
+    </table>
+
+    <h3><span>Layer 2</span></h3>
+
+    <table>
+        <tr>
+            <th>Bradley as Bradley</th>
+            <th>Video/Audio</th>
+            <th>Documenter</th>
+        </tr>
+        <tr>
+            <td>Lifts stand and Bankers Box full of fabrics.</td>
+            <td>Video of bees flying and pollinating in the backyard of Bradley’s childhood home.
+                <br>
+                The sound oscillates between recordings of the backyard and the patio of his home.
+            </td>
+            <td>Watching / Capturing</td>
+        </tr>
+        <tr>
+            <td>Lifts and places stand into multiple positions through the grid, where the fabric will be hung.
+            </td>
+            <td>Video loops.
+                <br>
+                The sound of the backyard, buzzing bees.
+            </td>
+            <td>Watching / Capturing</td>
+        </tr>
+        <tr>
+            <td>Lifts and cycles through phrases inspired by his father’s labor as a cargo handler:
+                <br>
+                <i>Alright…. 3, 2, 1, hup!<br>
+                    Okay, yeah I got it… I got it.<br>
+                    Careful, careful, careful<br>
+                    You got it?<br>
+                    Remember that time we? (chuckles) nevermind… <br>
+                    Yeah yeah, I’m lifting with my back I know…<br>
+                    Almost quittin’ time… <br>
+                    Oh, I drank too much last night.
+                </i>
+            </td>
+            <td>Video loops.
+                <br>
+                The sound of the patio. The rise and fall of passing cars on the suburban street.
+            </td>
+            <td>Watching / Capturing</td>
+        </tr>
+        <tr>
+            <td>Grows tired… back hurts from the lifting. Fumbling with fabrics, frustrated. Wipes brow of sweat.
+            </td>
+            <td>Video loops.
+                <br>
+                Atop the footage, a video of his father mowing the front lawn plays. It is edited to near invisibility.
+                <br>
+                The sound of the patio. The doppler effect curves the sputtering engines like a wave.
+                <br>
+                The sound of the lawnmower’s teeth pulling on the grass fibers.
+            </td>
+            <td>Watching / Capturing</td>
+        </tr>
+        <tr>
+            <td>Lifts stand with a few pieces of fabric remaining in the box.
+                <br>
+                <i>Just a few more.</i>
+            </td>
+            <td>Video loops.
+                <br>
+                The sound of the backyard, the distant whirr of airplanes passing overhead.
+            </td>
+            <td>Watching / Capturing</td>
+        </tr>
+        <tr>
+            <td>Hangs the final four pieces of fabric. Three are opaque, one is transparent.
+                <br>
+                <i>Hey, if they come around and start checking… you should go take a walk…</i>
+                <br>
+                The shape resembles a room, one where he can hide or at least so he tells himself. From the front of the
+                room he’s revealed, unable to fully escape from being seen.
+            </td>
+            <td>Video loops.
+                <br>
+                Atop the footage, a video of his mother washing the dishes in the kitchen plays. It is edited to near
+                invisibility.
+                <br>
+                The sound of the patio.
+                <br>
+                The sound of the water running over the dishes. The sound of his mother saying “Don’t video me like
+                that.”
+            </td>
+            <td>Watching / Capturing</td>
+        </tr>
+        <tr>
+            <td><i>Alright, we’re almost done.</i>
+                <br>
+                The final piece of fabric goes up, the stand and box are returned to the corner where they were picked
+                up.
+                <br>
+                <i>Finally….</i>
+            </td>
+            <td>Video loops.
+                <br>
+                The sound of the backyard.
+            </td>
+            <td>Watching / Capturing</td>
+        </tr>
+        <tr>
+            <td>Walks through the pieces of fabric: like an errant breeze between curtains, like a poltergeist, like a
+                memory. He’s both the shadow making an impression and the impressing thing. He ties fabrics, wraps
+                himself in them, lifts and drops them revealing and un-revealing all at once.
+            </td>
+            <td>A video of Bradley’s immediate and extended family in their home, cutting a cake for his siblings joint
+                birthday party. A black flame in his father’s hands repeats.
+                <br>
+                The sound of the original video, its camaraderie and chaos, is band-passed. The frequencies make way for
+                a low humming sine wave mixed with a sample of pen marks. The synthesizer lilts and twists with tinges
+                of almost too much nostalgia, pierced by the precision of pen strikes.
+            </td>
+            <td>Watching / Capturing</td>
+        </tr>
+    </table>
+
+    <h3><span>Layer 3</span></h3>
+
+    <table>
+        <tr>
+            <th>Bradley as Bradley</th>
+            <th>Video/Audio</th>
+            <th>Documenter</th>
+        </tr>
+        <tr>
+            <td>Moves into the false room of fabrics.
+                <br>
+                <i>You want to see me soooo bad! You’re obsessed with me!! You’re totally like “where is he?” Take a
+                    picture it’ll- </i>
+            </td>
+            <td>A home video begins to play of Bradley’s first diwali in 1997.
+                <br>
+                No sound is playing.
+            </td>
+            <td>Approaches Bradley as Bradley. Camera in hand, he photographs with a fastidious tenacity. The camera
+                shutter sound probes the room.</td>
+        </tr>
+        <tr>
+            <td><i>Fine, you want a piece of me? Here.</i>
+                <br>
+                Sticks his hand out of a corner where two pieces of fabric meet.
+            </td>
+            <td>The video is edited only to the blurry bits.
+                <br>
+                No sound is playing.
+            </td>
+            <td>Walks up to Bradley’s outstretched hand and photographs it.</td>
+        </tr>
+        <tr>
+            <td><i>Here!</i>
+                <br>
+                Sticks his hand and leg out of another corner where two pieces of fabric meet.
+
+            </td>
+            <td>The camera fails to capture the light because it is too dark.
+                <br>
+                No sound is playing.
+            </td>
+            <td>Takes the corner around the grid and walks up to Bradley’s outstretched hand and leg and photographs it.
+            </td>
+        </tr>
+        <tr>
+            <td><i>Here!</i>
+                <br>
+                Sticks his face out of another corner where two pieces of fabric meet.
+            </td>
+            <td>Video continues.
+                <br>
+                No sound is playing.
+            </td>
+            <td>Takes the corner around the grid and walks up to photograph his face.</td>
+        </tr>
+        <tr>
+            <td>Gaining confidence and excitement by being seen and by being photographed. It’s erotic. Exits from his
+                room, giving all to the Documenter.
+            </td>
+            <td>Video continues.
+                <br>
+                No sound is playing.
+            </td>
+            <td>Walks onto the grid and walks closer.</td>
+        </tr>
+        <tr>
+            <td>Backs away as the Documenter continues approach.
+                <br>
+                <i>Stop, you got it.</i>
+            </td>
+            <td>Video continues.
+                <br>
+                No sound is playing.
+            </td>
+            <td>Pushes forward towards Bradley, clicking the shutter.</td>
+        </tr>
+        <tr>
+            <td>Backs away as the Documenter continues approach.
+                <br>
+                <i>Stop, you got it.</i>
+            </td>
+            <td>Video continues.
+                <br>
+                No sound is playing.
+            </td>
+            <td>Pushes forward towards Bradley, clicking the shutter.</td>
+        </tr>
+        <tr>
+            <td>Backs away as the Documenter continues approach.
+                <br>
+                <i>Stop, you got it.</i>
+            </td>
+            <td>Video continues.
+                <br>
+                No sound is playing.
+            </td>
+            <td>Pushes forward towards Bradley, clicking the shutter.</td>
+        </tr>
+        <tr>
+            <td><i>Stop.</i>
+                Moves into the false room of hiding.
+            </td>
+            <td>Video opens on a 3D Photogrammetry model of Bradley’s face emerging from a black expanse. The face is
+                metallic and lit garishly by purple and green hues.
+            </td>
+            <td>Pauses and photographs him.</td>
+        </tr>
+        <tr>
+            <td>Exits the room of hiding and slips his head under a central fabric in the grid. He rotates his body 360
+                degrees, giving all gazes a total image.
+
+            </td>
+            <td>The camera takes it all in, curving around the model in 360 degrees, gathering a complete picture. The
+                camera peers at the mesh from above.
+                <br>
+                <i>It is greedy. It doesn’t just want to survey, it wants to consume. Its appetite? Unsatisfied until it
+                    pierces. It wants my room. It wants my house.</i>
+            </td>
+            <td>Begins to seemingly pack up his camera equipment slowly, angered and unwilling to continue. </td>
+        </tr>
+        <tr>
+            <td>Lays his body flat.
+            </td>
+            <td>The camera pierces through and through.
+                <br>
+                <i>It wants my body. It penetrates me, reduces me, flattens me, pummels me.</i>
+            </td>
+            <td>Continues to pack up his camera equipment slowly. </td>
+        </tr>
+        <tr>
+            <td>Raises to a seated position on the floor.
+            </td>
+            <td>The video ends and cuts to a white screen.
+            </td>
+            <td>Starts to walk out the room.</td>
+        </tr>
+        <tr>
+            <td><i>Hold on, don’t go. I still need you.</i>
+            </td>
+            <td>White screen persists.
+            </td>
+            <td>Nods head. Sets up the camera and returns to the position of Watching/Capturing. A fragile
+                reconciliation.</td>
+        </tr>
+    </table>
+
+    <h3><span>Layer 4</span></h3>
+
+    <table>
+        <tr>
+            <th>Bradley as Bradley</th>
+            <th>Video/Audio</th>
+            <th>Documenter</th>
+        </tr>
+        <tr>
+            <td><i>Wait… I forgot my line. Line!?
+                    Line!? Oh no, this is so embarrassing I’m sorry everyone I forgot my line.
+                    <br>
+                    You know I thought this might happen, so I brought my script just in case! Let me see, okay… hmm..
+                    Did that, did that… Wait, it didn't print right… Oh no…
+                </i>
+                <br>
+                A beat.
+                <br>
+                <i>
+                    Okay, maybe… can we all agree to forget this happened?</i>
+                <br>
+                Looks to the documenter:
+                <i>Are we still rolling?</i>
+                <br>
+                <i>Okay, yes, I’ll edit this part out of the video and we can all just forget this ever happened
+                    okay?</i>
+                <br>
+                <i>Alright, we’ll all just move on to the next part.</i>
+            </td>
+            <td>A video montage begins to play footage filmed by his dad. The food prepared earlier, pholourie, chutney,
+                roti, underneath a series of kitchen towels. He pushes towards other belongings in the kitchen, an
+                interesting amount of time spent with the details of the oven: its knobs, its coils. The radio set atop
+                the half-wall separating the living room from the kitchen.
+                <br>
+                Cut to: streamers hanging from the rafters, birthday signage. It’s unclear if they are anticipating the
+                party or proving it.
+                <br>
+                Cut to: the well-traveled dishes set atop the tablecloth. It's thanksgiving. A collage of chairs round
+                the table potlucked from everyone’s home.
+                <br>
+                Events and objects are all the same to the lens.
+
+            </td>
+            <td>Watching/Capturing</td>
+        </tr>
+    </table>
+
+    <h3><span>Layer 5</span></h3>
+
+    <table>
+        <tr>
+            <th>Bradley as Bradley</th>
+            <th>Video/Audio</th>
+            <th>Documenter</th>
+        </tr>
+        <tr>
+            <td>Moves to the Bankers Boxes and pulls out a DJ controller and laptop from the top-most one, turns on the
+                amplifier.
+            </td>
+            <td>A video of Bradley shredding the documents his father gave him last December begins to play. The papers
+                are inserted rhythmically in their own time.
+            </td>
+            <td>Watching/Capturing</td>
+        </tr>
+        <tr>
+            <td>Begins to mix the interview with his dad about his work life. Fingers press the plastic buttons and
+                softer pads in relative rhythmic time.
+            </td>
+            <td>Video continues.
+                <br>
+                The sound of his father’s voice and a drum sequence emerge from the amplifier.
+            </td>
+            <td>Watching/Capturing/Listening</td>
+        </tr>
+        <tr>
+            <td>Hands twist on the turntable wheels. Fingers twist the knobs, adjusting frequencies and effects.
+            </td>
+            <td>Video continues.
+                <br>
+                His father’s voice is cut into incoherent parts, creating a sonic mass of the interview, a sonic mass of
+                his labor.
+            </td>
+            <td>Watching/Capturing/Listening</td>
+        </tr>
+        <tr>
+            <td>Places his hands on the volume lever and alternates, raising one track and lowering the other. Hands
+                resemble: the climbing of a staircase–a Sisyphean task; repeating keyboard clicks, and the looping of
+                lifting and dropping. The endless kick drum of having something to do.
+            </td>
+            <td>Video continues.
+                <br>
+                The sound oscillates between two excerpts of the interview, his father’s voice rising and falling.
+            </td>
+            <td>Watching/Capturing/Listening</td>
+        </tr>
+        <tr>
+            <td>Loads two drum tracks initially synchronized in time. Fingers on each tempo slider, one moving up, the
+                other moving down. Leaves the drum tracks repeating as he walks away.
+            </td>
+            <td>Video continues.
+                <br>
+                Drum tracks are mis-aligned in tempo. The result is a sonic cacophony. The sound of timing not lining
+                up.
+            </td>
+            <td>Watching/Capturing/Listening</td>
+        </tr>
+        <tr>
+            <td>Lifts and moves the wooden panels on the floor, moving and strewing them across the room.
+                <br>
+                Repeats, at alternating fragmented rhythms, an edited line from Mahmoud Darwish’s poem “I Didn’t
+                Apologize to the Well.”
+                <br>
+                <i>I broke the grid and I broke.</i>
+
+            </td>
+            <td>Video continues.
+                <br>
+                The oblique sound of meaning not lining up — Sedgwick’s definition of queerness.
+            </td>
+            <td>Watching/Capturing/Listening</td>
+        </tr>
+        <tr>
+            <td>Walks in the spaces between the fragments of the grid. Gathers Bankers Boxes full of paper scraps and
+                places them on their side atop the separated wooden pieces. The scraps spill out. He pushes them out of
+                their box, dousing the wood with the scraps.
+                <br>
+                The boxes are stacked above
+            </td>
+            <td>Video continues.
+            </td>
+            <td>Watching/Capturing/Listening</td>
+        </tr>
+        <tr>
+            <td><i>Did we get it? </i>
+                <br>
+                Packs up DJ Controller, Amp and Computer.
+                <br>
+                Repeats to Documenter: 
+                <br>
+                <i>Did we get it?</i>
+                
+            </td>
+            <td>Video continues.
+            </td>
+            <td>Packs up his camera and does not respond. </td>
+        </tr>
+        <tr>
+            <td>Exits from the door whence he came.
+            </td>
+            <td>Video ends. Then loops.
+            </td>
+            <td>Exits from the door whence he came.</td>
+        </tr>
+    </table>
+
+
+    <h4>
+        Bradley Sinanan (he/they) is a designer born and raised in South Florida who taught himself Photoshop as a teen
+        to make Tumblr fandom gifs. He now resides and works in Richmond, Virginia. His practice encompasses video,
+        publication, sound, performance and interactive screen-based work to explore the relationship between the gaze,
+        identity, immutability, power, and control. They received their BFA in Graphic Design from the University of
+        Central Florida in 2019 and their MFA in Visual Communications from Virginia Commonwealth University in 2024.
+    </h4>
+</body>
+<script>
+    window.addEventListener('scroll', function () {
+        const threshold = 500; // Adjust this value as needed
+        const scrollPosition = window.scrollY || window.pageYOffset;
+        const imageContainer = document.getElementById('imageContainer');
+        const currentImage = document.getElementById('currentImage');
+
+        if (scrollPosition < threshold) {
+            currentImage.src = '';
+        } else if (scrollPosition < 2 * threshold) {
+            currentImage.src = '';
+        } else {
+            currentImage.src = '';
+        }
+
+        // Adjust image container size if needed
+        imageContainer.style.width = currentImage.width + 'px';
+        imageContainer.style.height = currentImage.height + 'px';
+    });
+</script>

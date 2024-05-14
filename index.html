@@ -103,7 +103,7 @@
         font-size: 24px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 100;
-        line-height: 30px;
+        line-height: 28px;
         text-align: justify;
         align-self: stretch;
     }
@@ -258,7 +258,6 @@
             body {
                 flex-direction: column;
                 margin: 10px;
-                overflow-x: hidden;
             }
 
             .left {
@@ -374,7 +373,7 @@
             dot.classList.add('dot');
             dot.style.backgroundColor = getRandomColor();
             
-            if (window.innerWidth > 750) {
+            if (window.innerWidth > 700) {
             dot.style.left = `${getRandomNumber(0, 1000)}px`; // For desktop
             dot.style.top = `${getRandomNumber(0, 500)}px`; // For desktop
             } else {

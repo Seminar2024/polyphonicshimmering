@@ -1,0 +1,324 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somewhere Between Here and Eternity</title>
+    <link rel="icon" href="img/star.gif" type="image/gif" />
+
+</head>
+<style>
+    @import url("https://use.typekit.net/lcz4kdr.css");
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
+    @font-face {
+        font-family: EditorialNew;
+        src: url(ED-R.otf);
+    }
+
+    body {
+        background-color: #eee;
+        display: flex;
+        flex-direction: column;
+        margin: 24px;
+    }
+
+    /* title and name */
+    h1 {
+        width: 90%;
+        position: relative;
+        color: #000000;
+        font-size: 100px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        line-height: 100px;
+    }
+
+    h2 {
+        position: relative;
+        margin-top: -55px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        font-weight: 100;
+        margin-bottom: 48px;
+    }
+
+    /* bio and text */
+    h3 {
+        width: 50%;
+        position: relative;
+        color: #000000;
+        font-size: 18px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 100;
+        line-height: 24px;
+    }
+
+    h4 {
+        width: 50%;
+        position: relative;
+        margin-top: 48px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 100;
+        color: #9c9c9c;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    button {
+        background-color: transparent;
+        position: absolute;
+        border: none;
+        cursor: default;
+    }
+
+    button:hover {
+        cursor: pointer;
+        font-style: italic;
+    }
+
+    .back_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        text-transform: uppercase;
+        text-decoration: underline;
+        color: #ff9129;
+    }
+
+    /* Egg rotation above the “about” element @Weitong*/
+    .back_btn img {
+        width: 55px;
+        height: 40px;
+        animation: rotation 6s infinite linear;
+        filter: drop-shadow(0px 0px 8px #fac390);
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    #imageContainer {
+        position: fixed;
+        top: 50%;
+        right: 15%;
+        transform: translateY(-50%);
+        z-index: -1;
+        display: none;
+    }
+
+    #currentImage {
+        width: 300px;
+        height: 200px;
+    }
+
+    @media screen and (max-width: 700px) {
+        body {
+            margin: 10px;
+            gap: 10px;
+        }
+
+        h1 {
+            font-size: 36px;
+            line-height: 40px;
+            /* Increase line height for better readability */
+            /* text-align: center; */
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            /* Adjust font size for smaller screens */
+            /* text-align: center; */
+            margin-bottom: 20px;
+            margin-top: 0px;
+
+        }
+
+        h3 {
+            width: 95%;
+            /* text-align: justify; */
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        h4 {
+            width: 95%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            /* text-align: justify; */
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        button {
+            position: relative;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back_btn {
+            font-size: 12px;
+            /* Adjust font size for smaller screens */
+        }
+    }
+
+    .back_btn img {
+        width: 20px;
+        height: 15px;
+        animation: rotation 6s infinite linear;
+        filter: drop-shadow(0px 0px 8px #fac390);
+    }
+
+    /* #imageContainer {
+            position: fixed; 
+            top: 60%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.5;
+        } */
+
+    /* #currentImage {
+            width: 0px; 
+            height: 0px;
+        } */
+</style>
+
+<body>
+    <button type="button" onclick="window.location.href = 'index.html';">
+        <div class="back_btn">
+            <img src="img/Web_Egg_Motif_08.png" alt="Rotating Egg">
+            <p>back to index</p>
+        </div>
+    </button>
+
+    <h1>Somewhere Between Here and Eternity</h1>
+
+    <h2>Quinn Standley</h2>
+
+    <div id="imageContainer">
+        <img id="currentImage" src="" alt="Current Image">
+    </div>
+
+    <h3>
+        I used to hold my breath and make a wish when we would drive freeway tunnels. I remember this one freeway
+        interchange that was a million feet high and a million lanes wide and there were a million roads and bridges and
+        curves and dark tunnels and bright tunnels and cars that raced by but there was no freeway noise in fact there
+        was no noise at all other than the silence – the 16,000 hz cacophonous buzz somewhere between my brain and my
+        ear drums. I remember the first time I heard that buzz – I was three or maybe four years old and when I would
+        get overwhelmed or cry or have a tantrum I would lay in my closet and look up at the light bulb and I remember
+        one time I laid there until I fell asleep and when my tears dried and I woke up I heard a buzz in my head and I
+        thought it was the sound of silence. The freeway interchange – there was no way to get into or out of it because
+        it was a loop or a trap or something like that and I remember I was futilely trying to find a way out of it or
+        through it or over or even across it and in attempting to do so I walked on a narrow sliver of some sort of
+        sidewalk but it only lead to thousands of these strange glass elevators that soared up into the sky and down
+        into the infinite abyss beneath the ground. I knew that I had been in this place once before – or actually
+        multiple times or maybe even an infinite amount of times but I couldn’t remember why but I do remember I was
+        always alone at this place and I could neither move forward nor backward through space and time because going
+        either direction or even upward or downward always lead to the same place like they are all contained within
+        themselves or something. I remember when I was younger and had moved home from Seattle because of repeated
+        psychotic episodes and was finally approaching mental stability after 8 months of pharmaceutical trial and error
+        I decided that I would never move back to Seattle and I didn’t know what I was going to do with my life but I
+        remember that I wanted to become a farmer or go to school for forestry or for awhile I waned to join the
+        military because I had nowhere else to go and I remember receiving letters in the mail beginning when I was 17
+        checking up on me and they said I could join the United States Marines to find a sense of belonging and travel
+        the world and have all these benefits and even shoot a gun and drive big trucks but the tradeoff was that I
+        would be scared of my ceiling fan. I still want to be a farmer but I never want to go to war because guns make
+        me nervous especially because I only shot a gun once and it was this one time I shot my Dad’s 12 gauge and the
+        power of the weapon made me shake and I had intrusive thoughts that I was going to shoot him and my only regret
+        in my life is that I didn’t go to school for forestry when I was offered a full ride to Northern Arizona
+        University and turned it down but maybe things happen for a reason, but in reality I don’t know if I believe
+        that because I think things happen and then we come up with a reason but what difference does it make? Anyway
+        the freeway overpass dissected Seattle from Phoenix and I didn’t know which way to go. If I was going one way on
+        a road or sidewalk I would run into this freeway interchange but then I would get stuck in it forever and then I
+        would die but there was this one time where I was with a little boy – and I knew that the little boy was my son
+        and I knew that I had never loved anything like him in my life and it felt so real and I looked into his eyes
+        and I saw myself and I wanted to protect him forever but we got stuck here at this void and he grabbed onto my
+        back and we followed sidewalks to dead ends and into tunnels and came out the other side but we would be looking
+        at the same tunnel we just went through and we took elevators to different levels of the interchange and would
+        come out and be trapped outside or inside enclosed gates and sometimes I would lose my son and when I’d find him
+        he would be in a different elevator or stuck in a different enclosed space but we would somehow always end up
+        back together and it was always in the same place we started. I don’t remember how long this went on but I
+        remember it as clearly as any other memory and I remember it lasting for an eternity and the last thing I
+        remember was saying goodbye to my son and we were both crying but when my son said goodbye I switched
+        perspectives to him and looked at myself and then I had the realization that we were the same person and I
+        looked through tears at myself who was also crying and then I woke up with tears in my actual eyes but I had
+        only been asleep for 6 hours and I do not have a son and I am 20 years old and I still end up in the same place
+        I started and there’s a buzz in my ears that I thought was the sound of silence but it’s just another fluke in
+        my neural chemistry and I used to have that dream every night – but that was the last time. And sometimes I
+        still can’t discern it form a memory.
+        <br><br>
+        I’m not sure what’s worse the insomnia or the night terrors. “Dreams” – To call them dreams is laughable but to
+        call them nightmares is childish and according to the DSM-5 to call them night-terrors would be inaccurate but
+        what I do know is that I can’t discern them from reality and even now – long after I stopped dreaming – they are
+        woven into my memory and I do know that they used to last days or weeks or years and when I finally woke up I
+        felt like I hadn’t slept in just as long and some mornings with bags under my eyes I would check the time and
+        calculate that I’d slept for over 10 hours but felt like I’d slept for less than a minute and on other nights I
+        would wake up and find that I slept for 20 minutes but my dream lasted two weeks and I can’t remember if my dad
+        is actually dead or if it was just part of that dream and why do I have tears in my eyes?
+        <br><br>
+        I can’t remember my first dream because I don’t remember any dreams before my 17th birthday but I remember last
+        year I had an American dream: a cheese burger turned into a gun and I woke up laughing. My baseline for a bad
+        dream or a nightmare or a night terror is this one time I killed a baby in my dreams and it made me feel like a
+        psychopath or a sociopath or maybe just a sinner but I do not know the difference between the three but I do
+        know that this one night I had a dream that started with this girl I had apparently impregnated and when she had
+        the baby I took a knife and slashed it and killed it and dumped the body and then went on a run from the police
+        for two weeks and when I woke up I felt like it was all true and I felt mortified, humiliated, paranoid, and
+        shocked that something so morbid could come from my mind or like my subconscious or whatever and it wasn’t until
+        many months later when I was on a long drive through the desert with my dad when I put on one of my favorite
+        outlaw country songs called Psycho sung by Eddie Noack and my dad didn’t really like it for some reason and I
+        said dad why don’t you like this song and he said the lyrics are really fucked up, man– and I shrugged and said
+        I don’t listen to music for the lyrics I just like how it sounds, and then when I got home I pulled up the
+        lyrics and laughed hysterically because it is a song about a cowboy who kills his baby and goes on a run from
+        the law and so I must’ve listened to that song right before going to bed that one night. The good thing is that
+        ever since I started taking a medicine called Prazosin all these nightmares stopped but sadly my dreams stopped
+        too but then one day I looked up information about the drug and saw a news article that said it is the most
+        common medicine given to veterans with PTSD to help them with their nightmares but the article said that there
+        is no conclusive evidence that it helps and it actually said that the drug is just a placebo affect and so after
+        I read that article I stopped taking my pill at night and then my nightmares came back and I vividly remember
+        this one morning I woke up confused why I didn’t have a brain tumor because I could’ve sworn that I was dealing
+        with one for months and could remember all the hospital visits and consultations with surgeons etcetera etcetera
+        until I remembered that I stopped taking my Prazosin because that one news site deemed it to be a placebo affect
+        and so jesus fucking christ I thought, I’m never skipping this pill again. And now when I drive through tunnels
+        I don’t hold my breath and I don’t make a wish I just remember those dreams I used to have and wonder what they
+        meant or if they meant anything or if it is just another symptom that can be defined by a disorder in one of the
+        books my psychiatrist uses or cured with a pill or if its a real place in a different world or a different
+        universe that I’ll never visit again or if I do it won’t be in this life time or maybe not even the next. If I
+        did hold my breath and wish for something maybe I would wish I was a farmer or a forester but maybe there’s a
+        reason I’m something else but even if there wasn’t a reason I could easily come up with one.
+
+    </h3>
+    <h4>
+        Quinn Standley (he/him)
+    </h4>
+</body>
+<script>
+    window.addEventListener('scroll', function () {
+        const threshold = 500; // Adjust this value as needed
+        const scrollPosition = window.scrollY || window.pageYOffset;
+        const imageContainer = document.getElementById('imageContainer');
+        const currentImage = document.getElementById('currentImage');
+
+        if (scrollPosition < threshold) {
+            currentImage.src = '';
+        } else if (scrollPosition < 2 * threshold) {
+            currentImage.src = '';
+        } else {
+            currentImage.src = '';
+        }
+
+        // Adjust image container size if needed
+        imageContainer.style.width = currentImage.width + 'px';
+        imageContainer.style.height = currentImage.height + 'px';
+    });
+</script>

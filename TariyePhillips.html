@@ -40,18 +40,29 @@
         font-family: Arial, Helvetica, sans-serif;
         font-size: 25px;
         font-weight: 100;
+        margin-bottom: 48px;
     }
 
     /* bio and text */
     h3 {
         width: 50%;
         position: relative;
-        margin-bottom: 24px;
         color: #000000;
         font-size: 18px;
         font-family: "Nanum Myeongjo", serif;
         font-weight: 100;
         line-height: 24px;
+    }
+
+    h4 {
+        width: 50%;
+        position: relative;
+        margin-top: 48px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 100;
+        color: #9c9c9c;
+        font-size: 16px;
+        line-height: 20px;
     }
 
     button {
@@ -94,6 +105,92 @@
         }
     }
 
+    #imageContainer {
+        position: fixed; 
+        top: 50%; 
+        right: 15%; 
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+
+    #currentImage {
+            width: 300px; 
+            height: 200px;
+        }
+
+    @media screen and (max-width: 700px) {
+            body {
+                margin: 10px;
+                gap: 10px;
+            }
+
+            h1 {
+            font-size: 36px;
+            line-height: 40px;
+            /* Increase line height for better readability */
+            /* text-align: center; */
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            /* Adjust font size for smaller screens */
+            /* text-align: center; */
+            margin-bottom: 20px;
+            margin-top: 0px;
+
+        }
+
+        h3 {
+            width: 95%;
+            /* text-align: justify; */
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        h4 {
+            width: 95%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            /* text-align: justify; */
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        button {
+            position: relative;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back_btn {
+            font-size: 12px; /* Adjust font size for smaller screens */
+        }
+        }
+        
+        .back_btn img {
+            width: 20px; 
+            height: 15px;
+            animation: rotation 6s infinite linear;
+            filter: drop-shadow(0px 0px 8px #fac390);
+        }
+
+        /* #imageContainer {
+            position: fixed; 
+            top: 60%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.5;
+        } */
+
+        /* #currentImage {
+            width: 0px; 
+            height: 0px;
+        } */
+
 </style>
 
 <body>
@@ -105,127 +202,127 @@
     </button>
 
     <h1>In Sleep Her Hair Reached Towards the Sun</h1>
+
     <h2>Tariye George-Phillips</h2>
-    <div id="imageContainer" style="position: fixed; top: 50%; right: 15%; transform: translateY(-50%);">
-        <img id="currentImage" src="./img/jalen-1.jpeg" alt="Current Image"
-            style="width: 300px; height: 200px;">
+
+    <div id="imageContainer">
+        <img id="currentImage" src="./img/Tariye/IMG_6516.jpg" alt="Current Image">
     </div>
+
     <h3>
         [A strong stench of rotting animal carcasses enveloped a thick air, one which not even not even the wind could penetrate; it&rsquo;s stagnant and hot, nearly suffocating. The banging of sledgehammers shoots clouds of dust into the air, adhering to their feeble cotton masks like a thick paste. A deafening, dull ringing inhabited their eardrums, barely granting reprieve through the steady drum of labor. They were trying to clear a road, to not much avail. Each battered bit of concrete exposing a shred of rebar that reflects a blinding ray of sunlight. Their bald heads absorbed the heat, searing their skin into tought, cracked leather, sensitive to the touch. As iron continues to clang against the concrete, a worker spots a strange object. A beveled wooden rod sporting a hooked metal rod from one end, and two from the other. She pick it up, removing the debris that was connected to it, examining its weathered form. ]
     <br><br>
-        Wurqa: What on earth is this?&nbsp;
+        <b>Wurqa: What on earth is this?&nbsp;</b>
     <br><br>
         [She brushed her thumb on the bent metal needle, focusing on gently caressing the edge of the small hook that rounded the tip, and letting it catch her dead skin. It resembles some objects that she&rsquo;s seen before, but in a seemingly unsettling way. A bastardized version. It wasn&rsquo;t meant for cloth. Was it medicinal? Some archaic surgical tool? It looked like it hadn&rsquo;t been used in about a century, mummified in its concrete tomb awaiting to be excavated. She traced her thumb further down the thin metal rod until it met a slender wooden centerpiece. Although weathered by decades of filth, the rounded edges were still smooth, and she could still see the detail of the wood grain. The longer she held the object in her hand, the more she felt a connection to it; as if it placed itself there and called out to her through time to lead her to this union. It possessed an almost spiritual quality that he couldn&rsquo;t quite comprehend but there was a warmth in her hand as she held it that felt like a hug from a distant grandmother she&rsquo;s never met, or pairs of loving hands gently tugging at her scalp. She reached up to touch her head as if something was there. She had been in a trance for so long she had forgotten where she was. A faint voice calling out echoed through her skull, repeating until her attention caught it enough to break the object&rsquo;s hypnosis. She shoved the object in her pocket, looking up and around and over her shoulder, catching eyes with a timid and visibly panicked individual, beckoning her to an imposing six-legged shadow steadily approaching from the path leading back to the compound.]
     <br><br>    
-        Syruf: Get back to work! He&rsquo;s coming!&nbsp;
+        <b>Syruf: Get back to work! He&rsquo;s coming!&nbsp;</b>
     <br><br>    
         [There was a fear in his eyes that was distinct. The impending doom that emanated from this frail man ensured her that this was no time to daydream about relics. She looked at the man, nodded, and resumed swinging her hammer.]
     <br><br>   
-        Syruf: What was that? That thing you were holding?
+        <b>Syruf: What was that? That thing you were holding?</b>
     <br><br>
-        Wurqa: Nothing.
+        <b>Wurqa: Nothing.</b>
     <br><br>
         [Worker&rsquo;s spirituals harmonized the percussion of hammers smashing concrete. Wheelbarrows bounced back and forth, dancing on uneven ground. Voices strained and cracked as oversight encroached, sucking up the air with each step. It somehow got hotter. It was hard to breathe.]
     <br><br>
-        Wurqa: <em>Wipes the beads of salty sweat onto raw, burnt skin.</em>
+        [Wurqa wipes the beads of salty sweat onto raw, burnt skin.]
     <br><br>   
-        Overseer: Not taking a break, are we?&nbsp;
+        <b>Overseer: Not taking a break, are we?&nbsp;</b>
     <br><br>
-        <em>Sitting atop a terrifying beast, he glares downwards towards Wurqa in the most infuriating condescension. It was apparent that he viewed her as no more than an insect; all of them, singular springs and spurs within the most finite sector of their waning empire. His wispy hair reacted dramatically in scarce pockets of air that had managed to escape such a dense atmosphere. It was taunting her, all of them. Reminding them all of what they were robbed of when they were designated these roles from birth. </em>
+        Sitting atop a terrifying beast, he glares downwards towards Wurqa in the most infuriating condescension. It was apparent that he viewed her as no more than an insect; all of them, singular springs and spurs within the most finite sector of their waning empire. His wispy hair reacted dramatically in scarce pockets of air that had managed to escape such a dense atmosphere. It was taunting her, all of them. Reminding them all of what they were robbed of when they were designated these roles from birth. 
     <br><br>
-        Wurqa: Not at all sir.
+        <b>Wurqa: Not at all sir.</b>
     <br><br>
-        Overseer: What were you spending so much time staring at then?
+        <b>Overseer: What were you spending so much time staring at then?</b>
     <br><br>
         [A chill shoots up Wurqa&rsquo;s spine. It&rsquo;s as if time has stopped; she tries not to look around, to seem suspicious. She tries to cough up a response but she's choked by her own tongue. It&rsquo;s tied in a knot. In a final second of clarity she manages to come up with something that may pass as reasonable.]
     <br><br>
-        Wurqa: I thought I managed to come across some valuable ore sir, maybe some copper or something, I tried to check it out in the light but it just ended up being a chipped off, rusty piece of rebar.&nbsp;
+        <b>Wurqa: I thought I managed to come across some valuable ore sir, maybe some copper or something, I tried to check it out in the light but it just ended up being a chipped off, rusty piece of rebar.&nbsp;</b>
     <br><br>
         [A bead of sweat dripped down her flaking skin.]
     <br><br>
-        Overseer: That&rsquo;s why you are here to smash the ground and not appraise the rubble. You&rsquo;re wasting time. <em>Rolling his eyes with a smirk</em>, <em>he turns away dragging the hungry ursine creatures snout away from the pair, in order to address the wider group.</em>
+        <b>Overseer: That&rsquo;s why you are here to smash the ground and not appraise the rubble. You&rsquo;re wasting time.</b> [Rolling his eyes with a smirk, he turns away dragging the hungry ursine creatures snout away from the pair, in order to address the wider group.]
     <br><br>
-        The road must be cleared by dawn. We need to be able to send the caravans to scout for supplies by 8AM. If you fail to complete this task, you will become feed for the Urgora.
+        <b>The road must be cleared by dawn. We need to be able to send the caravans to scout for supplies by 8AM. If you fail to complete this task, you will become feed for the Urgora.</b>
     <br><br>
         [The overseers sneer and ride off back towards the compound. Wurqa, in a sigh of relief, fondles the strange object in her pocket quickly before returning to work. They work in silence, banging echoes until the morning. They struggled to keep themselves up as their limbs vibrated on the long, foot trek home from the worksite. They entered their dingy quarters, riddled with scurrying pests evacuating the sudden burst of dawn&rsquo;s light. As they lay on thin mattress pads, Wurqa holds up the object into the air, continuing to examine its worn wooden curves. &ldquo;What could anyone have possibly used this for?&rdquo; She stroked her head, her skin retracting, tightening her forehead as her sweaty skin sticks to her palm. She couldn&rsquo;t wrap her head around the peculiar thing.]
     <br><br>        
-        Laybra: What&rsquo;s that you got?&nbsp;
+        <b>Laybra: What&rsquo;s that you got?&nbsp;</b>
     <br><br>    
-        Wurqa: Some old mess I found at the site. It&rsquo;s an odd thing. Like one of those needles that the old ladies have in the books, but way smaller. And why does this side have two hooks?
+        <b>Wurqa: Some old mess I found at the site. It&rsquo;s an odd thing. Like one of those needles that the old ladies have in the books, but way smaller. And why does this side have two hooks?</b>
     <br><br>        
-        Laybra: Maybe it was for a finer material, like spider or worm silk.
+        <b>Laybra: Maybe it was for a finer material, like spider or worm silk.</b>
     <br><br>
-        Wurqa: Now why would anybody try to make clothes out of worm silk?&nbsp;
+        Wurqa: Now why would anybody try to make clothes out of worm silk?&nbsp;</b>
     <br><br>
-        Laybra: Maybe it&rsquo;s for rich people?
+        <b>Laybra: Maybe it&rsquo;s for rich people?</b>
     <br><br>
-        Wurqa: What in the hell would rich people want with worm silk? Wouldn&rsquo;t they want something stronger like wool? Something that wouldn&rsquo;t get ripped brushing up against a branch?
+        <b>Wurqa: What in the hell would rich people want with worm silk? Wouldn&rsquo;t they want something stronger like wool? Something that wouldn&rsquo;t get ripped brushing up against a branch?</b>
     <br><br>
-        Laybra: Well you know rich people don&rsquo;t work like that, when was the last time you saw a rich person brush up against a branch?
+        <b>Laybra: Well you know rich people don&rsquo;t work like that, when was the last time you saw a rich person brush up against a branch?</b>
     <br><br>        
-        Wurqa: I don&rsquo;t even remember the last time I&rsquo;ve seen a rich person other than the overseers&hellip;
+        <b>Wurqa: I don&rsquo;t even remember the last time I&rsquo;ve seen a rich person other than the overseers&hellip;</b>
     <br><br>    
-        Laybra: They don&rsquo;t come down from that hill. They couldn&rsquo;t dare be seen mixing with the likes of us.
-    <br><br>       
+        <b>Laybra: They don&rsquo;t come down from that hill. They couldn&rsquo;t dare be seen mixing with the likes of us.</b>      
         [Laybra extends her hand, waving it towards her.]
-    <br><br>  
-        Lemme see that
+        <b>Lemme see that.</b>
     <br><br> 
-        [Wurqa grasps the object tightly for a second, before relinquishing it to Laybra. Laybra examines the object in the few rays of moonlight permeating the decaying wood.]</p>
+        [Wurqa grasps the object tightly for a second, before relinquishing it to Laybra. Laybra examines the object in the few rays of moonlight permeating the decaying wood.]
     <br><br>    
-        Laybra: Maybe they used it to scoop out people&rsquo;s brains.
+        <b>Laybra: Maybe they used it to scoop out people&rsquo;s brains.</b>
     <br><br> 
-        Wurqa: Huh?
+        <b>Wurqa: Huh?</b>
     <br><br>     
-        Laybra: Yeah, you know, like that one ancient civilization that scooped out the people&rsquo;s brains and kept them in animal-headed jars. The Egruptians?
+        <b>Laybra: Yeah, you know, like that one ancient civilization that scooped out the people&rsquo;s brains and kept them in animal-headed jars. The Egruptians?</b>
     <br><br> 
-        Slaag: I think you mean the Injorptians.
+        <b>Slaag: I think you mean the Injorptians.</b>
     <br><br>    
-        Laybra: Mind your business, Slaag.
+        <b>Laybra: Mind your business, Slaag.</b>
     <br><br> 
         [Slaag pouts and turns around, frustrated at his excommunication from such an intriguing conversation. Wurqa and Laybra continue to speculate.]
     <br><br> 
-        Wurqa: What if it was used to suture skin? I feel like it could be sharp enough.
+        <b>Wurqa: What if it was used to suture skin? I feel like it could be sharp enough.</b>
     <br><br> 
-        Laybra: But then what would the other two prongs be for? Maybe it's some sort of parasite extraction tool&hellip;I saw one of the overseers use something that looked like that on one of them beasts they ride on. Maybe it's just a really really old one of those.
+        <b>Laybra: But then what would the other two prongs be for? Maybe it's some sort of parasite extraction tool&hellip;I saw one of the overseers use something that looked like that on one of them beasts they ride on. Maybe it's just a really really old one of those.</b>
     <br><br>
-         Wurqa: Hmm, maybe.
+        <b>Wurqa: Hmm, maybe.</b>
     <br><br> 
-        [They lay on their bed pads, confused. Laybra hands the object back to Wurqa, who rubs her thumb against the splintered groove that felt like it was once perfectly suited for a thumb. As she drifts to sleep, her mind wanders. What a peculiar thing.
-    <br><br>     
-        A fuzzy image of two people emerges through the hypnagogia. As the resolution increases, a young woman can be seen sitting underneath what appears to be her mother. Their faces were still fogged, but there was such a familiar feeling about them. The mother&rsquo;s hands work diligently in the young woman&rsquo;s long, thick, curly hair, sectioning chunks of hair with a toothed tool before rolling it tightly within her palms. She then picked up a peculiar tool; it was blurred out by the surreal speed in which the wielder was working. Soon enough, the rolled hair turned to a solid loc, as she moved on to the rest of the next section. It was mesmerizing.]&nbsp;
-    <br><br> 
-        [A few hours pass, and the workers are crudely awoken, barely given the chance to wipe the crust out of their eyes. They slowly stand up, their legs wobbling in exhaustion from the day before. They weren&rsquo;t granted much rest at all. A slender man stood at the door, his thin but long, greasy black hair absorbing the light as it warmed the door frame around him. He looked in arrogant disgust before spitting phlegm on the floor.]
-    <br><br> 
-        Overseer: As you <em>ALL</em> know, we have a very strict policy regarding findings within work sites. <em>He peers around the room, scanning for any signs of nervousness. </em>All findings must be reported to an overseer immediately.
+        [They lay on their bed pads, confused.  Laybra hands the object back to Wurqa, who rubs her thumb against  the splintered groove that felt like it was once perfectly suited for a thumb.  As she drifts to sleep, her mind wanders.  What a peculiar thing.
+        <br><br>
+        A fuzzy image of two people emerges through the hypnagogia.  As the resolution increases, a young woman can be seen sitting underneath what appears to be her mother.  Their faces were still fogged, but there was such a familiar feeling about them.  The mother&rsquo;s hands work diligently in the young woman&rsquo;s long, thick, curly hair, sectioning chunks of hair with a toothed tool before rolling it tightly within her palms.  She then picked up a peculiar tool; it was blurred out by the surreal speed in which the wielder was working.  Soon enough, the rolled hair turned to a solid loc, as she moved on to the rest of the next section.  It was mesmerizing.] 
+    <br><br>
+        [A few hours pass, and the workers are crudely awoken, barely given the chance to wipe the crust out of their eyes.  They slowly stand up, their legs wobbling in exhaustion from the day before.  They weren&rsquo;t granted much rest at all.  A slender man stood at the door, his thin but long, greasy black hair absorbing the light as it warmed the door frame around him.  He looked in arrogant disgust before spitting phlegm on the floor.] 
+    <br><br>
+        <b>Overseer: As you <em>ALL</em> know, we have a very strict policy regarding findings within work sites.</b> [He peers around the room, scanning for any signs of nervousness. All findings must be reported to an overseer immediately.]
     <br><br> 
         [Wurqa panics internally as she realizes that she is no longer in possession of the strange object. Someone must have swiped it from her in her sleep. But who? She lowered her head and stared at her feet. Her toes curled as her nails splintered the floor. She could feel herself begin to shake but could do nothing to stop it. The overseer points in her direction. She could feel all the eyes in the room fixate on her, but she could not muster up the courage to lift her head.]&nbsp;
     <br><br> 
-        Overseer: You. Step forth.
+        <b>Overseer: You. Step forth.</b>
     <br><br> 
         [The crowd clears a path. Wurqa, head still fixed to the ground, inches forward.]
     <br><br> 
-        Overseer: Quickly!
+        <b>Overseer: Quickly!</b>
     <br><br>     
         [She shuffles forward in a haste.]
     <br><br> 
-        Overseer: And what might this be? <em>Holding the object in front of her</em>
+        <b>Overseer: And what might this be?</b> [Holding the object in front of her]
     <br><br> 
-        Wurqa: I..I have no idea&hellip;
+        <b>Wurqa: I..I have no idea&hellip;</b>
     <br><br> 
-        Overseer: A little birdy told me you had quite a few speculations. Something about an ancient lobotomy tool? I think I&rsquo;d like to test this theory&hellip; <em>He fiddles with the object in his fingers, a devilish grin slithered across his crooked face. His ghostly face cast a sheer cold over the crowd</em>
+        <b>Overseer: A little birdy told me you had quite a few speculations. Something about an ancient lobotomy tool? I think I&rsquo;d like to test this theory&hellip;</b>[He fiddles with the object in his fingers, a devilish grin slithered across his crooked face. His ghostly face cast a sheer cold over the crowd]
     <br><br>
         [Wurqa stood in horror. She glanced at Laybra, who stared back with the same hollow, terrified expression. Wurqa then looked around the room and noticed that Slaag was nowhere to be found.]
     <br><br> 
-        urqa: I&rsquo;m sorry, plea-
+        <b>Wurqa: I&rsquo;m sorry, plea-</b>
     <br><br> 
-        Overseer: Silence. I&rsquo;m no longer interested in you. You hid an item from us, yes. And you will be punished accordingly. Luckily for you, our Excellence likes to keep around those who have keen sight for relics. However you will lose a half week's worth of provisions.&nbsp;
+        <b>Overseer: Silence. I&rsquo;m no longer interested in you. You hid an item from us, yes. And you will be punished accordingly. Luckily for you, our Excellence likes to keep around those who have keen sight for relics. However you will lose a half week's worth of provisions.&nbsp;</b>
     <br><br> 
         [Wurqa sighed in bitter-sweet relief. She would be without food, but maybe Laybra would spare her some. Luckily, she kept her life, whatever that life may continue to be. However, she felt a profound longing. There was something about that strange object that spoke to her history. It spoke to her, and all of the ones who came before her, and although she still didn&rsquo;t quite know what it was for, she knew that it was for <em>her</em>. She could still remember the tugging on her scalp that she felt when she held it, reminding her forever of what she had stolen from her. At the very least, she was granted another day to figure a way into a new life, Where she could grow long hair that reached toward the sun. Somewhere where her lungs breathed a comforting, clean air. Where she could peacefully speculate on the world&rsquo;s past.]
     </h3>
-    <h3 style="color: #9c9c9c; font-size: 16px;  line-height: 20px;">
+    <h4>
         Tariye George-Phillips (he/him) is a painter and designer whose work utilizes worldbuilding and storytelling to examine the surreality of the Black experience, language and its uses, cryptography, and our perceptions of ourselves and others, from the physical to the virtual.  These concepts take form through stories, typefaces, paintings, print, and digital media.  He received his BFA in Painting and Printmaking from Virginia Commonwealth University in 2018, where he is also pursuing his MFA.
-    </h3>
+    </h4>
 </body>
 <script>
     window.addEventListener('scroll', function () {
@@ -235,13 +332,11 @@
         const currentImage = document.getElementById('currentImage');
 
         if (scrollPosition < threshold) {
-            currentImage.src = '/polyphonicshimmering/img/jalen-1.jpeg';
+            currentImage.src = './img/Tariye/IMG_6516.jpg';
         } else if (scrollPosition < 2 * threshold) {
-            currentImage.src = '/polyphonicshimmering/img/jalen-1.jpeg';
-        } else if (scrollPosition < 3 * threshold) {
-            currentImage.src = '/polyphonicshimmering/img/jalen-1.jpeg';
+            currentImage.src = './img/Tariye/IMG_6517.jpg';
         } else {
-            currentImage.src = '/polyphonicshimmering/img/jalen-1.jpeg';
+            currentImage.src = './img/Tariye/IMG_6515.jpg';
         }
 
         // Adjust image container size if needed

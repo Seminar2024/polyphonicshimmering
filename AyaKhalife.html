@@ -1,0 +1,432 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Through Signals and Memory</title>
+    <link rel="icon" href="img/star.gif" type="image/gif" />
+
+</head>
+<style>
+    @import url("https://use.typekit.net/lcz4kdr.css");
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
+    @font-face {
+        font-family: EditorialNew;
+        src: url(ED-R.otf);
+    }
+
+    body {
+        background-color: #eee;
+        display: flex;
+        flex-direction: column;
+        margin: 24px;
+    }
+
+    /* title and name */
+    h1 {
+        width: 90%;
+        position: relative;
+        color: #000000;
+        font-size: 100px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        line-height: 100px;
+    }
+
+    h2 {
+        position: relative;
+        margin-top: -55px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        font-weight: 100;
+        margin-bottom: 48px;
+    }
+
+    /* bio and text */
+    h3 {
+        width: 50%;
+        position: relative;
+        color: #000000;
+        font-size: 18px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 100;
+        line-height: 24px;
+    }
+
+    h3 span {
+        font-weight: 700;
+    }
+
+    #column1 {
+        width: 25%;
+    }
+
+    #column2 {
+        width: 25%;
+        left: 25%;
+    }
+
+    h4 {
+        width: 50%;
+        position: relative;
+        margin-top: 48px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 100;
+        color: #9c9c9c;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    button {
+        background-color: transparent;
+        position: absolute;
+        border: none;
+        cursor: default;
+    }
+
+    button:hover {
+        cursor: pointer;
+        font-style: italic;
+    }
+
+    .back_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        text-transform: uppercase;
+        text-decoration: underline;
+        color: #ff9129;
+    }
+
+    /* Egg rotation above the “about” element @Weitong*/
+    .back_btn img {
+        width: 55px;
+        height: 40px;
+        animation: rotation 6s infinite linear;
+        filter: drop-shadow(0px 0px 8px #fac390);
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    #imageContainer {
+        position: fixed; 
+        top: 50%; 
+        right: 15%; 
+        transform: translateY(-50%);
+        z-index: -1;
+        display: none;
+    }
+
+    #currentImage {
+            width: 300px; 
+            height: 200px;
+        }
+
+    @media screen and (max-width: 600px) {
+        body {
+            margin: 10px;
+            gap: 10px;
+        }
+
+        h1 {
+            font-size: 36px;
+            line-height: 40px;
+            /* Increase line height for better readability */
+            /* text-align: center; */
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            /* Adjust font size for smaller screens */
+            /* text-align: center; */
+            margin-bottom: 20px;
+            margin-top: 0px;
+
+        }
+
+        h3 {
+            width: 95%;
+            /* text-align: justify; */
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        #column1 {
+        width: 70%;
+        }
+
+        #column2 {
+        width: 70%;
+        left: 20%;
+        }
+
+        h4 {
+            width: 95%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            /* text-align: justify; */
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        button {
+            position: relative;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back_btn {
+            font-size: 12px;
+            /* Adjust font size for smaller screens */
+        }
+    }
+
+    .back_btn img {
+        width: 20px;
+        height: 15px;
+        animation: rotation 6s infinite linear;
+        filter: drop-shadow(0px 0px 8px #fac390);
+    }
+
+    /* #imageContainer {
+        display: none;
+    } */
+
+    /* #imageContainer {
+            position: fixed; 
+            top: 60%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #currentImage {
+            z-index: -1;
+            opacity: 0.5;
+        } */
+</style>
+
+<body>
+    <button type="button" onclick="window.location.href = 'index.html';">
+        <div class="back_btn">
+            <img src="img/Web_Egg_Motif_08.png" alt="Rotating Egg">
+            <p>back to index</p>
+        </div>
+    </button>
+
+    <h1>Through Signals and Memory</h1>
+
+    <h2>Aya Khalife</h2>
+
+    <div id="imageContainer">
+        <img id="currentImage" src="" alt="Current Image">
+    </div>
+
+    <h3 id="column1">
+        <span>20.11.2023</span><br>
+        I was on the phone with my mom today.<br><br>
+        She was telling me about what happened the night before. She was laughing.
+        She said it was raining heavily last night when a loud thunderstorm hit. She woke up only to find herself in the
+        middle of the room standing with her arms wrapped around her head screaming, “They’re here. They’re here. It’s
+        happening!”
+    </h3>
+
+    <h3 id="column1">
+        <span>25.02.2024</span><br>
+        I was on the phone with my mom a couple of days ago.<br><br>
+        Her voice did not sound like the perky nature I'm used to
+        hearing. I asked what’s wrong, and she admitted that she had been taking medication on a daily basis. The same
+        small pink pill she gave me the night she and my dad picked me up from the hospital and drove me home in 2020.
+        The same pink pill that is supposed to relax the nerves and heal trauma. “I was able to control my nerves and
+        anxiety more during the war in 2006,” she said, “You were kids, I remember we were hiding in the basement when
+        they were bombing around us. We were playing cards while hearing the loud explosives outside.” She continued,
+        “Do you remember?” “Yes, of course I do,” I answered. “I sometimes wonder, why/how were we so calm back then? I
+        didn’t need the pill then, why do I need it now?” She continued.
+        She had been taking this small pink pill since last monday, the day my hometown got bombed, the day we all
+        realized no one is safe anymore.<br><br>
+        She tried to explain how loud it was. Louder than anything she had ever heard. So loud that she can still hear.
+        Deafening in her ears. “The fire came after”, she said. She recalls it was the biggest fire she had ever seen.
+        It was so close to her aunt’s house, where she was at the time. I called her a few minutes after hearing the
+        news. I called to make sure they were ok. I remember hearing the tremble in her voice, the siren of the
+        ambulance, and the neighbors’ screams in the distance. Sounds that I am very familiar with.
+    </h3>
+
+    <h3 id="column2">
+        <span>26.02.2024</span><br>
+        I’ve been thinking of what happened yesterday all day today. I keep thinking about how her nightmare suddenly
+        became her reality. I wonder if she’s feeling better today. I doubt she is. I know I'm not.
+    </h3>
+
+    <h3 id="column1">
+        <span>27.02.2024</span><br>
+        I was on the phone with my mom today.
+        She was telling me she saw on the news that there was a mass shooting that happened in Ottawa, Canada. 6 people
+        died. She was explaining how she freaked out when she saw the news because that’s where my brother lives. It was
+        1:30 AM his time when she called him, woke him up, and made sure he was okay. She said she felt bad for freaking
+        him out in the middle of the night but she wouldn’t have been able to continue with her day if she didn’t do
+        that. It’s been a full day since she checked on him, yet her heart still pounds heavily every time she thinks
+        about it.
+    </h3>
+
+    <h3 id="column1">
+        <span>07.03.2024</span><br>
+        I was on the phone with my mom while she was telling me what happened earlier today. Apparently she was upstairs
+        when my dad was downstairs in the kitchen. He made a loud bang as he was closing one of the cupboards. The loud
+        sound made her jump to her feet and her heart to beat very fast. It has been 3 hours since it happened. Her
+        heart is still beating fast.
+    </h3>
+
+    <h3 id="column2">
+        <span>26.02.2024</span><br>
+        I’ve been thinking of what happened yesterday all day today. I keep thinking about how her nightmare suddenly
+        became her reality. I wonder if she’s feeling better today. I doubt she is. I know I'm not.
+    </h3>
+
+    <h3 id="column1">
+        <span>27.02.2024</span><br>
+        I was on the phone with my mom today. She was telling me she saw on the news that there was a mass shooting that
+        happened in Ottawa, Canada. 6 people died. She was explaining how she freaked out when she saw the news because
+        that’s where my brother lives. It was 1:30 AM his time when she called him, woke him up, and made sure he was
+        okay. She said she felt bad for freaking him out in the middle of the night but she wouldn’t have been able to
+        continue with her day if she didn’t do that. It’s been a full day since she checked on him, yet her heart still
+        pounds heavily every time she thinks about it.
+    </h3>
+
+    <h3 id="column1">
+        <span>07.03.2024</span><br>
+        I was on the phone with my mom while she was telling me what happened earlier today. Apparently she was upstairs
+        when my dad was downstairs in the kitchen. He made a loud bang as he was closing one of the cupboards. The loud
+        sound made her jump to her feet and her heart to beat very fast. It has been 3 hours since it happened. Her
+        heart is still beating fast.
+    </h3>
+
+    <h3 id="column2">
+        <span>08.03.2024</span><br>
+        I wake up, eyes barely open. I take my phone out and open instagram. Like a mother checking on her children, I
+        quickly go to the @eye.on.south.lebanon page. I check this page every morning to know if i should talk/check on
+        anyone&mdash;family or friends.
+    </h3>
+
+    <h3 id="column2">
+        <span>11.03.2024</span><br>
+        I vividly remember a conversation I had with my khalo a while ago. He’s a couple of years younger than my mom,
+        but I always knew him with gray hair. I asked him about his original hair color, and it took him a while to
+        answer. Either he couldn't remember or he was trying to remember. A few seconds had passed when he finally said,
+        “brown I think”. I then curiously asked when his hair turned gray. He continued telling me the story of when he
+        was still in school during the civil war. They weren’t going to classes for safety purposes, but he had final
+        exams so he had to show up. On his way to school, he saw a car parked by the sidewalk. He was behind the car
+        when he realized there were two people sitting in the front. As he walked closer, he jumped when he saw that the
+        two people were actually killed. It was his first time seeing dead bodies. Later that day, his hair started
+        falling out in the shower. He told me that grandma told him it was a normal behavior his body is going through
+        after what he witnessed. And that was when his hair turned gray.
+    </h3>
+
+    <h3 id="column1">
+        <span>12.03.2024</span><br>
+        I was on the phone with my mom today. She told me that Aline, my cousin, canceled her wedding that was scheduled
+        to happen in July. She and her boyfriend live in Dubai and were excited about celebrating their wedding in
+        Lebanon with family and friends. Mama said they canceled because of the current situation in the south. There
+        were people who were going to travel to be at the wedding, so they didn’t want to risk the situation getting
+        worse.
+    </h3>
+
+    <h3 id="column2">
+        <span>13.03.2024</span><br>
+        I realized I'm the only one who flinches or makes a reaction every time an aircraft passes. It happened today in
+        class, I looked around and no one seemed to mind it, maybe they didn’t even notice it. I wonder if it was even
+        as loud as I thought it was. It might have been only loud in my head.
+    </h3>
+
+    <h3 id="column2">
+        <span>20.03.2024</span><br>
+        We had a free writing exercise to do today. I decided to write about life in 2019. Most days were the same,
+        after class I would head back to my 2 bedroom, 1 bathroom, kitchenette studio-apartment on Abdel Aziz St. On my
+        way, I would run into familiar faces. I stopped and said hi to a couple before putting my headphones on and
+        ignoring the rest of the conversation. Small talk is my ultimate fear. I hate the awkward silence after the “how
+        are you” and the “how has your semester been?” I choose to avoid all that with headphones on, head down and
+        walking fast. I knew it was my fault for choosing to walk on Bliss street – knowing it’s where everyone will be
+        in between classes. I reach Abel Aziz, take my headphones off, put them around my neck and walk towards Raseef,
+        a coffee shop in the small alley across my apartment. I Walk in, say hi to everyone, and ask about their day. I
+        don't mind small talk here, in fact I love it and do it everyday. I sit at the bar and send a quick text on the
+        whatsapp group saying I will be having a drink there and ask if anyone wants to join. I check the clock and
+        order either arak or tea, the usuals depending on the time of the day. If is was too early, I order tea. If it
+        is past lunchtime, I will have arak. I go outside, sit on a table in the shade. I roll a cigarette while waiting
+        for my drink. Minutes later, my friends start walking in. One after the other the porch fills up with common
+        faces and one drink leads to another.
+    </h3>
+
+    <h3 id="column2">
+        <span>21.03.2024</span><br>
+        I couldn’t reach my mom on the phone today. My brother and I decided to call her together at 3pm our time, 9
+        hers. It’s mother’s day today in the Middle East. We called 3 times, no answer. While waiting for her to answer,
+        we chatted a bit. We haven’t been talking much, me and my brother. After the 4th try, we both got worried. We
+        checked with our dad, he said she’s sleeping. But why is she sleeping at 9pm on mother’s day before she talks to
+        any of us?
+    </h3>
+
+    <h3 id="column1">
+        <span>24.03.2024</span><br>
+        I was on the phone with my mom today. She called me early in the morning, my time. She said she wasn’t feeling
+        well last night so she went to bed early. She didn’t want to go into details but she said she’s better today.
+        She asked about classes, I asked about what she made for iftar then we hung up.`
+    </h3>
+
+    <h3 id="column1">
+        <span>25.03.2024</span><br>
+        I was on the phone with my mom today. My brother was on the line too. I like it when the 3 of us are on the line
+        together. My dad is usually in the same room with my mom so when she’s on speaker, it feels like all 4 of us are
+        together. They kept asking me if something was wrong, I kept repeating that I'm fine. I don't know why they kept
+        insisting that I didn't seem fine. We chatted a bit about school, work, life, family and we hung up.
+    </h3>
+
+    <h3 id="column1">
+        <span>28.03.2024</span><br>
+        I was on the phone with my mom today. She asked me about my classes and I asked her what she made for iftar
+        today. She said she made kafta in the oven, tabbouleh, and lentil soup. I then asked her about the situation in
+        Lebanon. She said it was still the same. “Mama, if I'm coming this summer I need to book soon, the tickets are
+        getting really expensive,” I said. “No no don’t book yet, let’s wait to see if things will get better,” she
+        replied. “NO, don't listen to her, book today!!” I heard my dad in the background. They proceeded to argue about
+        my booking and whether it’s safe for me to visit or not. She kept telling me to wait in order to see if the
+        situation is gonna get better while he insists that it’s completely fine for me to come. I said that I was
+        getting another call and I had to hang up. So, I hung up. There wasn’t another call.
+    </h3>
+
+    <h4>
+        Aya Khalife (she/her) is a bilingual designer born in Lebanon. She is interested in the intersection of language
+        across the visual field. Her work explores themes of trauma, offering insights into the complexities of memory
+        and history. She received her BFA in Graphic Deßsign from the American University of Beirut and is currently
+        pursuing her MFA at Virginia Commonwealth University. </h4>
+</body>
+<script>
+    window.addEventListener('scroll', function () {
+        const threshold = 500; // Adjust this value as needed
+        const scrollPosition = window.scrollY || window.pageYOffset;
+        const imageContainer = document.getElementById('imageContainer');
+        const currentImage = document.getElementById('currentImage');
+
+        if (scrollPosition < threshold) {
+            currentImage.src = '';
+        } else if (scrollPosition < 2 * threshold) {
+            currentImage.src = '';
+        } else {
+            currentImage.src = '';
+        }
+
+        // Adjust image container size if needed
+        imageContainer.style.width = currentImage.width + 'px';
+        imageContainer.style.height = currentImage.height + 'px';
+    });
+</script>
