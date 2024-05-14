@@ -25,10 +25,8 @@
 
     /* title and name */
     h1 {
-        height: 14vh;
         width: 90%;
         position: relative;
-        top: 0px;
         color: #000000;
         font-size: 100px;
         font-family: Arial, Helvetica, sans-serif;
@@ -37,17 +35,18 @@
     }
 
     h2 {
-        margin-top: -7px;
+        position: relative;
+        margin-top: -55px;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 25px;
         font-weight: 100;
+        margin-bottom: 48px;
     }
 
     /* bio and text */
     h3 {
         width: 50%;
         position: relative;
-        margin-bottom: 24px;
         color: #000000;
         font-size: 18px;
         font-family: "Nanum Myeongjo", serif;
@@ -57,6 +56,17 @@
     span {
         color: darkred;
     }
+    h4 {
+        width: 50%;
+        position: relative;
+        margin-top: 48px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 100;
+        color: #9c9c9c;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
     button {
         background-color: transparent;
         position: absolute;
@@ -81,7 +91,7 @@
 
     /* Egg rotation above the “about” element @Weitong*/
     .back_btn img {
-        width: 55px;
+        width: 55px; 
         height: 40px;
         animation: rotation 6s infinite linear;
         filter: drop-shadow(0px 0px 8px #fac390);
@@ -96,6 +106,93 @@
             transform: rotate(360deg);
         }
     }
+
+    #imageContainer {
+        position: fixed; 
+        top: 50%; 
+        right: 15%; 
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+
+    #currentImage {
+            width: 300px; 
+            height: 200px;
+        }
+
+    @media screen and (max-width: 700px) {
+            body {
+                margin: 10px;
+                gap: 10px;
+            }
+
+            h1 {
+            font-size: 36px;
+            line-height: 40px;
+            /* Increase line height for better readability */
+            /* text-align: center; */
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            /* Adjust font size for smaller screens */
+            /* text-align: center; */
+            margin-bottom: 20px;
+            margin-top: 0px;
+
+        }
+
+        h3 {
+            width: 95%;
+            /* text-align: justify; */
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        h4 {
+            width: 95%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            /* text-align: justify; */
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        button {
+            position: relative;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back_btn {
+            font-size: 12px; /* Adjust font size for smaller screens */
+        }
+        }
+        
+        .back_btn img {
+            width: 20px; 
+            height: 15px;
+            animation: rotation 6s infinite linear;
+            filter: drop-shadow(0px 0px 8px #fac390);
+        }
+
+        /* #imageContainer {
+            position: fixed; 
+            top: 60%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.5;
+        } */
+
+        /* #currentImage {
+            width: 0px; 
+            height: 0px;
+        } */
+
 </style>
 
 <body>
@@ -108,9 +205,8 @@
 
     <h1>one roll, flip, two roll, 20x35 / Hand in an intimate grid</h1>
     <h2>Rasim Bayramov</h2>
-    <div id="imageContainer" style="position: fixed; top: 50%; right: 15%; transform: translateY(-50%);">
-        <img id="currentImage" src="/polyphonicshimmering/img/rasim-1.jpeg" alt="Current Image"
-            style="width: 300px; height: 200px;">
+    <div id="imageContainer">
+        <img id="currentImage" src="./img/rasim-1.jpeg" alt="Current Image">
     </div>
     <h3>
         Yesterday I found myself with my back hurting and my hands floured and oily. I found myself making pakhlava, a
@@ -268,7 +364,7 @@
         Yesterday, I found
         myself looking for a connection.<br>
     </h3>
-    <h3 style="color: #9c9c9c; font-size: 16px;">
+    <h4>
         Rasim Bayramov (they/them) is a designer born near the Caspian shore in Baku, Azerbaijan. Inviting others to
         connect with the unknown through rituals, their work uses the human body as an interface for a link. A link that
         goes through bodies of nature, objects of use, everyday experiences, technology and memory. An ever changing
@@ -276,7 +372,7 @@
         with collectivity and participation. These ideas find themselves in websites, installations, print, videos,
         performances and sculptures. They received their BSc in Industrial Design from the Middle East Technical
         University and are currently pursuing their MFA degree at Virginia Commonwealth University.
-    </h3>
+    </h4>
 </body>
 <script>
     window.addEventListener('scroll', function () {
@@ -286,13 +382,13 @@
         const currentImage = document.getElementById('currentImage');
 
         if (scrollPosition < threshold) {
-            currentImage.src = '/polyphonicshimmering/img/rasim-1.jpeg';
+            currentImage.src = './img/rasim-1.jpeg';
         } else if (scrollPosition < 2 * threshold) {
-            currentImage.src = '/polyphonicshimmering/img/rasim-2.jpeg';
+            currentImage.src = './img/rasim-2.jpeg';
         } else if (scrollPosition < 3 * threshold) {
-            currentImage.src = '/polyphonicshimmering/img/rasim-3.jpeg';
+            currentImage.src = './img/rasim-3.jpeg';
         } else {
-            currentImage.src = '/polyphonicshimmering/img/rasim-4.jpeg';
+            currentImage.src = './img/rasim-4.jpeg';
         }
 
         // Adjust image container size if needed

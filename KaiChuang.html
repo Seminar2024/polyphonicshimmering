@@ -25,10 +25,8 @@
 
     /* title and name */
     h1 {
-        height: 4vh;
         width: 90%;
         position: relative;
-        top: 0px;
         color: #000000;
         font-size: 100px;
         font-family: Arial, Helvetica, sans-serif;
@@ -37,22 +35,38 @@
     }
 
     h2 {
-        margin-top: -7px;
+        position: relative;
+        margin-top: -55px;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 25px;
         font-weight: 100;
+        margin-bottom: 48px;
     }
 
     /* bio and text */
     h3 {
         width: 50%;
         position: relative;
-        margin-bottom: 24px;
         color: #000000;
         font-size: 18px;
         font-family: "Nanum Myeongjo", serif;
         font-weight: 100;
         line-height: 24px;
+    }
+
+    h3 span {
+        font-weight: 700;
+    }
+
+    h4 {
+        width: 50%;
+        position: relative;
+        margin-top: 48px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 100;
+        color: #9c9c9c;
+        font-size: 16px;
+        line-height: 20px;
     }
 
     button {
@@ -79,7 +93,7 @@
 
     /* Egg rotation above the “about” element @Weitong*/
     .back_btn img {
-        width: 55px;
+        width: 55px; 
         height: 40px;
         animation: rotation 6s infinite linear;
         filter: drop-shadow(0px 0px 8px #fac390);
@@ -94,6 +108,93 @@
             transform: rotate(360deg);
         }
     }
+
+    #imageContainer {
+        position: fixed; 
+        top: 50%; 
+        right: 15%; 
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+
+    #currentImage {
+            width: 300px; 
+            height: 320px;
+        }
+
+    @media screen and (max-width: 700px) {
+            body {
+                margin: 10px;
+                gap: 10px;
+            }
+
+            h1 {
+            font-size: 36px;
+            line-height: 40px;
+            /* Increase line height for better readability */
+            /* text-align: center; */
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            /* Adjust font size for smaller screens */
+            /* text-align: center; */
+            margin-bottom: 20px;
+            margin-top: 0px;
+
+        }
+
+        h3 {
+            width: 95%;
+            /* text-align: justify; */
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        h4 {
+            width: 95%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            /* text-align: justify; */
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        button {
+            position: relative;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back_btn {
+            font-size: 12px; /* Adjust font size for smaller screens */
+        }
+        }
+        
+        .back_btn img {
+            width: 20px; 
+            height: 15px;
+            animation: rotation 6s infinite linear;
+            filter: drop-shadow(0px 0px 8px #fac390);
+        }
+
+        /* #imageContainer {
+            position: fixed; 
+            top: 60%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.5;
+        } */
+
+        /* #currentImage {
+            width: 0px; 
+            height: 0px;
+        } */
+
 </style>
 
 <body>
@@ -106,11 +207,12 @@
 
     <h1>a cursor is a kite is a cursor</h1>
     <h2>Kai Chuang</h2>
-    <div id="imageContainer" style="position: fixed; top: 50%; right: 15%; transform: translateY(-50%);">
-        <img id="currentImage" src="/polyphonicshimmering/img/kai-1.jpeg" alt="Current Image"
-            style="width: 300px; height: 200px;">
+    <div id="imageContainer">
+        <img id="currentImage" src="./img/kai-1.jpeg" alt="Current Image">
     </div>
     <h3>
+        <i>[a cursor is a kite is a cursor]</i>
+        <br><br>
         Make your flight a breeze with these useful tips:
         <br><br>
         Prepare a wide, open area with a smooth surface before starting.<br>
@@ -122,12 +224,11 @@
         Be mindful of changing weather conditions while browsing in the cloud.
         <br><br>
         And always remember to trace your kite's state and reactions—it’s tracing you too.
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <i>a string is a link is a string</i><br>
-        <br>
-        <br>
-        missing kite string? : r/cursor_kite<br>
-        <br>
+        <br><br><br><br>
+        <i>[a string is a link is a string]</i><br>
+        <br><br>
+        <span>missing kite string? : r/cursor_kite</span>
+        <br><br>
         Hi all. I've had this kite for a while now, but I can't seem to find its string anywhere. The kite on my screen
         follows my hand movements, so there must be a string between us. I checked behind my screen, but none of those
         wires seem to link directly to the device in my hand. It says it's wireless. And whether it's wired or not, it
@@ -150,19 +251,13 @@
         string. It&rsquo;s like a promise, like a 'see you soon' from someone special. A line we can hold onto,
         reminding us that we're always connected.<br>
         <br>
-        So, any ideas where my kite string might be hiding?<br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <i>A user is a flyer is a user</i><br>
-        <br>
-        <br>
-        <br>
-        Good morning flyer, how&rsquo;s the ground today?<br>
-        <br>
+        So, any ideas where my kite string might be hiding?
+        <br><br><br><br>
+
+        <i>[A user is a flyer is a user]</i><br>
+        <br><br>
+        Good morning flyer, how&rsquo;s the ground today?
+        <br><br>
         The weather here is alright, much better than yesterday. Occasional strong winds still disrupt the clouds; you
         can see many throbbers spinning on the page. To my surprise, you stay while the content loads, not leaving to
         other windows or incessantly refreshing like usual. You seem to be in a good mood&mdash;I can almost feel your
@@ -217,12 +312,12 @@
         And I hope to fulfill this dream with you.<br>
 
     </h3>
-    <h3 style="color: #9c9c9c; font-size: 16px;">
+    <h4>
         Kai Chuang (they/them) spends so much time on their computer that they've started to see it as a plaything
         rather than a utilitarian tool. They've been playing hide-and-seek and puzzles on their websites, building
         blocks with pixels, taking walks on the keyboard, and flying kites with the cursor. At least they still remember
         how to type. They write when stories find them, ready to be told.
-    </h3>
+    </h4>
 </body>
 <script>
     window.addEventListener('scroll', function () {
@@ -232,13 +327,13 @@
         const currentImage = document.getElementById('currentImage');
 
         if (scrollPosition < threshold) {
-            currentImage.src = '/polyphonicshimmering/img/kai-1.jpeg';
+            currentImage.src = './img/kai-1.jpeg';
         } else if (scrollPosition < 2 * threshold) {
-            currentImage.src = '/polyphonicshimmering/img/kai-1.jpeg';
+            currentImage.src = './img/kai-1.jpeg';
         } else if (scrollPosition < 3 * threshold) {
-            currentImage.src = '/polyphonicshimmering/img/kai-1.jpeg';
+            currentImage.src = './img/kai-1.jpeg';
         } else {
-            currentImage.src = '/polyphonicshimmering/img/kai-1.jpeg';
+            currentImage.src = './img/kai-1.jpeg';
         }
 
         // Adjust image container size if needed

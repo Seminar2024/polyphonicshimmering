@@ -19,31 +19,49 @@
         background-color: #eee;
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        overflow-x: hidden;
+        margin: 24px;
     }
 
+    /* title and name */
     h1 {
-        width: 100%;
+        width: 90%;
         position: relative;
-        left: 24px;
-        right: 24px;
-        top: 0px;
         color: #000000;
         font-size: 100px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 100;
+        line-height: 100px;
     }
 
+    h2 {
+        position: relative;
+        margin-top: -55px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        font-weight: 100;
+        margin-bottom: 48px;
+    }
+
+    /* bio and text */
     h3 {
         width: 50%;
         position: relative;
-        left: 24px;
-        margin-bottom: 48px;
         color: #000000;
         font-size: 18px;
         font-family: "Nanum Myeongjo", serif;
         font-weight: 100;
+        line-height: 24px;
+    }
+
+    h4 {
+        width: 50%;
+        position: relative;
+        margin-top: 48px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 100;
+        color: #9c9c9c;
+        font-size: 16px;
+        line-height: 20px;
     }
 
     button {
@@ -70,7 +88,7 @@
 
     /* Egg rotation above the “about” element @Weitong*/
     .back_btn img {
-        width: 55px;
+        width: 55px; 
         height: 40px;
         animation: rotation 6s infinite linear;
         filter: drop-shadow(0px 0px 8px #fac390);
@@ -85,6 +103,7 @@
             transform: rotate(360deg);
         }
     }
+
     img {
         z-index: -10;
     } 
@@ -105,22 +124,95 @@
         height: auto;
     }
 
+    @media screen and (max-width: 700px) {
+            body {
+                margin: 10px;
+                gap: 10px;
+            }
 
+            h1 {
+            font-size: 36px;
+            line-height: 40px;
+            /* Increase line height for better readability */
+            /* text-align: center; */
+            margin-bottom: 10px;
+        }
 
-    
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            /* Adjust font size for smaller screens */
+            /* text-align: center; */
+            margin-bottom: 20px;
+            margin-top: 0px;
+
+        }
+
+        h3 {
+            width: 95%;
+            /* text-align: justify; */
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        h4 {
+            width: 95%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            /* text-align: justify; */
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        button {
+            position: relative;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back_btn {
+            font-size: 12px; /* Adjust font size for smaller screens */
+        }
+        }
+        
+        .back_btn img {
+            width: 20px; 
+            height: 15px;
+            animation: rotation 6s infinite linear;
+            filter: drop-shadow(0px 0px 8px #fac390);
+        }
+
+        /* #imageContainer {
+            position: fixed; 
+            top: 60%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.5;
+        } */
+
+        /* #currentImage {
+            width: 0px; 
+            height: 0px;
+        } */
+
 
 </style>
 
 <body>
+
     <button type="button" onclick="window.location.href = 'index.html';">
         <div class="back_btn">
             <img src="img/Web_Egg_Motif_08.png" alt="Rotating Egg">
             <p>back to index</p>
         </div>
     </button>
-    <h1>
-        Yuan Xin / <i>Infinitely Noncyclic Chain</i>
-    </h1>
+
+    <h1>Infinitely Noncyclic Chain</h1>
+
+    <h2>Yuan Xin</h2>
+
     <div id="image-container">
         <img class="randImg" class="img1" src="" alt="Random image" />
         <img class="randImg" class="img2" src="" alt="Random image" />
@@ -145,9 +237,9 @@
         <p>So one character creates the conditions for another character to exist, while being influenced by the third. Now, if the first character has a chance to use each other to divert the direction of the story, what would happen to our third character? What if next time, there aren't just three characters?<br>
         </p>
     </h3>
-    <h3 style="color: #9c9c9c; font-size: 16px;">
+    <h4>
         Yuan Xin’s creations span various mediums and themes, from printed materials to immersive 3D videos, exploring the reexamination of memory, dream, female identity and the unseen beyond the surface of the human experience. Her work invites viewers into virtual landscapes, often integrating montage, theatrical environments, and metaphorical concepts into her presentation, or referencing works of Chinese literature. She tracks forms of feeling and communicating hidden behind social constructs and digital cognition, unfolding into sensitive and often somber narratives. 
-    </h3>
+    </h4>
 
 <script>
 

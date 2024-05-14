@@ -19,29 +19,48 @@
         background-color: #eee;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        margin: 24px;
     }
 
     h1 {
-        width: 100%;
+        width: 90%;
         position: relative;
-        left: 24px;
-        top: 0px;
         color: #000000;
         font-size: 100px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 100;
+        line-height: 100px;
     }
 
+    h2 {
+        position: relative;
+        margin-top: -55px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        font-weight: 100;
+        margin-bottom: 48px;
+    }
+
+    /* bio and text */
     h3 {
         width: 50%;
         position: relative;
-        left: 24px;
-        margin-bottom: 48px;
         color: #000000;
         font-size: 18px;
         font-family: "Nanum Myeongjo", serif;
         font-weight: 100;
+        line-height: 24px;
+    }
+
+    h4 {
+        width: 50%;
+        position: relative;
+        margin-top: 48px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 100;
+        color: #9c9c9c;
+        font-size: 16px;
+        line-height: 20px;
     }
 
     button {
@@ -84,21 +103,108 @@
         }
     }
 
-    sup{
-        color:blue;
+    #imageContainer {
+        position: fixed;
+        top: 50%;
+        right: 15%;
+        transform: translateY(-50%);
+        z-index: -1;
     }
-    sup:hover{
-        color:yellow;
+
+    #currentImage {
+        width: 300px;
+        height: 450px;
+    }
+
+    @media screen and (max-width: 700px) {
+        body {
+            margin: 10px;
+            gap: 10px;
+        }
+
+        h1 {
+            font-size: 36px;
+            line-height: 40px;
+            /* Increase line height for better readability */
+            /* text-align: center; */
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            /* Adjust font size for smaller screens */
+            /* text-align: center; */
+            margin-bottom: 20px;
+            margin-top: 0px;
+
+        }
+
+        h3 {
+            width: 95%;
+            /* text-align: justify; */
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        h4 {
+            width: 95%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            /* text-align: justify; */
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        button {
+            position: relative;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back_btn {
+            font-size: 12px;
+            /* Adjust font size for smaller screens */
+        }
+    }
+
+    .back_btn img {
+        width: 20px;
+        height: 15px;
+        animation: rotation 6s infinite linear;
+        filter: drop-shadow(0px 0px 8px #fac390);
+    }
+
+    /* #imageContainer {
+            position: fixed; 
+            top: 60%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.5;
+        } */
+
+    /* #currentImage {
+            width: 0px; 
+            height: 0px;
+        } */
+    sup {
+        color: blue;
+    }
+
+    sup:hover {
+        color: yellow;
         cursor: pointer;
     }
-    abbr{
+
+    abbr {
         font-variant: none;
     }
-    #imageContainer{
+
+    #imageContainer {
         z-index: -1000;
     }
-   
-
 </style>
 
 <body>
@@ -108,97 +214,144 @@
             <p>back to index</p>
         </div>
     </button>
-    <h1>
-        Taehee / <i>Your voice 06:14</i>
-    </h1>
+    <h1>Your voice 06:14</h1>
+
+    <h2>taehee</h2>
+
+    <div id="imageContainer">
+        <img id="currentImage" src="./img/tae.JPG" alt="Current Image">
+    </div>
+
     <h3>
         <p>I check my phone first thing in the morning. (I know, a terrible habit.) <br>
-            The blueish dimly lit white text says 6:14 AM and while I was sleeping a voice texted me from across the world. <br>
+            The blueish dimly lit white text says 6:14 AM and while I was sleeping a voice texted me from across the
+            world. <br>
             It wasn&rsquo;t a dream. <br>
             I feel assured by the voice&rsquo;s morning text.<br>
-            Sometimes I wake up and wonder if all our conversations have just been in my head. In that opaque moment of dawn before her message emerged, I revisit the voice&rsquo;s story of a howling angry child violently kneaded into the image of what the world expected of her without her consent.</p>
-            
-            <p>&ldquo;It seems like you are always working a lot.&rdquo; When the voice pointed this out, I shrugged sheepishly at her observation. I joked that she had caught me red handed, &ldquo;Yeah, I have an issue.&rdquo; I tried to laugh it off but it&rsquo;s not entirely true. I used to have a habit of turning everything I fancy into a project &mdash; something to keep me distracted, or even motivate me to move forward. But I&rsquo;m not the one with the problem. I never gave full consent to work in order to survive. I never even consented to be born. Especially, of all places, into the Capitalist Empire. Yet, I can&rsquo;t give up on this idea that...</p>
-            
-            <p>The voice asked, &ldquo;Are your parents supportive?&rdquo;<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;In what sense?</p>
-            
-            <p>
+            Sometimes I wake up and wonder if all our conversations have just been in my head. In that opaque moment of
+            dawn before her message emerged, I revisit the voice&rsquo;s story of a howling angry child violently
+            kneaded into the image of what the world expected of her without her consent.</p>
+
+        <p>&ldquo;It seems like you are always working a lot.&rdquo; When the voice pointed this out, I shrugged
+            sheepishly at her observation. I joked that she had caught me red handed, &ldquo;Yeah, I have an
+            issue.&rdquo; I tried to laugh it off but it&rsquo;s not entirely true. I used to have a habit of turning
+            everything I fancy into a project &mdash; something to keep me distracted, or even motivate me to move
+            forward. But I&rsquo;m not the one with the problem. I never gave full consent to work in order to survive.
+            I never even consented to be born. Especially, of all places, into the Capitalist Empire. Yet, I can&rsquo;t
+            give up on this idea that...</p>
+
+        <p>The voice asked, &ldquo;Are your parents supportive?&rdquo;<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;In
+            what sense?</p>
+
+        <p>
             Oh, in what sense&#8230;<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ldquo;You&#8230; &emsp;&emsp;&emsp;being&#8230; <br>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;queer&#8230; <br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ldquo;You&#8230;
+            &emsp;&emsp;&emsp;being&#8230; <br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;queer&#8230;
+            <br>
             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;trans&#8230;<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;and everything&#8230;&rdquo;</p>
-            
-            <p>
-            I have a desire to tell my parents who have brought me into this world: &ldquo;You don't have to worry about me. I'm living fine.&rdquo; Then will they finally find peace in knowing that my fierce independence will keep me untouched by the violence of the world? I can&rsquo;t even remember when this belief was planted in me. If I just push myself harder, they will have to accept me. Until then, I can&rsquo;t even afford to have a burnout.</p>
-            
-            <p>There is something I really want.<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;and
+            everything&#8230;&rdquo;</p>
+
+        <p>
+            I have a desire to tell my parents who have brought me into this world: &ldquo;You don't have to worry about
+            me. I'm living fine.&rdquo; Then will they finally find peace in knowing that my fierce independence will
+            keep me untouched by the violence of the world? I can&rsquo;t even remember when this belief was planted in
+            me. If I just push myself harder, they will have to accept me. Until then, I can&rsquo;t even afford to have
+            a burnout.</p>
+
+        <p>There is something I really want.<br>
             There is something I really want to protect.<br>
             There is something I really want to realize.</p>
-            
-            <p>Han Byung Chul, a Korean German philosopher, said the 21st century has become a &ldquo;performance society.&rdquo; We no longer need Foucult&rsquo;s disciplinary society, in which looming punishment through surveillance keeps us as obedient workers. We&rsquo;re now trapped in a performance-driven world, saturated with positivity. Individual will always restlessly surveil themselves to be better. We have become our own institution, entrepreneur, and a subject in a pursuit of &ldquo;happiness.&rdquo; But this high performance of happiness will eventually lead to exhaustion.</p>
-            
-            <p>My therapist once told me that the practice of therapy has been misused to keep ailment at bay in order to maintain the individual as a positive worker. The worker has to come to terms with the system and its injustices. What she told me made me feel less guilty about asking what I want from the world. Like a toddler poking a hole into an ant hill, I began to ask for things as much as I could get away with it. Still, a toddler is a toddler. He can not stop the march of an army alone.</p>
-            
-            <p>&ldquo;Maybe it is time to give up.&rdquo;<br>
-            &ldquo;What do you mean giving up? We can&rsquo;t just leave things like this. It is so irresponsible<sup><abbr title="I’m not a responsible person/worker/top/dom. I just happened to be conditioned as a Korean eldest “daughter.” ">1</abbr></sup>.&rdquo; <br>
+
+        <p>Han Byung Chul, a Korean German philosopher, said the 21st century has become a &ldquo;performance
+            society.&rdquo; We no longer need Foucult&rsquo;s disciplinary society, in which looming punishment through
+            surveillance keeps us as obedient workers. We&rsquo;re now trapped in a performance-driven world, saturated
+            with positivity. Individual will always restlessly surveil themselves to be better. We have become our own
+            institution, entrepreneur, and a subject in a pursuit of &ldquo;happiness.&rdquo; But this high performance
+            of happiness will eventually lead to exhaustion.</p>
+
+        <p>My therapist once told me that the practice of therapy has been misused to keep ailment at bay in order to
+            maintain the individual as a positive worker. The worker has to come to terms with the system and its
+            injustices. What she told me made me feel less guilty about asking what I want from the world. Like a
+            toddler poking a hole into an ant hill, I began to ask for things as much as I could get away with it.
+            Still, a toddler is a toddler. He can not stop the march of an army alone.</p>
+
+        <p>&ldquo;Maybe it is time to give up.&rdquo;<br>
+            &ldquo;What do you mean giving up? We can&rsquo;t just leave things like this. It is so
+            irresponsible<sup><abbr
+                    title="I’m not a responsible person/worker/top/dom. I just happened to be conditioned as a Korean eldest “daughter.” ">1</abbr></sup>.&rdquo;
+            <br>
             &ldquo;Don&rsquo;t you think it is time we admit that we are tired?&rdquo;<br>
             &ldquo;Is it a denial?&rdquo; I asked. <br>
             &ldquo;No, a refusal.&rdquo; I answered back.</p>
-            
-            <p>There are many forms of giving up.<br>
+
+        <p>There are many forms of giving up.<br>
             The voice told me <br>
             of the bodies on the ground blocking the tanks<br>
             &ldquo;There is no true slumber in the world of productive cruelty.&rdquo;<br>
-             <br>
+            <br>
             I know some will burrow into the woods<br>
             Severe any proof of pain<br>
             But devils have ways of uprooting the forest<br>
-            The sadists love blindfolding plays</p>
-            
-            <p>I think of a bratty friend<br>
+            The sadists love blindfolding plays
+        </p>
+
+        <p>I think of a bratty friend<br>
             unafraid to speak her mind<br>
             complaining when things don&rsquo;t add up<br>
             Truly, a phenomenology of brattiness<sup><abbr title="Rabeeha Adnan, 2023">2</abbr></sup></p>
-            
-            <p>Then, there is the migrating animal&rsquo;s bravery<br>
+
+        <p>Then, there is the migrating animal&rsquo;s bravery<br>
             Giving up their seasonal home <br>
             They know <br>
             they will return</p>
-            
-            <p>
+
+        <p>
             ******</p>
-            
-            <p>Last night on a phone call my mom said, &ldquo;Parents are the people who are responsible for registering the birth of a child. And the child, then, is responsible to take care of the aftermath of the parent&rsquo;s death.&rdquo;</p>
-            
-            <p>She has been in a process of organizing her mother&rsquo;s death.</p>
-            
-            <p>I have been grappling with this idea of kinship: the ties that are forged over time with someone based on trust, and love.</p>
-            
-            <p>My mother, the last time I saw her, faintly asked me.<br>
+
+        <p>Last night on a phone call my mom said, &ldquo;Parents are the people who are responsible for registering the
+            birth of a child. And the child, then, is responsible to take care of the aftermath of the parent&rsquo;s
+            death.&rdquo;</p>
+
+        <p>She has been in a process of organizing her mother&rsquo;s death.</p>
+
+        <p>I have been grappling with this idea of kinship: the ties that are forged over time with someone based on
+            trust, and love.</p>
+
+        <p>My mother, the last time I saw her, faintly asked me.<br>
             &ldquo;So you like girls?&rdquo;<br>
-            After my confession from 10 years ago, she finally broke her silence. Her resignation was shrouded by a veil I couldn&rsquo;t read. Can you love someone when you don&rsquo;t understand them at all? If in forming kinship, both consent and labor are extremely entangled in expressing love. Capitalism equates biological ties with sacrificial love without recognizing the labor of loving love that goes into it. I don&rsquo;t understand why biological kinship should take on more importance than other chosen kinship we make. Biological kinship is a haphazard landmine I constantly realize myself in. I don&rsquo;t know what will come up. I never consented to be born. Not on this earth. Not in this way. I was never given a choice. <br>
-            After waiting for my wet heaving to subside the voice said, &ldquo;there is a saying parent child relationship is karmic connection. Both of you are bringing a part of your past life into your current life for the unresolved matter. It&rsquo;s a relationship where you both are destined to learn from each other in this unreasonable world.&rdquo;<br>
+            After my confession from 10 years ago, she finally broke her silence. Her resignation was shrouded by a veil
+            I couldn&rsquo;t read. Can you love someone when you don&rsquo;t understand them at all? If in forming
+            kinship, both consent and labor are extremely entangled in expressing love. Capitalism equates biological
+            ties with sacrificial love without recognizing the labor of loving love that goes into it. I don&rsquo;t
+            understand why biological kinship should take on more importance than other chosen kinship we make.
+            Biological kinship is a haphazard landmine I constantly realize myself in. I don&rsquo;t know what will come
+            up. I never consented to be born. Not on this earth. Not in this way. I was never given a choice. <br>
+            After waiting for my wet heaving to subside the voice said, &ldquo;there is a saying parent child
+            relationship is karmic connection. Both of you are bringing a part of your past life into your current life
+            for the unresolved matter. It&rsquo;s a relationship where you both are destined to learn from each other in
+            this unreasonable world.&rdquo;<br>
             Parents must love their child. It has been long taken for granted. From my parents, what have I learned?<br>
             I asked my mom if she were to be reborn again would she like to be my parent again.<br>
             She answered, &ldquo;I don&rsquo;t know.&rdquo;</p>
-            
-            <p>****<br>
+
+        <p>****<br>
             I&rsquo;ve been waking up to the voice&rsquo;s text this winter. <br>
             &ldquo;I trust that we can navigate this.&rdquo;<br>
             Spring will come and the birds once again will maneuver through the gravitational pull with their flock.<br>
-            </p>
+        </p>
     </h3>
 
-    <h3 style="color: #9c9c9c; font-size: 16px;">
-        Taehee (they/them) is a Korean American transdisciplinary artist whose work explores themes related to the fluidity of kinship, queer body, and grief with sculptural websites. It’s because they believe that love is transdimensional, able to exist in virtual, physical, metaphysical, and even afterlife forms. They are a current MFA in Graphic Design candidate at Virginia Commonwealth University.They have completed their BFA in Painting from the Rhode Island School of Design in 2016. They are a founder of Hyperlink Press (2018-2022) and anti-bone (2023-current). 
-    </h3>
-
-    <div id="imageContainer" style="position: fixed; top: 70%; right: 10%; transform: translateY(-50%);">
-        <img id="currentImage" src="img/tae.JPG" alt="Current Image"
-            style="width: 250px; max-width: 100%; height:auto">
-    </div>
+    <h4>
+        Taehee (they/them) is a Korean American transdisciplinary artist whose work explores themes related to the
+        fluidity of kinship, queer body, and grief with sculptural websites. It’s because they believe that love is
+        transdimensional, able to exist in virtual, physical, metaphysical, and even afterlife forms. They are a current
+        MFA in Graphic Design candidate at Virginia Commonwealth University.They have completed their BFA in Painting
+        from the Rhode Island School of Design in 2016. They are a founder of Hyperlink Press (2018-2022) and anti-bone
+        (2023-current).
+    </h4>
 
 
     <script>
@@ -207,17 +360,17 @@
             const scrollPosition = window.scrollY || window.pageYOffset;
             const imageContainer = document.getElementById('imageContainer');
             const currentImage = document.getElementById('currentImage');
-    
+
             if (scrollPosition < threshold) {
-                currentImage.src='img/tae.JPG';
+                currentImage.src = './img/tae.JPG';
             } else if (scrollPosition < 2 * threshold) {
-                currentImage.src = 'img/tae.JPG';
+                currentImage.src = './img/tae.JPG';
             } else if (scrollPosition < 3 * threshold) {
-                currentImage.src = 'img/tae.JPGg';
+                currentImage.src = './img/tae.JPGg';
             } else {
-                currentImage.src = 'img/tae.JPG';
+                currentImage.src = './img/tae.JPG';
             }
-    
+
             // Adjust image container size if needed
             // imageContainer.style.width = currentImage.width + 'px';
             // imageContainer.style.height = currentImage.height + 'px';

@@ -19,50 +19,49 @@
         background-color: #eee;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        margin: 24px;
     }
 
+    /* title and name */
     h1 {
-        width: 100%;
+        width: 90%;
         position: relative;
-        left: 24px;
-        right: 24px;
-        top: 0px;
         color: #000000;
         font-size: 100px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 100;
+        line-height: 100px;
     }
 
+    h2 {
+        position: relative;
+        margin-top: -55px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        font-weight: 100;
+        margin-bottom: 48px;
+    }
+
+    /* bio and text */
     h3 {
         width: 50%;
         position: relative;
-        left: 24px;
-        margin-bottom: 48px;
         color: #000000;
         font-size: 18px;
         font-family: "Nanum Myeongjo", serif;
         font-weight: 100;
-    }
-    img {
-        z-index: -1000;
-    } 
-
-    #image-container {
-        position: fixed;
-        top:28%;
-        right:12%;
-        width: 50%; /* Make width smaller to ensure it doesn't take too much screen */
-        height: 600px; /* Use viewport height to make it responsive */
-        overflow-y: auto;
+        line-height: 24px;
     }
 
-    #image-container img {
-        position: absolute;
-        display: flex;
-        width: 400px; /* Adjust based on your image size */
-        height: auto;
-        z-index: -1000;
+    h4 {
+        width: 50%;
+        position: relative;
+        margin-top: 48px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 100;
+        color: #9c9c9c;
+        font-size: 16px;
+        line-height: 20px;
     }
 
     button {
@@ -89,7 +88,7 @@
 
     /* Egg rotation above the “about” element @Weitong*/
     .back_btn img {
-        width: 55px;
+        width: 55px; 
         height: 40px;
         animation: rotation 6s infinite linear;
         filter: drop-shadow(0px 0px 8px #fac390);
@@ -104,98 +103,152 @@
             transform: rotate(360deg);
         }
     }
+
+    #imageContainer {
+        position: fixed; 
+        top: 50%; 
+        right: 15%; 
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+
+    #currentImage {
+            width: 300px; 
+            height: 200px;
+        }
+
+    @media screen and (max-width: 700px) {
+            body {
+                margin: 10px;
+                gap: 10px;
+            }
+
+            h1 {
+            font-size: 36px;
+            line-height: 40px;
+            /* Increase line height for better readability */
+            /* text-align: center; */
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            /* Adjust font size for smaller screens */
+            /* text-align: center; */
+            margin-bottom: 20px;
+            margin-top: 0px;
+
+        }
+
+        h3 {
+            width: 95%;
+            /* text-align: justify; */
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        h4 {
+            width: 95%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            /* text-align: justify; */
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        button {
+            position: relative;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back_btn {
+            font-size: 12px; /* Adjust font size for smaller screens */
+        }
+        }
+        
+        .back_btn img {
+            width: 20px; 
+            height: 15px;
+            animation: rotation 6s infinite linear;
+            filter: drop-shadow(0px 0px 8px #fac390);
+        }
+
+        /* #imageContainer {
+            position: fixed; 
+            top: 60%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.5;
+        } */
+
+        /* #currentImage {
+            width: 0px; 
+            height: 0px;
+        } */
 </style>
 
 <body>
+
     <button type="button" onclick="window.location.href = 'index.html';">
         <div class="back_btn">
             <img src="img/Web_Egg_Motif_08.png" alt="Rotating Egg">
             <p>back to index</p>
         </div>
     </button>
-    <h1>
-        Yangyang Zhang / <i>Pink Quilt Sac – My Greenhouse
-        </i>
-    </h1>
+
+    <h1>Pink Quilt Sac – My Greenhouse</h1>
+
+    <h2>Yangyang Zhang</h2>
+
+    <div id="imageContainer">
+        <img id="currentImage" src="./img/yy/1.jpg" alt="Current Image">
+    </div>
+
     <h3>
-        <p>If someone were to ask me what the second hardest thing I have to do besides working towards an MFA&#65292; then I would definitely say it&rsquo;s the daily wake-up call. Getting out of bed may not seem like something that needs to be documented in writing for regular people, but for me, it is. If someone were to ask me what the most comfortable thing in the world is, I would say it's a quilt. My quilt, the greenhouse of my limbs, is a comfort zone I can't leave. If I didn&rsquo;t need to eat, if I didn&rsquo;t need to do my homework, if I didn&rsquo;t need to go out and about. Then I would never leave it, and I would spend 24 hours a day inside it.  </p>
-        <br>
-        <p>07:55 AM: Every morning the first rays of sunlight through the blinds collide with my eyes, hitting me straight in the eyes, my head rubbing against the soft edges of the quilted bag, my limbs curled up in the quilt, and then my alarm starts ..... ... ..... ..... ..... ... My fingers clench tightly to rouse the sleeping blood, sleepy eyes linked to thoughts trying to recall the location where I put my phone before bed, reluctantly revealing an ear and a hand to follow the path of the alarm clock sound, fingers following, looking for the cold hard 6.8-inch screen, by intuition, like fingers in the game, as quickly and decisively straight to the &quot;close the alarm&quot; button to turn off the alarm. My brain feels instant silence, but my body is in the quilted greenhouse repeatedly struggling. Then I feel my tendons and bones stretching, muscles freed from the nerve endings, activated and released followed by a hort period of relaxation.</p>
+        <p>If someone were to ask me what the second hardest thing I have to do besides working towards an MFA&#65292; then I would definitely say it&rsquo;s the daily wake-up call. Getting out of bed may not seem like something that needs to be documented in writing for regular people, but for me, it is. If someone were to ask me what the most comfortable thing in the world is, I would say it's a quilt. My quilt, the greenhouse of my limbs, is a comfort zone I can't leave. If I didn&rsquo;t need to eat, if I didn&rsquo;t need to do my homework, if I didn&rsquo;t need to go out and about. Then I would never leave it, and I would spend 24 hours a day inside it.  07:55 AM: Every morning the first rays of sunlight through the blinds collide with my eyes, hitting me straight in the eyes, my head rubbing against the soft edges of the quilted bag, my limbs curled up in the quilt, and then my alarm starts ..... ... ..... ..... ..... ... My fingers clench tightly to rouse the sleeping blood, sleepy eyes linked to thoughts trying to recall the location where I put my phone before bed, reluctantly revealing an ear and a hand to follow the path of the alarm clock sound, fingers following, looking for the cold hard 6.8-inch screen, by intuition, like fingers in the game, as quickly and decisively straight to the &quot;close the alarm&quot; button to turn off the alarm. My brain feels instant silence, but my body is in the quilted greenhouse repeatedly struggling. Then I feel my tendons and bones stretching, muscles freed from the nerve endings, activated and released followed by a hort period of relaxation.</p>
 
         <p>My brain floats a weak signal:</p>
 
         <p>get up? Get up?  Get up? No? Get up? No? get up?  Get up? Get up? No? Get up?  No? get up? Get up?   Get up? No?  Get up?   No!</p>
 
         <p>Cycling back and forth with only the faintest of intentions, the thoughts become more and more uncontrollable as I slowly begin to return to my dream. My body stops struggling, my forehead retracts back into my blanket, releasing the muscles that have been curled up all night, and I begin to move on to the next sleep.</p>
-        <br>
 
         <p>08:30 AM: The alarm starts again at 8:30, the sunlight leaking through the blinds gradually spreads, pouring onto the pink cotton quilt, my limbs wriggle inside it The airflow inside the cotton quilt gets replaced, in the process my limbs gradually warms from the sunlight's displacement, the fluffy cotton on seems to align with the direction of the light and absorbs the warmth of the morning. I can feel my quilt breathing, my limbs relaxing in the greenhouse, and I know that this is the only time of the day when I can get away from the hustle and bustle and return to my inner peace. The quilt becomes a sanctuary for my limbs, and all worries and stresses are kept out of the greenhouse.</p>
 
         <p>I like to immerse myself in this greenhouse, meditating and absorbing the energy that the sun gives me. The comfort of the blankets and the environment of the room bring me not only physical relaxation, but also spiritual pleasure and fulfillment. I no longer stay in bed because I am sleepy, but because I need a few minutes to myself with the cotton. 08:35 AM: The third alarm sounded less harsh, perhaps because the fibers in the pink bag absorbed the noise, and I was no longer offended by the third alarm, gently turning it off and enjoying the last two minutes before waking up. At this time, my mind became clearer and I realized that the pink quilt was not only a physical space to hold my body, but also a space to heal my soul. I would lie down in the bag and close my eyes, feeling its soft touch and warmth, because its softness was enough to caress my tiredness, and its warmth was enough to banish the outside world's disturbances, and in the greenhouse environment, I could leave all the outside distractions and troubles behind. In this greenhouse-like environment, I can put aside all external distractions and disturbances, and listen to the deepest voice of my heart. My pink quilt allows me to talk to myself again, listen to my inner voice and feel my true self. It gives me the strength and courage to face the challenges and difficulties in life. In the quilt bag, I can release my inner pressure and burden. In my cotton quilt, I reconnect with my inner self and find peace and strength. It is a magical place for me to heal my soul and a source of renewed strength and energy. The quilt, the home of my soul, is always warm, peaceful and healing.</p>
-        <br>
 
         <p>08:37 AM: At 08:37, lifting the quilt and rotating the blinds' shades to release the light of a new day, I leave my bed, where my quilt continues to lazily cover me, absorbing heat to its fullest, waiting for the sun to set and touch me.</p>
     </h3>
-    <h3 style="color: #9c9c9c; font-size: 16px;">
+    <h4>
         Yangyang Zhang(She/her) is a designer whose work records some cultural symbols left behind in the context of the rapid economic development of contemporary China.  She recorded and enjoyed paying attention to these cultural symbols, exploring the reasons behind them, constructing a narrative about contemporary Chinese cultural symbols by creating a special visual atmosphere in a special period in China, and thus started a discussion on consumerism,tradition and political issues.  She is currently majoring in MFA Graphic design in Virginia Commonwealth University(VCUarts).
-    </h3>
-
-    <div id="image-container">
-        <img class="randImg" class="img1" src="" alt="Random image" />
-      
-    </div>
-
-    <script>
-       const images = [
-        'img/yy/1.jpg','img/yy/2.jpg','img/yy/3.jpg','img/yy/4.jpg'
-    ];
-  document.addEventListener('DOMContentLoaded', _ => {
-  [...document.getElementsByClassName('randImg')].forEach(e => {
-    const randImageIndex = ~~(Math.random() * images.length);
-    e.src = images[randImageIndex];
-  }); 
-});
-
-window.onload = function() {
-    const container = document.getElementById('image-container');
-    const images = container.getElementsByTagName('img');
-    const containerWidth = container.clientWidth;
-    const containerHeight = container.clientHeight;
-
-    Array.from(images).forEach(image => {
-        // Calculate half of the container width and adjust the position
-        const halfWidth = containerWidth / 2;
-        const x = halfWidth + Math.random() * (halfWidth - image.clientWidth); // Ensures placement in the right half
-        const y = Math.random() * (containerHeight - image.clientHeight);
-
-        image.style.left = x + 'px';
-        image.style.top = y + 'px';
-    });
-};
-
-document.addEventListener('DOMContentLoaded', function() {
-    const imgContainer = document.getElementById('image-container');
-    const images = [
-        'img/yy/1.jpg','img/yy/2.jpg','img/yy/3.jpg','img/yy/4.jpg'
-    ];
-
-    // Function to refresh images
-    function refreshImages() {
-        const allImages = imgContainer.getElementsByTagName('img');
-        Array.from(allImages).forEach((img, index) => {
-            const newImageIndex = Math.floor(Math.random() * images.length);
-            img.src = images[newImageIndex];
-        });
-    }
-
-    // Add scroll event listener with throttling
-    let timeout;
-    window.addEventListener('scroll', function() {
-        clearTimeout(timeout);
-        timeout = setTimeout(refreshImages, 100);  // Adjust time for performance
-    });
-});
-    </script>
+    </h4>
 
 
 </body>
+
+<script>
+    window.addEventListener('scroll', function () {
+        const threshold = 100; // Adjust this value as needed
+        const scrollPosition = window.scrollY || window.pageYOffset;
+        const imageContainer = document.getElementById('imageContainer');
+        const currentImage = document.getElementById('currentImage');
+
+        if (scrollPosition < threshold) {
+            currentImage.src = './img/yy/1.jpg';
+        } else if (scrollPosition < 2 * threshold) {
+            currentImage.src = './img/yy/2.jpg';
+        } else if (scrollPosition < 3 * threshold) {
+            currentImage.src = './img/yy/3.jpg';
+        } else {
+            currentImage.src = './img/yy/4.jpg';
+        }
+
+        // Adjust image container size if needed
+        imageContainer.style.width = currentImage.width + 'px';
+        imageContainer.style.height = currentImage.height + 'px';
+    });
+</script>
