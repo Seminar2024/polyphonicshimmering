@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>"Notes Toward A Personal Afrofuturis"</title>
+    <link rel="icon" href="img/star.gif" type="image/gif" />
 </head>
 <style>
     @import url("https://use.typekit.net/lcz4kdr.css");
@@ -19,6 +20,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+        margin: 24px;
     }
 
     /* title and name */
@@ -26,11 +28,18 @@
         height: 14vh;
         width: 90%;
         position: relative;
-        left: 24px;
         top: 0px;
         color: #000000;
         font-size: 100px;
         font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        line-height: 100px;
+    }
+
+    h2 {
+        margin-top: -7px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
         font-weight: 100;
     }
 
@@ -38,41 +47,68 @@
     h3 {
         width: 50%;
         position: relative;
-        left: 24px;
-        margin-bottom: 48px;
+        margin-bottom: 24px;
         color: #000000;
         font-size: 18px;
         font-family: "Nanum Myeongjo", serif;
         font-weight: 100;
+        line-height: 24px;
     }
 
     button {
-        background-color: #ddd;
-        position: relative;
-        width: 100px;
-        left: 36px;
-        top: 36px;
-        height: 40px;
-        font-size: 20px;
+        background-color: transparent;
+        position: absolute;
         border: none;
-        border-radius: 8px;
         cursor: default;
     }
 
     button:hover {
-        background-color: #ccc;
         cursor: pointer;
+        font-style: italic;
+    }
+
+    .back_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        text-transform: uppercase;
+        text-decoration: underline;
+        color: #ff9129;
+    }
+
+    /* Egg rotation above the “about” element @Weitong*/
+    .back_btn img {
+        width: 55px;
+        height: 40px;
+        animation: rotation 6s infinite linear;
+        filter: drop-shadow(0px 0px 8px #fac390);
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
     }
 </style>
 
 <body>
-    <button type="button" onclick="history.back()">Go back</button>
-    <h1>
-        Jalen Adams / <i>Notes Toward A Personal Afrofuturis</i>
-    </h1>
+    <button type="button" onclick="window.location.href = 'index.html';">
+        <div class="back_btn">
+            <img src="img/Web_Egg_Motif_08.png" alt="Rotating Egg">
+            <p>back to index</p>
+        </div>
+    </button>
+
+    <h1>Notes Toward A Personal Afrofuturis</h1>
+    <h2>Jalen Adams</h2>
     <div id="imageContainer" style="position: fixed; top: 50%; right: 15%; transform: translateY(-50%);">
         <img id="currentImage" src="/polyphonicshimmering/img/jalen-1.jpeg" alt="Current Image"
-            style="width: 300px; height: 200px;">
+            style="width: 300px; height: 400px;">
     </div>
     <h3>
         2/1/23<br>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polyphonic Shimmering</title>
+    <link rel="icon" href="img/star.gif" type="image/gif" />
 </head>
 <style>
     @import url("https://use.typekit.net/lcz4kdr.css");
@@ -15,61 +16,108 @@
     }
 
     body {
+        width: 100vw;
+        height: 100vh;
         background-color: #404040;
-        margin: 24px;
-        overflow: hidden;
+        margin: 1vw;
+        overflow-x: hidden;
+        display: flex;
+        align-content: stretch;
+        flex-wrap: nowrap;
+    }
+
+    .main {
+        display: flex;
+        flex-flow: row wrap;
+
+        gap: 2vw;
+    }
+
+    .left {
+        display: flex;
+        flex-flow: column;
+        max-width: 1100px;
+        gap: 2vw;
     }
 
     #header {
-        position: absolute;
-        width: 500px;
-        height: 300px;
-        /* margin-left: 24px; */
-        /* margin-top: 24px; */
-        /* display: flex; */
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: stretch;
+        align-content: stretch;
+        flex-basis: auto;
+        align-self: auto;
+        max-height: 600px;
     }
 
     .h1shimmer {
         --x: 50%;
         --y: 50%;
         --width: 70%;
-        background: radial-gradient(var(--width) 100% at var(--x) var(--y), #fff2e4 30%, hsla(0, 0%, 100%, 0.396) 100%);
+        background: radial-gradient(var(--width) 100% at var(--x) var(--y), #fff2e4 30%, hsla(0, 0%, 100%, 0.157) 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-size: 108px;
+        font-size: 220px;
         font-family: EditorialNew;
-        line-height: 115px;
-        position: absolute;
+        font-weight: 100;
+        line-height: 258px;
+        position: relative;
         margin-top: 24px;
         z-index: 1;
     }
 
-    .right {
+    .about {
+        position: relative;
+    }
+
+    .egg {
         position: absolute;
-        right: 24px;
-        top: 50px;
-        width: 600px;
-        height: 100vh;
+        left: 900px;
+        opacity: 0.7;
+        transform: translate(0,-80%);
+    }
+
+    /* Egg rotation above the “about” element @Weitong*/
+    img {
+        width: 125px;
+        height: 140px;
+        animation: rotation 6s infinite linear;
+        filter: drop-shadow(0px 0px 8px #fac390);
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
     }
 
     h2 {
-        /* position: absolute; */
-        /* margin-top:0px; */
-        overflow: hidden;
+        position: relative;
         color: #a2a2a2;
-        font-size: 16px;
+        font-size: 24px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 100;
-        line-height: 22px;
+        line-height: 28px;
         text-align: justify;
+        align-self: stretch;
+    }
+
+    .right {
+        top: 40px;
+        width: 30vw;
+        min-width: 15vw;
+        z-index: 2;
     }
 
     .list {
         position: absolute;
         margin-top: 24px;
-        left: 50%;
-        transform: translate(-50%,0);
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -79,8 +127,7 @@
 
     /* Change name to title on hover @Weitong */
     .list span {
-        /* color: #c6c6c6; */
-        font-size: 24px;
+        font-size: 48px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 100;
     }
@@ -96,27 +143,24 @@
     }
 
     .list-item {
-        /* color: #c6c6c6; */
-        width: 600px;
-        font-size: 24px;
+        font-size: 48px;
         font-family: Arial, Helvetica, sans-serif;
     }
 
     .list-item a:hover:before {
-        text-shadow: 0 0 15px #f5a963;        
+        text-shadow: 0 0 15px #f5a963;
         /* color: #f5a963; */
     }
 
     #list-item0 {
-        /* margin-bottom: 96px; */
-        font-size: 16px;
+        font-size: 24px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 100;
     }
 
     #list-item0 span {
         color: #a2a2a2;
-        font-size: 16px;
+        font-size: 24px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 100;
     }
@@ -178,16 +222,16 @@
     /* glitter animation under Header @Rasim*/
     .glitter {
         position: absolute;
-        width: 100%;
+        width: 100vw;
         /* margin: 0; */
-        height: 100%;
+        height: 100vh;
         z-index: 1;
     }
 
     .dot {
         position: absolute;
-        width: 5px;
-        height: 5px;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
         background-color: transparent;
         animation: glitterAnimation 1s linear infinite;
@@ -210,75 +254,117 @@
         }
     }
 
-    .egg {
-        position: fixed;
-        right: 70px;
-        top: 330px;
-        opacity: 0.7;
-    }
+    @media screen and (max-width: 600px) {
+            body {
+                flex-direction: column;
+                margin: 10px;
+            }
 
+            .left {
+            width: 95%;
+            }
+
+            .h1shimmer {
+            font-size: 60px;
+            line-height: 68px;
+            }
+
+            .egg {
+            position: absolute;
+            left: 70%;
+            bottom: 0%; 
+            opacity: 0.7;
+            transform: translate(0,100%);
+            }
 
     /* Egg rotation above the “about” element @Weitong*/
-    img {
-        width: 125px; 
-        height: 140px;
-        animation: rotation 6s infinite linear;
-        filter: drop-shadow(0px 0px 8px #fac390);
+            img {
+            width: 100px;
+            height: 70px;
+            animation: rotation 6s infinite linear;
+            filter: drop-shadow(0px 0px 8px #fac390);
+            }
+
+            h2 {
+            width: 100%;    
+            margin-top: 0;
+            font-size: 16px;
+            line-height: 22px;
+            }
+
+            .right {
+                width: 100%; /* Occupy full width */
+            }
+
+            .list {
+                margin-top: 20px; /* Remove top margin */
+                padding-bottom: 30px;
+            }
+
+            /* Adjust font sizes */
+            .list span,
+            .list-item {
+                font-size: 24px;
+            }
+
+            .dot {
+            width: 5px;
+            height: 5px;
     }
 
-    @keyframes rotation {
-        from {
-            transform: rotate(0deg);
         }
-
-        to {
-            transform: rotate(360deg);
-        }
-    }
 </style>
 
 <body>
-    <div id="header">
-        <h1 class="h1shimmer" style="width: auto;">Polyphonic<br>Shimmering</h1>
-        <div class="glitter"></div>
-    </div>
 
-    <div class="right">
-    
-    <h2><i>Polyphonic Shimmering</i> was authored, edited, and designed by the participants of a seminar led by Meg Miller 
-        in VCU's School of the Arts in spring, 2024. They are Jalen Adams, Rasim Bayramov, Kai Chuang, Molly Garrett, Tariye George-Phillips, Aya Khalife, Bradley Sinanan,
-        Quinn Standley, Weitong Sun, Taehee, Yuan Xin, and Yangyang Zhang. All of their pieces are richly
-        rendered, beautifully described; their research and experience gives depth and fascinating texture. These pieces
-        shimmer and hum, they play with duration and pacing and expand language beyond its conventional encasements.
-        They allow us to see what they see, in ways both visual and textual, but mostly through language that blurs the
-        distinction between the two. </h2>
+    <section class="main">
 
+    <section class="left">
+        <div id="header">
+            <h1 class="h1shimmer" style="width: auto;">Polyphonic<br>Shimmering</h1>
+            <div class="glitter"></div>
+        </div>
 
+        <div class="about">
+            <div class="egg">
+                <img src="img/Web_Egg_Motif_08.png" alt="Rotating Egg">
+            </div>
+            <h2><i>Polyphonic Shimmering</i> was authored, edited, and designed by the participants of a seminar led by Meg Miller
+                in VCU's School of the Arts in spring, 2024. They are Jalen Adams, Rasim Bayramov, Kai Chuang, Molly
+                Garrett, Tariye George-Phillips, Aya Khalife, Bradley Sinanan,
+                Quinn Standley, Weitong Sun, Taehee, Yuan Xin, and Yangyang Zhang. All of their pieces are richly
+                rendered, beautifully described; their research and experience gives depth and fascinating texture. These
+                pieces
+                shimmer and hum, they play with duration and pacing and expand language beyond its conventional encasements.
+                They allow us to see what they see, in ways both visual and textual, but mostly through language that blurs
+                the
+                distinction between the two.
+            </h2>
+        </div>
+        
+    </section>
 
-    <!-- TODO: change the URL to their individual page-->
-    <div class="list">
-        <div class="list-item" id="list-item0"><a href="about.html"><span>Intro by Meg Miller</span></a></div>
-        <span>&#10036;</span>
-        <div class="list-item" id="list-item1"><a href="JalenAdams.html"><span>Jalen Adams</span></a></div>
-        <div class="list-item" id="list-item2"><a href="RasimBayramov.html"><span>Rasim Bayramov</span></a></div>
-        <div class="list-item" id="list-item3"><a href="KaiChuang.html"><span>Kai Chuang</span></a></div>
-        <div class="list-item" id="list-item4"><a href="MollyGarrett.html"><span>Molly Garrett</span></a></div>
-        <div class="list-item" id="list-item5"><a href="TariyePhillips"><span>Tariye George-Phillips</span></a></div>
-        <div class="list-item" id="list-item6"><a href="AyaKhalife"><span>Aya Khalife</span></a> </div>
-        <div class="list-item" id="list-item7"><a href="BradleySinanan"><span>Bradley Sinanan</span></a></div>
-        <div class="list-item" id="list-item8"><a href="QuinnStandley.html"><span>Quinn Standley</span></a></div>
-        <div class="list-item" id="list-item9"><a href="WeitongSun.html"><span>Weitong Sun</span></a></div>
-        <div class="list-item" id="list-item10"><a href="Taehee.html"><span>Taehee</span></a></div>
-        <div class="list-item" id="list-item11"><a href="YuanXin.html"><span>Yuan Xin</span></a></div>
-        <div class="list-item" id="list-item12"><a href="YangyangZhang.html"><span>Yangyang Zhang</span></a></div>
-    </div>
-    </div>
+    <section class="right">
+        <!-- TODO: change the URL to their individual page-->
+        <div class="list">
+            <div class="list-item" id="list-item0"><a href="about.html"><span>Intro by Meg Miller</span></a></div>
+            <span>&#10036;</span>
+            <div class="list-item" id="list-item1"><a href="JalenAdams.html"><span>Jalen Adams</span></a></div>
+            <div class="list-item" id="list-item2"><a href="RasimBayramov.html"><span>Rasim Bayramov</span></a></div>
+            <div class="list-item" id="list-item3"><a href="KaiChuang.html"><span>Kai Chuang</span></a></div>
+            <div class="list-item" id="list-item4"><a href="MollyGarrett.html"><span>Molly Garrett</span></a></div>
+            <div class="list-item" id="list-item5"><a href="TariyePhillips.html"><span>Tariye George-Phillips</span></a></div>
+            <div class="list-item" id="list-item6"><a href="AyaKhalife.html"><span>Aya Khalife</span></a> </div>
+            <div class="list-item" id="list-item7"><a href="BradleySinanan.html"><span>Bradley Sinanan</span></a></div>
+            <div class="list-item" id="list-item8"><a href="QuinnStandley.html"><span>Quinn Standley</span></a></div>
+            <div class="list-item" id="list-item9"><a href="WeitongSun.html"><span>Weitong Sun</span></a></div>
+            <div class="list-item" id="list-item10"><a href="Taehee.html"><span>Taehee</span></a></div>
+            <div class="list-item" id="list-item11"><a href="YuanXin.html"><span>Yuan Xin</span></a></div>
+            <div class="list-item" id="list-item12"><a href="YangyangZhang.html"><span>Yangyang Zhang</span></a></div>
+        </div>
+    </section>
 
-    <div class="egg">
-        <img src="img/Web_Egg_Motif_08.png" alt="Rotating Egg">
-    </div>
-
-
+    </section>
 
 
     <script>
@@ -286,8 +372,15 @@
             const dot = document.createElement('div');
             dot.classList.add('dot');
             dot.style.backgroundColor = getRandomColor();
-            dot.style.left = `${getRandomNumber(0, 500)}px`;
-            dot.style.top = `${getRandomNumber(0, 300)}px`;
+            
+            if (window.innerWidth > 600) {
+            dot.style.left = `${getRandomNumber(0, 1000)}px`; // For desktop
+            dot.style.top = `${getRandomNumber(0, 500)}px`; // For desktop
+            } else {
+            dot.style.left = `${getRandomNumber(0, window.innerWidth)}px`; // For smaller screens
+            dot.style.top = `${getRandomNumber(0, 200)}px`; // For smaller screens
+            }
+
             dot.style.animationDuration = `${getRandomNumber(1, 3)}s`;
 
             const glitterContainer = document.querySelector('.glitter');
