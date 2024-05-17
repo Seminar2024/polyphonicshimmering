@@ -19,39 +19,49 @@
         background-color: #eee;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        margin: 24px;
     }
 
+    /* title and name */
     h1 {
-        width: 100%;
+        width: 90%;
         position: relative;
-        left: 24px;
-        top: 0px;
         color: #000000;
         font-size: 100px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 100;
+        line-height: 100px;
     }
 
+    h2 {
+        position: relative;
+        margin-top: -55px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        font-weight: 100;
+        margin-bottom: 48px;
+    }
+
+    /* bio and text */
     h3 {
         width: 50%;
         position: relative;
-        left: 24px;
-        margin-bottom: 48px;
         color: #000000;
         font-size: 18px;
         font-family: "Nanum Myeongjo", serif;
         font-weight: 100;
+        line-height: 24px;
     }
-    h2 {
+
+    h4 {
         width: 50%;
         position: relative;
-        left: 24px;
-        margin-bottom: 48px;
-        color: #000000;
-        font-size: 18px;
+        margin-top: 48px;
         font-family: "Nanum Myeongjo", serif;
         font-weight: 100;
+        color: #9c9c9c;
+        font-size: 16px;
+        line-height: 20px;
     }
 
     button {
@@ -78,7 +88,7 @@
 
     /* Egg rotation above the “about” element @Weitong*/
     .back_btn img {
-        width: 55px;
+        width: 55px; 
         height: 40px;
         animation: rotation 6s infinite linear;
         filter: drop-shadow(0px 0px 8px #fac390);
@@ -93,6 +103,87 @@
             transform: rotate(360deg);
         }
     }
+
+    img {
+        z-index: -10;
+    } 
+
+    #image-container {
+        position: fixed;
+        top:28%;
+        right:15%;
+        width: 50%; /* Make width smaller to ensure it doesn't take too much screen */
+        height: 600px; /* Use viewport height to make it responsive */
+        overflow-y: auto;
+    }
+
+    #image-container img {
+        position: absolute;
+        display: flex;
+        width: 100px; /* Adjust based on your image size */
+        height: auto;
+    }
+
+    @media screen and (max-width: 700px) {
+            body {
+                margin: 10px;
+                gap: 10px;
+            }
+
+            h1 {
+            font-size: 36px;
+            line-height: 40px;
+            /* Increase line height for better readability */
+            /* text-align: center; */
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            /* Adjust font size for smaller screens */
+            /* text-align: center; */
+            margin-bottom: 20px;
+            margin-top: 0px;
+
+        }
+
+        h3 {
+            width: 95%;
+            /* text-align: justify; */
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        h4 {
+            width: 95%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            /* text-align: justify; */
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        button {
+            position: relative;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back_btn {
+            font-size: 12px; /* Adjust font size for smaller screens */
+        }
+        }
+        
+        .back_btn img {
+            width: 20px; 
+            height: 15px;
+            animation: rotation 6s infinite linear;
+            filter: drop-shadow(0px 0px 8px #fac390);
+        }
+
+    
 
     img{
         max-width: 20%;
@@ -268,9 +359,9 @@
     <div><img src="img/wt/6.JPG"> </div>
     
 </h3>
-<h3 style="color: #9c9c9c; font-size: 16px;">
+<h4>
     Stories, once created, will never end. Same as the tales of the digital world. Weitong “ShanMu” Sun (born in Jinan, China) is an experimental artist who explores artificial intelligence, the methodology of programming languages, and its influence on our sense of history and time. Her practice provokes a conversation between the beholder and the work itself.
-</h3>
+</h4>
 
 <script>
     const images=['img/wt/1.JPG','img/wt/2.PNG','img/wt/3.jpeg','img/wt/5.JPG','img/wt/6.JPG']
