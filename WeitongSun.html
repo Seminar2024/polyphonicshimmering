@@ -19,49 +19,39 @@
         background-color: #eee;
         display: flex;
         flex-direction: column;
-        margin: 24px;
+        gap: 10px;
     }
 
-    /* title and name */
     h1 {
-        width: 90%;
+        width: 100%;
         position: relative;
+        left: 24px;
+        top: 0px;
         color: #000000;
         font-size: 100px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 100;
-        line-height: 100px;
     }
 
-    h2 {
-        position: relative;
-        margin-top: -55px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 25px;
-        font-weight: 100;
-        margin-bottom: 48px;
-    }
-
-    /* bio and text */
     h3 {
         width: 50%;
         position: relative;
+        left: 24px;
+        margin-bottom: 48px;
         color: #000000;
         font-size: 18px;
         font-family: "Nanum Myeongjo", serif;
         font-weight: 100;
-        line-height: 24px;
     }
-
-    h4 {
+    h2 {
         width: 50%;
         position: relative;
-        margin-top: 48px;
+        left: 24px;
+        margin-bottom: 48px;
+        color: #000000;
+        font-size: 18px;
         font-family: "Nanum Myeongjo", serif;
         font-weight: 100;
-        color: #9c9c9c;
-        font-size: 16px;
-        line-height: 20px;
     }
 
     button {
@@ -88,7 +78,7 @@
 
     /* Egg rotation above the “about” element @Weitong*/
     .back_btn img {
-        width: 55px; 
+        width: 55px;
         height: 40px;
         animation: rotation 6s infinite linear;
         filter: drop-shadow(0px 0px 8px #fac390);
@@ -104,111 +94,44 @@
         }
     }
 
-    #imageContainer {
-        position: fixed; 
-        top: 50%; 
-        right: 15%; 
-        transform: translateY(-50%);
-        z-index: -1;
-        display: none;
+    img{
+        max-width: 20%;
+    }
+    #image-container {
+        position: fixed;
+        top:28%;
+        right:15%;
+        width: 50%; /* Make width smaller to ensure it doesn't take too much screen */
+        height: 600px; /* Use viewport height to make it responsive */
+        overflow-y: auto;
     }
 
-    #currentImage {
-            width: 300px; 
-            height: 200px;
-        }
+    #image-container img {
+        position: absolute;
+        display: flex;
+        width: 100px; /* Adjust based on your image size */
+        height: auto;
+    }
 
-    @media screen and (max-width: 700px) {
-            body {
-                margin: 10px;
-                gap: 10px;
-            }
-
-            h1 {
-            font-size: 36px;
-            line-height: 40px;
-            /* Increase line height for better readability */
-            /* text-align: center; */
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 18px;
-            /* Adjust font size for smaller screens */
-            /* text-align: center; */
-            margin-bottom: 20px;
-            margin-top: 0px;
-
-        }
-
-        h3 {
-            width: 95%;
-            /* text-align: justify; */
-            font-size: 16px;
-            line-height: 20px;
-        }
-
-        h4 {
-            width: 95%;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            /* text-align: justify; */
-            font-size: 14px;
-            line-height: 18px;
-        }
-
-        button {
-            position: relative;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-        }
-
-        .back_btn {
-            font-size: 12px; /* Adjust font size for smaller screens */
-        }
-        }
-        
-        .back_btn img {
-            width: 20px; 
-            height: 15px;
-            animation: rotation 6s infinite linear;
-            filter: drop-shadow(0px 0px 8px #fac390);
-        }
-
-        /* #imageContainer {
-            position: fixed; 
-            top: 60%; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0.5;
-        } */
-
-        /* #currentImage {
-            width: 0px; 
-            height: 0px;
-        } */
 </style>
 
 <body>
-
     <button type="button" onclick="window.location.href = 'index.html';">
         <div class="back_btn">
             <img src="img/Web_Egg_Motif_08.png" alt="Rotating Egg">
             <p>back to index</p>
         </div>
     </button>
-
-    <h1>Earth's Rotation Vertigo</h1>
-
-    <h2>Weitong Sun</h2>
-
-    <div id="imageContainer">
-        <img id="currentImage" src="" alt="Current Image">
+    <div id="image-container">
+        <img class="randImg" class="img1" src="" alt="Random image" />
+        <img class="randImg" class="img2" src="" alt="Random image" />
+        <img class="randImg" class="img3" src="" alt="Random image" />
+        <img class="randImg" class="img4" src="" alt="Random image" />
+        <img class="randImg" class="img5" src="" alt="Random image" />
     </div>
-
+    <h1>
+        Weitong Sun / <i>Earth's Rotation Vertigo</i>
+    </h1>
     <h3>
     <p>In the eyes of the unseen reality, I&rsquo;m lost in the reflection's enchantment. Today, the weather is clear. Daytime temperatures range from fourteen to twenty-four degrees Celsius. Springs converge into a lake. Following the river, I enter a flowing room &ndash; walls shimmering with ripples and fish swimming along the ceiling. I drop my backpack andshed my scales. I let water molecules penetrate my ears, fog my eyes, and fill my mouth and nose.</p>
 
@@ -216,7 +139,8 @@
     <br>
 
 
-    <p>1.</p>
+    <p>1.</p> 
+    <div><img src="img/wt/1.JPG"> </div>
 
     <p>March, April, May <br>
     The night shrinks<br>
@@ -233,8 +157,10 @@
 
     <p>Opening my eyes<br>
     I am a patient with vertigo, unable to get up</p>
+    
     <br>
     <p>2.</p>
+    <div><img src="img/wt/2.PNG"> </div>
     <p>
         Rotation in all directions<br>
         Inverts space<br>
@@ -251,8 +177,10 @@
         Counting the seconds<br>
         Faithfully waiting for the rotation to end<br>
         </p>
+        
     <br>
     <p>3.</p>
+    
     <p>3,2,1&#8230;<br>
         3,2,1&#8230;<br>
         3,2,1&#8230;<br>
@@ -290,6 +218,8 @@
         
         <p>&#8230;&#8230;<br>
         </p>
+        <div><img src="img/wt/3.jpeg"> </div>
+        
 
     <br>
     <p>4.</p>
@@ -312,6 +242,7 @@
     </p>
     <br>
     <p>5.</p>
+    <div><img src="img/wt/5.JPG"> </div>
     <p>Geckos climbs the cliffs<br>
         Gravity devours the candlelight<br>
         Smoke embeds into the walls<br>
@@ -323,8 +254,10 @@
         Harmonious<br>
         They take pride<br>
         In my withering</p>
+        
     <br>
     <p>6.</p>
+    
     <p>The loneliness I know <br>
         Is a fish stranded in a reef <br>
         The loneliness I know <br>
@@ -332,30 +265,60 @@
         I cherish the moment the shutter is pressed <br>
         I am frozen in another world <br>
     </p>
+    <div><img src="img/wt/6.JPG"> </div>
+    
 </h3>
-<h4>
+<h3 style="color: #9c9c9c; font-size: 16px;">
     Stories, once created, will never end. Same as the tales of the digital world. Weitong “ShanMu” Sun (born in Jinan, China) is an experimental artist who explores artificial intelligence, the methodology of programming languages, and its influence on our sense of history and time. Her practice provokes a conversation between the beholder and the work itself.
-</h4>
-
-</body>
+</h3>
 
 <script>
-    window.addEventListener('scroll', function () {
-        const threshold = 500; // Adjust this value as needed
-        const scrollPosition = window.scrollY || window.pageYOffset;
-        const imageContainer = document.getElementById('imageContainer');
-        const currentImage = document.getElementById('currentImage');
+    const images=['img/wt/1.JPG','img/wt/2.PNG','img/wt/3.jpeg','img/wt/5.JPG','img/wt/6.JPG']
+  document.addEventListener('DOMContentLoaded', _ => {
+  [...document.getElementsByClassName('randImg')].forEach(e => {
+    const randImageIndex = ~~(Math.random() * images.length);
+    e.src = images[randImageIndex];
+  }); 
+});
 
-        if (scrollPosition < threshold) {
-            currentImage.src = '';
-        } else if (scrollPosition < 2 * threshold) {
-            currentImage.src = '';
-        } else {
-            currentImage.src = '';
-        }
+window.onload = function() {
+    const container = document.getElementById('image-container');
+    const images = container.getElementsByTagName('img');
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
 
-        // Adjust image container size if needed
-        imageContainer.style.width = currentImage.width + 'px';
-        imageContainer.style.height = currentImage.height + 'px';
+    Array.from(images).forEach(image => {
+        // Calculate half of the container width and adjust the position
+        const halfWidth = containerWidth / 2;
+        const x = halfWidth + Math.random() * (halfWidth - image.clientWidth); // Ensures placement in the right half
+        const y = Math.random() * (containerHeight - image.clientHeight);
+
+        image.style.left = x + 'px';
+        image.style.top = y + 'px';
     });
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    const imgContainer = document.getElementById('image-container');
+    const images = ['img/wt/1.JPG','img/wt/2.PNG','img/wt/3.jpeg','img/wt/5.JPG','img/wt/6.JPG'];
+
+    // Function to refresh images
+    function refreshImages() {
+        const allImages = imgContainer.getElementsByTagName('img');
+        Array.from(allImages).forEach((img, index) => {
+            const newImageIndex = Math.floor(Math.random() * images.length);
+            img.src = images[newImageIndex];
+        });
+    }
+
+    // Add scroll event listener with throttling
+    let timeout;
+    window.addEventListener('scroll', function() {
+        clearTimeout(timeout);
+        timeout = setTimeout(refreshImages, 100);  // Adjust time for performance
+    });
+});
+
 </script>
+
+</body>
