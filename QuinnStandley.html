@@ -36,11 +36,11 @@
 
     h2 {
         position: relative;
-        margin-top: -55px;
+        margin-top: -40px;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 25px;
+        font-size: 34px;
         font-weight: 100;
-        margin-bottom: 48px;
+        margin-bottom: 100px;
     }
 
     /* bio and text */
@@ -52,6 +52,10 @@
         font-family: "Nanum Myeongjo", serif;
         font-weight: 100;
         line-height: 24px;
+    }
+
+    h3 span {
+        font-weight: 700;
     }
 
     h4 {
@@ -111,50 +115,42 @@
         right: 15%;
         transform: translateY(-50%);
         z-index: -1;
-        display: none;
     }
 
     #currentImage {
         width: 300px;
-        height: 200px;
     }
 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 720px) {
         body {
             margin: 10px;
             gap: 10px;
         }
 
         h1 {
-            font-size: 36px;
-            line-height: 40px;
-            /* Increase line height for better readability */
-            /* text-align: center; */
+            width: 100%;
+            font-size: 30px;
+            line-height: 36px;
             margin-bottom: 10px;
         }
 
         h2 {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 18px;
-            /* Adjust font size for smaller screens */
-            /* text-align: center; */
-            margin-bottom: 20px;
+            font-size: 20px;
+            margin-bottom: 40px;
             margin-top: 0px;
-
         }
 
         h3 {
-            width: 95%;
-            /* text-align: justify; */
+            width: 100%;
             font-size: 16px;
             line-height: 20px;
         }
 
         h4 {
-            width: 95%;
+            width: 100%;
             margin-top: 20px;
             margin-bottom: 20px;
-            /* text-align: justify; */
             font-size: 14px;
             line-height: 18px;
         }
@@ -168,30 +164,41 @@
 
         .back_btn {
             font-size: 12px;
-            /* Adjust font size for smaller screens */
+        }
+
+        .back_btn img {
+            width: 20px;
+            height: 15px;
+            animation: rotation 6s infinite linear;
+            filter: drop-shadow(0px 0px 8px #fac390);
+        }
+
+        #imageContainer {
+            top: 90%;
+            right: 10%;
+            transform: translateY(-100%);
+        }
+
+        #currentImage {
+            width: 200px;
+        }
+
+    }
+
+
+
+    @media screen and (min-width: 721px) {
+
+        #imageContainer {
+            top: 50%;
+            right: 15%;
+            transform: translateY(-50%);
+        }
+
+        #currentImage {
+            width: 300px;
         }
     }
-
-    .back_btn img {
-        width: 20px;
-        height: 15px;
-        animation: rotation 6s infinite linear;
-        filter: drop-shadow(0px 0px 8px #fac390);
-    }
-
-    /* #imageContainer {
-            position: fixed; 
-            top: 60%; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0.5;
-        } */
-
-    /* #currentImage {
-            width: 0px; 
-            height: 0px;
-        } */
 </style>
 
 <body>
@@ -206,23 +213,19 @@
 
     <h2>Quinn Standley</h2>
 
-    <div id="imageContainer">
-        <img id="currentImage" src="" alt="Current Image">
-    </div>
-
     <h3>
         I used to hold my breath and make a wish when we would drive freeway tunnels. I remember this one freeway
         interchange that was a million feet high and a million lanes wide and there were a million roads and bridges and
         curves and dark tunnels and bright tunnels and cars that raced by but there was no freeway noise in fact there
-        was no noise at all other than the silence – the 16,000 hz cacophonous buzz somewhere between my brain and my
-        ear drums. I remember the first time I heard that buzz – I was three or maybe four years old and when I would
+        was no noise at all other than the silence&mdash;the 16,000 hz cacophonous buzz somewhere between my brain and my
+        ear drums. I remember the first time I heard that buzz&mdash;I was three or maybe four years old and when I would
         get overwhelmed or cry or have a tantrum I would lay in my closet and look up at the light bulb and I remember
         one time I laid there until I fell asleep and when my tears dried and I woke up I heard a buzz in my head and I
-        thought it was the sound of silence. The freeway interchange – there was no way to get into or out of it because
+        thought it was the sound of silence. The freeway interchange&mdash;there was no way to get into or out of it because
         it was a loop or a trap or something like that and I remember I was futilely trying to find a way out of it or
         through it or over or even across it and in attempting to do so I walked on a narrow sliver of some sort of
         sidewalk but it only lead to thousands of these strange glass elevators that soared up into the sky and down
-        into the infinite abyss beneath the ground. I knew that I had been in this place once before – or actually
+        into the infinite abyss beneath the ground. I knew that I had been in this place once before&mdash;or actually
         multiple times or maybe even an infinite amount of times but I couldn’t remember why but I do remember I was
         always alone at this place and I could neither move forward nor backward through space and time because going
         either direction or even upward or downward always lead to the same place like they are all contained within
@@ -241,7 +244,7 @@
         that because I think things happen and then we come up with a reason but what difference does it make? Anyway
         the freeway overpass dissected Seattle from Phoenix and I didn’t know which way to go. If I was going one way on
         a road or sidewalk I would run into this freeway interchange but then I would get stuck in it forever and then I
-        would die but there was this one time where I was with a little boy – and I knew that the little boy was my son
+        would die but there was this one time where I was with a little boy&mdash;and I knew that the little boy was my son
         and I knew that I had never loved anything like him in my life and it felt so real and I looked into his eyes
         and I saw myself and I wanted to protect him forever but we got stuck here at this void and he grabbed onto my
         back and we followed sidewalks to dead ends and into tunnels and came out the other side but we would be looking
@@ -255,12 +258,12 @@
         looked through tears at myself who was also crying and then I woke up with tears in my actual eyes but I had
         only been asleep for 6 hours and I do not have a son and I am 20 years old and I still end up in the same place
         I started and there’s a buzz in my ears that I thought was the sound of silence but it’s just another fluke in
-        my neural chemistry and I used to have that dream every night – but that was the last time. And sometimes I
+        my neural chemistry and I used to have that dream every night&mdash;but that was the last time. And sometimes I
         still can’t discern it form a memory.
         <br><br>
-        I’m not sure what’s worse the insomnia or the night terrors. “Dreams” – To call them dreams is laughable but to
+        I’m not sure what’s worse the insomnia or the night terrors. “Dreams”&mdash;To call them dreams is laughable but to
         call them nightmares is childish and according to the DSM-5 to call them night-terrors would be inaccurate but
-        what I do know is that I can’t discern them from reality and even now – long after I stopped dreaming – they are
+        what I do know is that I can’t discern them from reality and even now&mdash;long after I stopped dreaming&mdash;they are
         woven into my memory and I do know that they used to last days or weeks or years and when I finally woke up I
         felt like I hadn’t slept in just as long and some mornings with bags under my eyes I would check the time and
         calculate that I’d slept for over 10 hours but felt like I’d slept for less than a minute and on other nights I
@@ -277,7 +280,7 @@
         shocked that something so morbid could come from my mind or like my subconscious or whatever and it wasn’t until
         many months later when I was on a long drive through the desert with my dad when I put on one of my favorite
         outlaw country songs called Psycho sung by Eddie Noack and my dad didn’t really like it for some reason and I
-        said dad why don’t you like this song and he said the lyrics are really fucked up, man– and I shrugged and said
+        said dad why don’t you like this song and he said the lyrics are really fucked up, man&mdash;and I shrugged and said
         I don’t listen to music for the lyrics I just like how it sounds, and then when I got home I pulled up the
         lyrics and laughed hysterically because it is a song about a cowboy who kills his baby and goes on a run from
         the law and so I must’ve listened to that song right before going to bed that one night. The good thing is that
@@ -306,23 +309,3 @@
         human.
     </h4>
 </body>
-<script>
-    window.addEventListener('scroll', function () {
-        const threshold = 500; // Adjust this value as needed
-        const scrollPosition = window.scrollY || window.pageYOffset;
-        const imageContainer = document.getElementById('imageContainer');
-        const currentImage = document.getElementById('currentImage');
-
-        if (scrollPosition < threshold) {
-            currentImage.src = '';
-        } else if (scrollPosition < 2 * threshold) {
-            currentImage.src = '';
-        } else {
-            currentImage.src = '';
-        }
-
-        // Adjust image container size if needed
-        imageContainer.style.width = currentImage.width + 'px';
-        imageContainer.style.height = currentImage.height + 'px';
-    });
-</script>

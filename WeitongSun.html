@@ -35,11 +35,15 @@
 
     h2 {
         position: relative;
-        margin-top: -55px;
+        margin-top: -40px;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 25px;
+        font-size: 34px;
         font-weight: 100;
-        margin-bottom: 48px;
+    }
+
+
+    h2 {
+        margin-bottom: 50px;
     }
 
     /* bio and text */
@@ -53,6 +57,7 @@
         line-height: 24px;
     }
 
+
     h4 {
         width: 50%;
         position: relative;
@@ -62,6 +67,28 @@
         color: #9c9c9c;
         font-size: 16px;
         line-height: 20px;
+    }
+
+    .column {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .twocolumn {
+        display: flex;
+        flex-flow: row;
+        align-items: start;
+        gap: 80px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .photo {
+        width: 50%;
+    }
+
+    .poem {
+        width: 50%;
     }
 
     button {
@@ -88,7 +115,7 @@
 
     /* Egg rotation above the “about” element @Weitong*/
     .back_btn img {
-        width: 55px; 
+        width: 55px;
         height: 40px;
         animation: rotation 6s infinite linear;
         filter: drop-shadow(0px 0px 8px #fac390);
@@ -105,55 +132,47 @@
     }
 
     #imageContainer {
-        position: fixed; 
-        top: 50%; 
-        right: 15%; 
+        position: fixed;
+        top: 50%;
+        right: 15%;
         transform: translateY(-50%);
         z-index: -1;
-        display: none;
     }
 
     #currentImage {
-            width: 300px; 
-            height: 200px;
+        width: 300px;
+    }
+
+    @media screen and (max-width: 720px) {
+        body {
+            margin: 10px;
+            gap: 10px;
         }
 
-    @media screen and (max-width: 700px) {
-            body {
-                margin: 10px;
-                gap: 10px;
-            }
-
-            h1 {
-            font-size: 36px;
-            line-height: 40px;
-            /* Increase line height for better readability */
-            /* text-align: center; */
+        h1 {
+            width: 100%;
+            font-size: 30px;
+            line-height: 36px;
             margin-bottom: 10px;
         }
 
         h2 {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 18px;
-            /* Adjust font size for smaller screens */
-            /* text-align: center; */
+            font-size: 20px;
             margin-bottom: 20px;
             margin-top: 0px;
-
         }
 
         h3 {
-            width: 95%;
-            /* text-align: justify; */
+            width: 100%;
             font-size: 16px;
             line-height: 20px;
         }
 
         h4 {
-            width: 95%;
+            width: 100%;
             margin-top: 20px;
             margin-bottom: 20px;
-            /* text-align: justify; */
             font-size: 14px;
             line-height: 18px;
         }
@@ -166,30 +185,65 @@
         }
 
         .back_btn {
-            font-size: 12px; /* Adjust font size for smaller screens */
+            font-size: 12px;
         }
-        }
-        
-        .back_btn img {
-            width: 20px; 
-            height: 15px;
-            animation: rotation 6s infinite linear;
-            filter: drop-shadow(0px 0px 8px #fac390);
+    }
+
+    .back_btn img {
+        width: 20px;
+        height: 15px;
+        animation: rotation 6s infinite linear;
+        filter: drop-shadow(0px 0px 8px #fac390);
+    }
+
+    #imageContainer {
+        top: 90%;
+        right: 10%;
+        transform: translateY(-100%);
+    }
+
+    #currentImage {
+        width: 200px;
+    }
+
+    .column {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .twocolumn {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .poem {
+        width: 100%;
+    }
+
+    .photo {
+        display: none;
+    }
+
+    @media screen and (min-width: 721px) {
+
+        #imageContainer {
+            top: 50%;
+            right: 15%;
+            transform: translateY(-50%);
         }
 
-        /* #imageContainer {
-            position: fixed; 
-            top: 60%; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0.5;
-        } */
+        #currentImage {
+            width: 300px;
+        }
 
-        /* #currentImage {
-            width: 0px; 
-            height: 0px;
-        } */
+        .poem {
+            width: 50%;
+        }
+
+        .photo {
+            display: block;
+        }
+    }
 </style>
 
 <body>
@@ -206,152 +260,199 @@
     <h2>Weitong Sun</h2>
 
     <div id="imageContainer">
-        <img id="currentImage" src="" alt="Current Image">
+        <img id="currentImage" src="./img/wt/1.JPG" alt="Current Image">
     </div>
 
     <h3>
-    <p>In the eyes of the unseen reality, I&rsquo;m lost in the reflection's enchantment. Today, the weather is clear. Daytime temperatures range from fourteen to twenty-four degrees Celsius. Springs converge into a lake. Following the river, I enter a flowing room &ndash; walls shimmering with ripples and fish swimming along the ceiling. I drop my backpack andshed my scales. I let water molecules penetrate my ears, fog my eyes, and fill my mouth and nose.</p>
+        <section class="column">
+        <p>In the eyes of the unseen reality, I&rsquo;m lost in the reflection's enchantment. Today, the weather is
+            clear. Daytime temperatures range from fourteen to twenty-four degrees Celsius. Springs converge into a
+            lake. Following the river, I enter a flowing room &ndash; walls shimmering with ripples and fish swimming
+            along the ceiling. I drop my backpack andshed my scales. I let water molecules penetrate my ears, fog my
+            eyes, and fill my mouth and nose.</p>
 
-    <p>Have you heard of a condition called Earth's rotation vertigo? I've seen people with this condition bumping into table corners, or accidentally spilling water on the floor. In response to concern, they smile and say, &quot;I'm fine, the Earth just rotated.&quot;</p>
-    <br>
+        <p>Have you heard of a condition called Earth's rotation vertigo? I've seen people with this condition bumping
+            into table corners, or accidentally spilling water on the floor. In response to concern, they smile and say,
+            &quot;I'm fine, the Earth just rotated.&quot;</p>
+        </section>
 
+        <section class="twocolumn">
 
-    <p>1.</p>
+            <img class="photo" src="img/wt/1.JPG">
 
-    <p>March, April, May <br>
-    The night shrinks<br>
-    If light is a particle that carries information<br>
-    Can memories become clear?</p>
+            <div class="poem">
+                <p>1.</p>
 
-    <p>Three hours, three days, three months<br>
-    Individual&rsquo;s time overlap and intersect<br>
-    linear time is disturbed by reality<br>
-    I am in the circle of reincarnation,<br>
-    cyclically shaping the past</p>
+                <p>March, April, May <br>
+                    The night shrinks<br>
+                    If light is a particle that carries information<br>
+                    Can memories become clear?</p>
 
-    <p>Ding, eight o'clock</p>
+                <p>Three hours, three days, three months<br>
+                    Individual&rsquo;s time overlap and intersect<br>
+                    linear time is disturbed by reality<br>
+                    I am in the circle of reincarnation,<br>
+                    cyclically shaping the past</p>
 
-    <p>Opening my eyes<br>
-    I am a patient with vertigo, unable to get up</p>
-    <br>
-    <p>2.</p>
-    <p>
-        Rotation in all directions<br>
-        Inverts space<br>
-        The pressure in the labyrinth of the inner ear rises <br>
-        Until sound disappears<br>
-        And time vanishes too</p>
-        
-        <p>Bats plunge into a vacuum<br>
-        Bringing the cacophony of failed sonar<br>
-        Tides invade the ears<br>
-        Screaming, roaring, tearing, healing</p>
-        
-        <p>I lie in bed<br>
-        Counting the seconds<br>
-        Faithfully waiting for the rotation to end<br>
-        </p>
-    <br>
-    <p>3.</p>
-    <p>3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;<br>
-        3,2,1&#8230;</p>
-        
-        <p>&#8230;&#8230;<br>
-        </p>
+                <p>Ding, eight o'clock</p>
 
-    <br>
-    <p>4.</p>
-    <p>Sunlight becomes extremely dazzling<br>
-        screaming and flaunting an everlasting life<br>
-        Yet, in my limited life, <br>
-        once again, <br>
-        I&rsquo;m unable to hear clearly</p>
-        
+                <p>Opening my eyes<br>
+                    I am a patient with vertigo, unable to get up</p>
+            </div>
+        </section>
+
+        <section class="twocolumn">
+
+            <img class="photo" src="img/wt/2.PNG">
+
+            <div class="poem">
+                <p>2.</p>
+                <p>
+                    Rotation in all directions<br>
+                    Inverts space<br>
+                    The pressure in the labyrinth of the inner ear rises <br>
+                    Until sound disappears<br>
+                    And time vanishes too</p>
+
+                <p>Bats plunge into a vacuum<br>
+                    Bringing the cacophony of failed sonar<br>
+                    Tides invade the ears<br>
+                    Screaming, roaring, tearing, healing</p>
+
+                <p>I lie in bed<br>
+                    Counting the seconds<br>
+                    Faithfully waiting for the rotation to end
+                </p>
+            </div>
+        </section>
+
+        <section class="twocolumn">
+
+            <img class="photo" src="img/wt/3.jpeg">
+
+            <div class="poem">
+                <p>3.</p>
+                <p>3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;<br>
+                    3,2,1&#8230;</p>
+                <p>&#8230;&#8230;</p>
+            </div>
+        </section>
+
+    <section class="column">
+        <p>4.</p>
+        <p>Sunlight becomes extremely dazzling<br>
+            screaming and flaunting an everlasting life<br>
+            Yet, in my limited life, <br>
+            once again, <br>
+            I&rsquo;m unable to hear clearly</p>
+
         <p>The dust, carried by the wind, <br>
-        arrogantly assumes its own importance <br>
-        drifting down into my eyes</p>
-        
+            arrogantly assumes its own importance <br>
+            drifting down into my eyes</p>
+
         <p>&ldquo;Don&rsquo;t worry, the Earth is rotating.&rdquo;<br>
-        That&rsquo;s what my mom told me <br>
-        when they found out I had M&eacute;ni&egrave;re's disease</p>
-        
+            That&rsquo;s what my mom told me <br>
+            when they found out I had M&eacute;ni&egrave;re's disease</p>
+
         <p>&quot;I'm fine; the Earth just rotated.&quot;<br>
-        I have been telling people that since then<br>
-    </p>
-    <br>
-    <p>5.</p>
-    <p>Geckos climbs the cliffs<br>
-        Gravity devours the candlelight<br>
-        Smoke embeds into the walls<br>
-        Carving time<br>
-        Just for a moment's pause<br>
-        I move into a gap on cliffs</p>
-        
-        <p>Here, all is silent<br>
-        Harmonious<br>
-        They take pride<br>
-        In my withering</p>
-    <br>
-    <p>6.</p>
-    <p>The loneliness I know <br>
-        Is a fish stranded in a reef <br>
-        The loneliness I know <br>
-        Is being adrift alone in the boundless universe <br>
-        I cherish the moment the shutter is pressed <br>
-        I am frozen in another world <br>
-    </p>
-</h3>
-<h4>
-    Stories, once created, will never end. Same as the tales of the digital world. Weitong “ShanMu” Sun (born in Jinan, China) is an experimental artist who explores artificial intelligence, the methodology of programming languages, and its influence on our sense of history and time. Her practice provokes a conversation between the beholder and the work itself.
-</h4>
+            I have been telling people that since then<br>
+        </p>
+    </section>
+
+        <section class="twocolumn">
+
+            <img class="photo" src="img/wt/5.JPG">
+
+            <div class="poem">
+                <p>5.</p>
+                <p>Geckos climbs the cliffs<br>
+                    Gravity devours the candlelight<br>
+                    Smoke embeds into the walls<br>
+                    Carving time<br>
+                    Just for a moment's pause<br>
+                    I move into a gap on cliffs</p>
+
+                <p>Here, all is silent<br>
+                    Harmonious<br>
+                    They take pride<br>
+                    In my withering</p>
+            </div>
+        </section>
+
+        <section class="twocolumn">
+
+            <img class="photo" src="img/wt/6.JPG">
+            <div class="poem">
+                <p>6.</p>
+                <p>The loneliness I know <br>
+                    Is a fish stranded in a reef <br>
+                    The loneliness I know <br>
+                    Is being adrift alone in the boundless universe <br>
+                    I cherish the moment the shutter is pressed <br>
+                    I am frozen in another world 
+                </p>
+            </div>
+        </section>
+    </h3>
+    <h4>
+        Stories, once created, will never end. Same as the tales of the digital world. Weitong “ShanMu” Sun (born in
+        Jinan, China) is an experimental artist who explores artificial intelligence, the methodology of programming
+        languages, and its influence on our sense of history and time. Her practice provokes a conversation between the
+        beholder and the work itself.
+    </h4>
 
 </body>
 
 <script>
     window.addEventListener('scroll', function () {
-        const threshold = 500; // Adjust this value as needed
-        const scrollPosition = window.scrollY || window.pageYOffset;
+        const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const percentageThreshold = 0.2; // Adjust this percentage as needed
+        const threshold = windowHeight * percentageThreshold; const scrollPosition = window.scrollY || window.pageYOffset;
         const imageContainer = document.getElementById('imageContainer');
         const currentImage = document.getElementById('currentImage');
 
         if (scrollPosition < threshold) {
-            currentImage.src = '';
+            currentImage.src = 'img/wt/1.JPG';
         } else if (scrollPosition < 2 * threshold) {
-            currentImage.src = '';
+            currentImage.src = 'img/wt/2.PNG';
+        } else if (scrollPosition < 3 * threshold) {
+            currentImage.src = 'img/wt/3.jpeg';
+        } else if (scrollPosition < 4 * threshold) {
+            currentImage.src = 'img/wt/5.JPG';
         } else {
-            currentImage.src = '';
+            currentImage.src = 'img/wt/6.JPG';
         }
 
         // Adjust image container size if needed

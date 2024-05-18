@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>We Have to Write While It’s Still Shimmering</title>
     <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.26/Tone.js"></script>
     <link rel="icon" href="img/star.gif" type="image/gif" />
@@ -12,153 +12,302 @@
     @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 
     body {
-        background-color: #f8f8f8;
+        background-color: #eee;
         display: flex;
         flex-direction: column;
-        gap: 36px;
+        margin: 24px;
     }
 
-    h3 {
-        max-width: 90vw;
+    h1 {
+        width: 90%;
         position: relative;
-        left: 24px;
         color: #000000;
-        font-size: 16px;
+        font-size: 60px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        line-height: 100px;
+    }
+
+    h2 {
+        position: relative;
+        margin-top: -40px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        font-weight: 100;
+        margin-bottom: 70px;
+    }
+
+
+    h3 {
+        width: 50%;
+        position: relative;
+        color: #000000;
+        font-size: 18px;
         font-family: "Nanum Myeongjo", serif;
         font-weight: 100;
-        max-height: 80vh;
+        line-height: 24px;
     }
 
     .tilt-video {
         position: relative;
         object-fit: cover;
-        border-radius: 12px;
+        border-radius: 5px;
         background-size: cover;
-        left: 24px;
-        top: 24px;
-        max-width: 90vw;
-        max-height: 20vh;
-        filter: drop-shadow(0 0 15px #ffdbba);
+        margin-top: 70px;
+        max-width: 100vw;
+        height: 300px;
+        /* filter: drop-shadow(0 0 15px #ffdbba); */
     }
 
-    a {
-        text-decoration: none;
+    button {
+        background-color: transparent;
+        position: absolute;
+        border: none;
+        cursor: default;
     }
-    a:hover {
+
+    button:hover {
         cursor: pointer;
-        text-decoration: underline;
+        font-style: italic;
     }
-    
-    a:visited {
-        text-decoration: none;
-        color: #000;
+
+    .back_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        text-transform: uppercase;
+        text-decoration: underline;
+        color: #ff9129;
+    }
+
+    /* Egg rotation above the “about” element @Weitong*/
+    .back_btn img {
+        width: 55px;
+        height: 40px;
+        animation: rotation 6s infinite linear;
+        filter: drop-shadow(0px 0px 8px #fac390);
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @media screen and (max-width: 720px) {
+        body {
+            margin: 10px;
+            gap: 10px;
+        }
+
+        h1 {
+            width: 100%;
+            font-size: 30px;
+            line-height: 36px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            margin-bottom: 40px;
+            margin-top: 0px;
+        }
+
+        h3 {
+            width: 100%;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        button {
+            position: relative;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back_btn {
+            font-size: 12px;
+        }
+
+        .back_btn img {
+            width: 20px;
+            height: 15px;
+            animation: rotation 6s infinite linear;
+            filter: drop-shadow(0px 0px 8px #fac390);
+        }
+
+        .tilt-video {
+        position: relative;
+        object-fit: cover;
+        border-radius: 5px;
+        background-size: cover;
+        margin-top: 10px;
+        max-width: 100vw;
+        height: 160px;
+        /* filter: drop-shadow(0 0 15px #ffdbba); */
+    }
+
+    }
+
+    @media screen and (min-width: 721px) {
+
     }
 </style>
 
 <body>
-    <video preload muted loop autoplay class="tilt-video" src="/polyphonicshimmering/img/shimmer-1.mp4"></video>
-    <h3>We Have to Write While It’s Still Shimmering <br>
-        By <span style="color: #9a82e4;">Meg Miller</span>
-        <br><br>
-        In the recent film The Super 8 Years, the writer Annie Ernaux narrates over home footage taken by her former
-        husband P​​hilippe Ernaux in the ’70s and ’80s, and assembled into a feature film by her and her son David
-        Ernaux-Briot. In one early scene, Annie and her two young sons come home from the grocery store and stand
-        awkwardly in the foyer as Philippe points the newly acquired Super 8 camera at them. “None of the three knows
-        what to do,” Annie Ernaux later writes of the scene in her autobiography The Years. “One might almost say
-        they’re posing for a photograph that won’t stop being taken.” Much of Ernaux’s writing in The Years is similarly
-        photographic, or filmic — she writes at one point about a state in which her memories come to her in a series of
-        images that overlap and float on top of one another. She calls it the “palimpsest sensation,” a time in which
-        “past and present overlap, without bleeding into each other, and where, it seems, she flickers in and out of all
-        the shapes of being she has been.”
-        <br><br>
-        This was one of the passages I pulled out in my opening lecture of the grad seminar from which this publication
-        arose. I was trying to give definition to a nebulous idea I was forming, by gathering examples of writers who
-        write from images, or about images, or whose writing is particularly imagistic. I had collected quotes from
-        Naomi Shihab Nye and May Sarton about finding poetry in everyday scenes. We read Toni Morrison on working from
-        memories in the mind, and Dodie Bellamy writing about how she never tires of describing photographs. Leslie
-        Marmon Silko on writing and film. Georgina Kleege on how dependent visual perception is on language. These
-        writers’ processes, in one way or another, started with the image. My point was simply that if they were using
-        language to see and images to write, perhaps writing and image-making are not such different crafts.
-        <br><br>
-        Here’s one last example that gives perhaps the most evocative expression of this idea: In her 1976 essay “Why I
-        Write,” Joan Didion describes how her writing comes from the pictures in her mind, things that she sees and that
-        then stay with her. “When I talk about pictures in my mind I am talking, quite specifically, about images that
-        shimmer around the edges,” she writes. “Look hard enough, and you can't miss the shimmer. It's there. You can't
-        think too much about these pictures that shimmer. You just lie low and let them develop.” Later in the essay,
-        Didion writes about the “grammar of the picture,” proposing that the arrangement of the writing — the
-        composition of a piece — can also be found in these shimmering images.
-        <br><br>
-        Didion, Morrison, Ernaux, etc. — these authors tell us to pay attention to images, because images bring forth
-        language. And anyone, whether they consider themselves a writer or not, has a bank of memories that live as
-        images in the mind, and float to the surface in quieter moments. Graphic designers and visual artists are
-        perhaps even more equipped than most at preserving those images, understanding their importance, and making them
-        legible to themselves or to others. Since this seminar was made up of MFA students at VCU’s School of the Arts,
-        we took the semester to explore what would happen if we thought of writing as just another form of image-making.
-        How would that shift who we think of as a writer, or who feels they have access to the practice of writing? How
-        would it change how we write, and what gets written about?
-        <br><br>
-        At least, that was the set up. But throughout the semester, the authors of this book took that premise and
-        pulled on it and unraveled it in so many interesting, funny, messy, thorny, thoughtful directions. They
-        connected memory to inheritance, lineage, culture, and a sense of place, as exemplified by Aya, Rasim, and
-        Bradley’s lovely meditations. Yangyang and Weitong deftly experimented with visual arrangements of text on page,
-        combining text and image into unexpected compositions. Quinn and Tariye infused their writing with surreality of
-        dream and sci fi imagery and the strangeness of reality. In class, this group introduced me to new ways of
-        thinking about access and opacity, themes you’ll see played with in Jalen’s text. We experimented with the kind
-        of meaning-making that writing can do when it connects the disparate material that makes up one’s interests,
-        which you can find compelling examples of in Molly and Kai’s works. We admired writing that was choral, that
-        brought in multiple voices and perspectives, as carried forth by Taehee and Yuan’s writings (and echoed in the
-        first part of this publication’s title).
-        <br><br>
-        <a href="/polyphonicshimmering/index.html">Polyphonic Shimmering</a>&#8592; was authored, edited, and designed by the
-        participants of this seminar: <span style="color: #76c155;">Jalen Adams</span>, <span style="color: #e4829d;">
-            Rasim Bayramov</span>, <span style="color: #d8e038;">Kai Chu Chuang</span> , <span
-            style="color: #f26830;">Molly Garrett</span>, <span style="color: #be519e;">Tariye George-Phillips</span>,
-        <span style="color: #f28e25;">Aya Khalife</span>,
-        <span style="color: #a2ce4f;">Bradley Sinanan</span>, <span style="color: #f89b64;">Quinn Standley</span>, <span
-            style="color: #f2d723;">Weitong Sun</span>, <span style="color: #de658a;">Taehee</span>, <span
-            style="color: #f15f26;">Yuan Xin</span>, and <span style="color: #f2b125;">Yangyang Zhang</span>. All of
-        their pieces are richly rendered, beautifully described; their research and experience gives depth and
-        fascinating texture. These pieces shimmer and hum, they play with duration and pacing and expand language beyond
-        its conventional encasements. They allow us to see what they see, in ways both visual and textual, but mostly
-        through language that blurs the distinction between the two.
-    </h3>
-    <script>
-        VanillaTilt.init(document.querySelector(".tilt-video"), {
-            max: 5,
-            speed: 200,
-            glare: true,
-            "max-glare": 4,
-        });
+    <button type="button" onclick="window.location.href = 'index.html';">
+        <div class="back_btn">
+            <img src="img/Web_Egg_Motif_08.png" alt="Rotating Egg">
+            <p>back to index</p>
+        </div>
+    </button>
 
-        Tone.start();
+    <video preload muted loop autoplay class="tilt-video" src="./img/shimmer-1.mp4"></video>
 
-        // Array of tones or notes corresponding to each span
-        const tones = [
-            'E3', // Meg Miller
-            'G3', // Jalen Adams
-            'F3', // Rasim Bayramov
-            'D3', // Kai Chu Chuang
-            'C3', // Molly Garrett
-            'B3', // Tariye George-Phillips
-            'F3', // Aya Khalife
-            'G3', // Bradley Sinanan
-            'A3', // Quinn Standley
-            'D#3', // Weitong Sun
-            'G3', // Taehee
-            'F3', // Yuan Xin
-            'C3',  // Yangyang Zhang
-        ];
-        // Add event listeners to each span to play the corresponding tone on hover
-        const spans = document.querySelectorAll('span');
+    <h1>We Have to Write While It’s Still Shimmering</h1>
 
-        spans.forEach((span, index) => {
-            span.addEventListener('mouseenter', () => {
-                const synth = new Tone.Synth().toDestination();
-                synth.triggerAttackRelease(tones[index], '8n');
+    <h2><span class="note" style="color: #9a82e4;">Meg Miller</span></h2>
+
+    <h3>
+            In the recent film The Super 8 Years, the writer Annie Ernaux narrates over home footage taken by her former
+            husband P​​hilippe Ernaux in the ’70s and ’80s, and assembled into a feature film by her and her son David
+            Ernaux-Briot. In one early scene, Annie and her two young sons come home from the grocery store and stand
+            awkwardly in the foyer as Philippe points the newly acquired Super 8 camera at them. “None of the three
+            knows
+            what to do,” Annie Ernaux later writes of the scene in her autobiography The Years. “One might almost say
+            they’re posing for a photograph that won’t stop being taken.” Much of Ernaux’s writing in The Years is
+            similarly
+            photographic, or filmic — she writes at one point about a state in which her memories come to her in a
+            series of
+            images that overlap and float on top of one another. She calls it the “palimpsest sensation,” a time in
+            which
+            “past and present overlap, without bleeding into each other, and where, it seems, she flickers in and out of
+            all
+            the shapes of being she has been.”
+            <br><br>
+            This was one of the passages I pulled out in my opening lecture of the grad seminar from which this
+            publication
+            arose. I was trying to give definition to a nebulous idea I was forming, by gathering examples of writers
+            who
+            write from images, or about images, or whose writing is particularly imagistic. I had collected quotes from
+            Naomi Shihab Nye and May Sarton about finding poetry in everyday scenes. We read Toni Morrison on working
+            from
+            memories in the mind, and Dodie Bellamy writing about how she never tires of describing photographs. Leslie
+            Marmon Silko on writing and film. Georgina Kleege on how dependent visual perception is on language. These
+            writers’ processes, in one way or another, started with the image. My point was simply that if they were
+            using
+            language to see and images to write, perhaps writing and image-making are not such different crafts.
+            <br><br>
+            Here’s one last example that gives perhaps the most evocative expression of this idea: In her 1976 essay
+            “Why I
+            Write,” Joan Didion describes how her writing comes from the pictures in her mind, things that she sees and
+            that
+            then stay with her. “When I talk about pictures in my mind I am talking, quite specifically, about images
+            that
+            shimmer around the edges,” she writes. “Look hard enough, and you can't miss the shimmer. It's there. You
+            can't
+            think too much about these pictures that shimmer. You just lie low and let them develop.” Later in the
+            essay,
+            Didion writes about the “grammar of the picture,” proposing that the arrangement of the writing — the
+            composition of a piece — can also be found in these shimmering images.
+            <br><br>
+            Didion, Morrison, Ernaux, etc. — these authors tell us to pay attention to images, because images bring
+            forth
+            language. And anyone, whether they consider themselves a writer or not, has a bank of memories that live as
+            images in the mind, and float to the surface in quieter moments. Graphic designers and visual artists are
+            perhaps even more equipped than most at preserving those images, understanding their importance, and making
+            them
+            legible to themselves or to others. Since this seminar was made up of MFA students at VCU’s School of the
+            Arts,
+            we took the semester to explore what would happen if we thought of writing as just another form of
+            image-making.
+            How would that shift who we think of as a writer, or who feels they have access to the practice of writing?
+            How
+            would it change how we write, and what gets written about?
+            <br><br>
+            At least, that was the set up. But throughout the semester, the authors of this book took that premise and
+            pulled on it and unraveled it in so many interesting, funny, messy, thorny, thoughtful directions. They
+            connected memory to inheritance, lineage, culture, and a sense of place, as exemplified by Aya, Rasim, and
+            Bradley’s lovely meditations. Yangyang and Weitong deftly experimented with visual arrangements of text on
+            page,
+            combining text and image into unexpected compositions. Quinn and Tariye infused their writing with
+            surreality of
+            dream and sci fi imagery and the strangeness of reality. In class, this group introduced me to new ways of
+            thinking about access and opacity, themes you’ll see played with in Jalen’s text. We experimented with the
+            kind
+            of meaning-making that writing can do when it connects the disparate material that makes up one’s interests,
+            which you can find compelling examples of in Molly and Kai’s works. We admired writing that was choral, that
+            brought in multiple voices and perspectives, as carried forth by Taehee and Yuan’s writings (and echoed in
+            the
+            first part of this publication’s title).
+            <br><br>
+            <span style="font-weight: 700;">Polyphonic Shimmering</span> was authored, edited, and designed by the
+            participants of this seminar:
+            <span class="note" style="color: #76c155;">Jalen Adams</span>,
+            <span class="note" style="color: #e4829d;">Rasim Bayramov</span>,
+            <span class="note" style="color: #d8e038;">Kai Chu Chuang</span> ,
+            <span class="note" style="color: #f26830;">Molly Garrett</span>,
+            <span class="note" style="color: #be519e;">Tariye George-Phillips</span>,
+            <span class="note" style="color: #f28e25;">Aya Khalife</span>,
+            <span class="note" style="color: #a2ce4f;">Bradley Sinanan</span>,
+            <span class="note" style="color: #f89b64;">Quinn Standley</span>,
+            <span class="note" style="color: #f2d723;">Weitong Sun</span>,
+            <span class="note" style="color: #de658a;">Taehee</span>,
+            <span class="note" style="color: #f15f26;">Yuan Xin</span>, and
+            <span class="note" style="color: #f2b125;">Yangyang Zhang</span>.
+            All of their pieces are richly rendered, beautifully described; their research and experience gives depth
+            and
+            fascinating texture. These pieces shimmer and hum, they play with duration and pacing and expand language
+            beyond its conventional encasements. They allow us to see what they see, in ways both visual and textual,
+            but
+            mostly through language that blurs the distinction between the two.
+        </h3>
+        <script>
+            VanillaTilt.init(document.querySelector(".tilt-video"), {
+                max: 5,
+                speed: 200,
+                glare: true,
+                "max-glare": 4,
             });
-        });
-    </script>
-    </script>
+
+            document.addEventListener('click', () => {
+                Tone.start();
+
+                // Array of tones or notes corresponding to each span
+                const tones = [
+                    'E3', // Meg Miller
+                    'G3', // Jalen Adams
+                    'F3', // Rasim Bayramov
+                    'D3', // Kai Chu Chuang
+                    'C3', // Molly Garrett
+                    'B3', // Tariye George-Phillips
+                    'F3', // Aya Khalife
+                    'G3', // Bradley Sinanan
+                    'A3', // Quinn Standley
+                    'D#3', // Weitong Sun
+                    'G3', // Taehee
+                    'F3', // Yuan Xin
+                    'C3',  // Yangyang Zhang
+                ];
+
+                const notes = document.querySelectorAll('.note');
+
+                notes.forEach((note, index) => {
+                    note.addEventListener('mouseenter', () => {
+                        const synth = new Tone.Synth().toDestination();
+                        synth.triggerAttackRelease(tones[index], '8n');
+                    });
+                });
+            });
+
+        </script>
 </body>
 
 </html>

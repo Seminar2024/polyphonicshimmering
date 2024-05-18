@@ -36,11 +36,11 @@
 
     h2 {
         position: relative;
-        margin-top: -55px;
+        margin-top: -40px;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 25px;
+        font-size: 34px;
         font-weight: 100;
-        margin-bottom: 48px;
+        margin-bottom: 100px;
     }
 
     /* bio and text */
@@ -54,7 +54,17 @@
         line-height: 24px;
     }
 
-    h3 span {
+    summary {
+        cursor: pointer;
+    }
+
+    .expand {
+        padding: 48px;
+        /* left: 20%; */
+    }
+
+    .expand span {
+        font-size: 20px;
         font-weight: 700;
     }
 
@@ -67,6 +77,13 @@
         color: #9c9c9c;
         font-size: 16px;
         line-height: 20px;
+    }
+
+    h6 {
+        font-family: "Nanum Myeongjo", serif;
+        font-size: 15px;
+        font-weight: 100;
+        font-style: italic;
     }
 
     button {
@@ -93,7 +110,7 @@
 
     /* Egg rotation above the “about” element @Weitong*/
     .back_btn img {
-        width: 55px; 
+        width: 55px;
         height: 40px;
         animation: rotation 6s infinite linear;
         filter: drop-shadow(0px 0px 8px #fac390);
@@ -110,54 +127,55 @@
     }
 
     #imageContainer {
-        position: fixed; 
-        top: 50%; 
-        right: 15%; 
+        position: fixed;
+        top: 50%;
+        right: 15%;
         transform: translateY(-50%);
         z-index: -1;
     }
 
     #currentImage {
-            width: 300px; 
-            height: 320px;
+        width: 600px;
+    }
+
+    @media screen and (max-width: 720px) {
+        body {
+            margin: 10px;
+            gap: 10px;
         }
 
-    @media screen and (max-width: 700px) {
-            body {
-                margin: 10px;
-                gap: 10px;
-            }
-
-            h1 {
-            font-size: 36px;
-            line-height: 40px;
-            /* Increase line height for better readability */
-            /* text-align: center; */
+        h1 {
+            width: 100%;
+            font-size: 30px;
+            line-height: 36px;
             margin-bottom: 10px;
         }
 
         h2 {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 18px;
-            /* Adjust font size for smaller screens */
-            /* text-align: center; */
-            margin-bottom: 20px;
+            font-size: 20px;
+            margin-bottom: 40px;
             margin-top: 0px;
-
         }
 
         h3 {
-            width: 95%;
-            /* text-align: justify; */
+            width: 100%;
             font-size: 16px;
             line-height: 20px;
         }
 
+        .expand {
+        padding: 24px 0 24px 12px;
+    }
+
+        .expand span {
+        font-size: 18px;
+        }
+
         h4 {
-            width: 95%;
+            width: 100%;
             margin-top: 20px;
             margin-bottom: 20px;
-            /* text-align: justify; */
             font-size: 14px;
             line-height: 18px;
         }
@@ -170,31 +188,40 @@
         }
 
         .back_btn {
-            font-size: 12px; /* Adjust font size for smaller screens */
+            font-size: 12px;
         }
-        }
-        
+
         .back_btn img {
-            width: 20px; 
+            width: 20px;
             height: 15px;
             animation: rotation 6s infinite linear;
             filter: drop-shadow(0px 0px 8px #fac390);
         }
 
-        /* #imageContainer {
-            position: fixed; 
-            top: 60%; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0.5;
-        } */
+        #imageContainer {
+            top: 90%;
+            right: 10%;
+            transform: translateY(-100%);
+        }
 
-        /* #currentImage {
-            width: 0px; 
-            height: 0px;
-        } */
+        #currentImage {
+            width: 250px;
+        }
 
+    }
+
+    @media screen and (min-width: 721px) {
+
+        #imageContainer {
+            top: 50%;
+            right: 15%;
+            transform: translateY(-50%);
+        }
+
+        #currentImage {
+            width: 600px;
+        }
+    }
 </style>
 
 <body>
@@ -208,26 +235,34 @@
     <h1>a cursor is a kite is a cursor</h1>
     <h2>Kai Chuang</h2>
     <div id="imageContainer">
-        <img id="currentImage" src="./img/kai-1.jpeg" alt="Current Image">
+        <img id="currentImage" src="./img/kai/kai-1.png" alt="Current Image">
     </div>
+    
     <h3>
-        <i>[a cursor is a kite is a cursor]</i>
-        <br><br>
+        <details>
+            <summary>a cursor is a kite is a cursor</summary>
+        <div class="expand">
         Make your flight a breeze with these useful tips:
-        <br><br>
-        Prepare a wide, open area with a smooth surface before starting.<br>
-        Keep your fingers relaxed, elbows close, and hands in front of your chest.<br>
-        Hold the line gently, avoiding excessive gripping or rapid clicks.<br>
-        Apply moderate tension to keep your kite stable and pointed in the desired direction.<br>
-        Maintain focus upward during flight, rather than on your hand.<br>
-        Check the connection if your kite doesn't respond to your movements.<br>
-        Be mindful of changing weather conditions while browsing in the cloud.
-        <br><br>
+        <br>
+            <ol>
+                <li>Prepare a wide, open area with a smooth surface before starting.</li>
+                <li>Keep your fingers relaxed, elbows close, and hands in front of your chest.</li>
+                <li>Hold the line gently, avoiding excessive gripping or rapid clicks.</li>
+                <li>Apply moderate tension to keep your kite stable and pointed in the desired direction.</li>
+                <li>Maintain focus upward during flight, rather than on your hand.</li>
+                <li>Check the connection if your kite doesn't respond to your movements.</li>
+                <li>Be mindful of changing weather conditions while browsing in the cloud.</li>
+            </ol>
         And always remember to trace your kite's state and reactions—it’s tracing you too.
-        <br><br><br><br>
-        <i>[a string is a link is a string]</i><br>
-        <br><br>
+        </div>
+    </details>
+
+        <details>
+        <summary>a string is a link is a string</summary>
+        <div class="expand">
         <span>missing kite string? : r/cursor_kite</span>
+        <br><br>
+        <small>u/flyer826 &#183; 1 day ago</small>
         <br><br>
         Hi all. I've had this kite for a while now, but I can't seem to find its string anywhere. The kite on my screen
         follows my hand movements, so there must be a string between us. I checked behind my screen, but none of those
@@ -252,10 +287,12 @@
         reminding us that we're always connected.<br>
         <br>
         So, any ideas where my kite string might be hiding?
-        <br><br><br><br>
+        </div>
+    </details>
 
-        <i>[A user is a flyer is a user]</i><br>
-        <br><br>
+        <details>
+        <summary>a user is a flyer is a user</summary>
+        <div class="expand">
         Good morning flyer, how&rsquo;s the ground today?
         <br><br>
         The weather here is alright, much better than yesterday. Occasional strong winds still disrupt the clouds; you
@@ -272,7 +309,7 @@
         paths we take, the speed we move, the sites we visit, the time we spend together seem to be operated by a
         dominant stream. Most of the time, we stay in the same frame of sky, riding the same currents, following the
         same flows. Display on, display off; windows open, windows close; enter, exit; scroll down, scroll up; play,
-        stop; light mode, dark mode; day in, day out&#8230;<br>
+        stop; light mode, dark mode; day in, day out...<br>
         <br>
         When the storm hit yesterday, I actually felt a bit relieved. I know you hate those stormy days when
         there&rsquo;s no internet connection and everything online shuts down. But I don&rsquo;t mind staying local with
@@ -307,11 +344,15 @@
         connects us, granting us access to what lies beyond our grasp. Through the window, I can continue to see you,
         chase you, dance with you, journey with you, and dream with you. I know you dream of exploring every corner of
         the world, and as your eternal counterpart, I share the desire to visit every pixel in the sky. With a total of
-        2560 x 1440 pixels, there are still 3758 of them I have yet to stop by.<br>
+        2560&#215;1440 pixels, there are still 3758 of them I have yet to stop by.<br>
         <br>
-        And I hope to fulfill this dream with you.<br>
-
+        And I hope to fulfill this dream with you.
+        </div>
+        </details>
     </h3>
+
+    <h6>Note: poke the above text to unfold.</h6>
+
     <h4>
         Kai Chuang (they/them) spends so much time on their computer that they've started to see it as a plaything
         rather than a utilitarian tool. They've been playing hide-and-seek and puzzles on their websites, building
@@ -321,19 +362,23 @@
 </body>
 <script>
     window.addEventListener('scroll', function () {
-        const threshold = 500; // Adjust this value as needed
+        const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const percentageThreshold = 0.2; // Adjust this percentage as needed
+        const threshold = windowHeight * percentageThreshold;        
         const scrollPosition = window.scrollY || window.pageYOffset;
         const imageContainer = document.getElementById('imageContainer');
         const currentImage = document.getElementById('currentImage');
 
         if (scrollPosition < threshold) {
-            currentImage.src = './img/kai-1.jpeg';
+            currentImage.src = './img/kai/kai-1.png';
         } else if (scrollPosition < 2 * threshold) {
-            currentImage.src = './img/kai-1.jpeg';
+            currentImage.src = './img/kai/kai-2.png';
         } else if (scrollPosition < 3 * threshold) {
-            currentImage.src = './img/kai-1.jpeg';
+            currentImage.src = './img/kai/kai-1.png';
+        } else if (scrollPosition < 4 * threshold) {
+            currentImage.src = './img/kai/kai-2.png';
         } else {
-            currentImage.src = './img/kai-1.jpeg';
+            currentImage.src = './img/kai/kai-1.png';
         }
 
         // Adjust image container size if needed

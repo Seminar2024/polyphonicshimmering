@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>"Notes Toward A Personal Afrofuturis"</title>
+    <title>Notes Toward A Personal Afrofuturis</title>
     <link rel="icon" href="img/star.gif" type="image/gif" />
 </head>
 <style>
@@ -36,11 +36,11 @@
 
     h2 {
         position: relative;
-        margin-top: -55px;
+        margin-top: -40px;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 25px;
+        font-size: 34px;
         font-weight: 100;
-        margin-bottom: 48px;
+        margin-bottom: 100px;
     }
 
     /* bio and text */
@@ -52,6 +52,11 @@
         font-family: "Nanum Myeongjo", serif;
         font-weight: 100;
         line-height: 24px;
+    }
+
+    h3 span {
+        font-size: 20px;
+        font-weight: 700;
     }
 
     h4 {
@@ -89,7 +94,7 @@
 
     /* Egg rotation above the “about” element @Weitong*/
     .back_btn img {
-        width: 55px; 
+        width: 55px;
         height: 40px;
         animation: rotation 6s infinite linear;
         filter: drop-shadow(0px 0px 8px #fac390);
@@ -106,54 +111,51 @@
     }
 
     #imageContainer {
-        position: fixed; 
-        top: 50%; 
-        right: 15%; 
+        position: fixed;
+        top: 50%;
+        right: 15%;
         transform: translateY(-50%);
         z-index: -1;
     }
 
     #currentImage {
-            width: 300px; 
-            height: 450px;
+        width: 300px;
+    }
+
+    @media screen and (max-width: 720px) {
+        body {
+            margin: 10px;
+            gap: 10px;
         }
 
-    @media screen and (max-width: 700px) {
-            body {
-                margin: 10px;
-                gap: 10px;
-            }
-
-            h1 {
-            font-size: 36px;
-            line-height: 40px;
-            /* Increase line height for better readability */
-            /* text-align: center; */
+        h1 {
+            width: 100%;
+            font-size: 30px;
+            line-height: 36px;
             margin-bottom: 10px;
         }
 
         h2 {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 18px;
-            /* Adjust font size for smaller screens */
-            /* text-align: center; */
-            margin-bottom: 20px;
+            font-size: 20px;
+            margin-bottom: 40px;
             margin-top: 0px;
-
         }
 
         h3 {
-            width: 95%;
-            /* text-align: justify; */
+            width: 100%;
             font-size: 16px;
             line-height: 20px;
         }
 
+        h3 span {
+            font-size: 16px;
+        }
+
         h4 {
-            width: 95%;
+            width: 100%;
             margin-top: 20px;
             margin-bottom: 20px;
-            /* text-align: justify; */
             font-size: 14px;
             line-height: 18px;
         }
@@ -166,26 +168,39 @@
         }
 
         .back_btn {
-            font-size: 12px; /* Adjust font size for smaller screens */
+            font-size: 12px;
         }
-        }
-        
+
         .back_btn img {
-            width: 20px; 
+            width: 20px;
             height: 15px;
             animation: rotation 6s infinite linear;
             filter: drop-shadow(0px 0px 8px #fac390);
         }
 
-        /* #imageContainer {
-            position: fixed; 
-            top: 60%; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0.5;
-        } */
+        #imageContainer {
+            top: 90%;
+            right: 10%;
+            transform: translateY(-100%);
+        }
 
+        #currentImage {
+            width: 180px;
+        }
+    }
+
+    @media screen and (min-width: 721px) {
+
+        #imageContainer {
+            top: 50%;
+            right: 15%;
+            transform: translateY(-50%);
+        }
+
+        #currentImage {
+            width: 300px;
+        }
+    }
 </style>
 
 <body>
@@ -202,7 +217,7 @@
         <img id="currentImage" src="./img/jalen-1.jpeg" alt="Current Image">
     </div>
     <h3>
-        2/1/23<br>
+        <span>2/1/23</span><br>
         <i>Utopias of a Third Kind by Vandana Singh</i><br>
         - Utopia: &quot;Collective dreaming&quot;<br>
         - Utopia is a construct created in response to the perceived gap between the current and the ideal<br>
@@ -237,7 +252,8 @@
             <li>Transcending the false dichotomies of capitalist modernity</li>
         </ul>
         <br><br>
-        2/6/23<br>
+
+        <span>2/6/23</span><br>
         <i>Black Marxism: The Roots of Black Radicalism (Cedric Robinson)</i><br>
         &quot;... the development of each (Brit, German, US empires) testified to the characteristic tendency of
         capitalist societies to amass violence for domination and exploitation and a diminishing return, a dialectic, in
@@ -259,8 +275,10 @@
         and the appearance of the &quot;Negro,&rdquo; the relationship between the African and European had been
         reversed.&quot; (82)<br>
         &quot;The obliteration of the African Past from European consciousness was the culmination of a process a
-        thousand years long and one at the root of European historical identity. &quot; (82)<br><br>
-        2/14/23<br>
+        thousand years long and one at the root of European historical identity. &quot; (82)
+        <br><br><br>
+
+        <span>2/14/23</span><br>
         <i>Black Marxism: The Historical archaeology of the Black Radical Tradition</i>(Cedric Robinson)<br>
         By denying the historical development of the dominated people, the imperialists also deny their cultural
         development<br>
@@ -272,8 +290,10 @@
         &quot;became&quot; slaves. And the subsequent generations of &quot;Native Sons&quot; bore these scars.<br>
         African labor only become necessary when Native labor was exhausted and European labor became inadequate<br>
         Palenqu&eacute; communities of the 1500s in Mexico: Communities of escaped slaves. resistance has always been
-        happening<br>
-        <br>2/27/23<br>
+        happening
+        <br><br><br>
+
+        <span>2/27/23</span><br>
         <i>The Mundane Afrofuturist Manifesto by Martine Syms</i><br>
         &quot;The most likely future is one in which we only have ourselves and this planet.&quot;<br>
         What imagined possibilities can come about avoiding the traditional tropes of Black Sci-fi?<br>
@@ -283,8 +303,10 @@
         Our &quot;twoness&quot; is inherently contemporary and futuristic. &quot;If I got a problem, a problem's gotta
         problem 'fil it's gone.&quot; - ODB in response to Dubois (W.e.B.)<br>
         Mundane Afrofuturism is the ultimate laboratory for worldbuilding outside of imperialist, capitalist,<br>
-        White patriarchy.<br>
-        <br>5/6/23<br>
+        White patriarchy.
+        <br><br><br>
+
+        <span>5/6/23</span><br>
         <i>The Carrier Bag Theory of Fiction by Ursula K. Le Guin</i><br>
         *notes originally from 1/23/23*<br>
         <br>
@@ -320,9 +342,10 @@
         black queer theory, pan-africanism, and ecological consciousness looks like on a micro, human to human level;
         and how an innumerable amount of these stories can create a mosaic for macro revolution. I am interested in the
         creativity, struggle, and resistance that materializes from the embodiment of these ideas. Criticizing the west;
-        capitalism, imperialism, racism, sexism, religious dogma, Queer phobia, etc.<br>
-        <br>
-        5/14/23<br>
+        capitalism, imperialism, racism, sexism, religious dogma, Queer phobia, etc.
+        <br><br><br>
+
+        <span>5/14/23</span><br>
         <b>Mundane Afrofuture film thoughts.</b><br>
         One character's story affects another character&rsquo;s story, an interconnected web<br>
         How do others fill out who we are?<br>
@@ -342,9 +365,10 @@
         &#20010;<br>
         The merging of surreal fronts colliding, making What's real and what isn't indistinguishable<br>
         A mythological, surreal odyssey organic to the real world. And dreams that are so mundane<br>
-        its reality isn't questioned<br>
-        <br>
-        8/14/23<br>
+        its reality isn't questioned
+        <br><br><br>
+
+        <span>8/14/23</span><br>
         <i>Dreams and the Temporality of Consciousness by: Katherine Maeduffie and George A. Mashour</i><br>
         Dreaming is a unique state of consciousness that incorporates 3 temporal dimensions: experience Of the present,
         Processing of the past, and preparation for the future.<br>
@@ -374,8 +398,10 @@
         only memorable detail<br>
         Emotion in dreams provide a continuity that the dream content does not<br>
         &quot;Hyperassociation&quot;: The retrieval of fragmented memories recombined in bizarre, illogical ways<br>
-        A dream is a temporal bridge across the past, present, and future, an overlapping window<br>
-        8/14/23<br>
+        A dream is a temporal bridge across the past, present, and future, an overlapping window
+        <br><br><br>
+
+        <span>8/14/23</span><br>
         <i>Films and Dreams by Robert Lung</i><br>
         We must understand dreams more before associating film with dreams<br>
         Trivial similarities: The cinematic qualities dreams carry in comparison to real life, the spatio- temporal
@@ -386,16 +412,20 @@
         inhabiting<br>
         Bi-presence: being in the dream as well as a spectator of the dream<br>
         Perhaps the film/dream comparison is most astute in the similar tendency to induce a self-forgetful involvement
-        Within whatever world is being experienced<br>
-        8/15/23<br>
+        Within whatever world is being experienced
+        <br><br><br>
+
+        <span>8/15/23</span><br>
         <i>Surrealist Cinema: Politics, history, and the language of Dreams by Sandy Flitterman - Lewis</i><br>
         Exploring societies social foundations through Cinema's capacity to materially reproduce the structure and logic
         of dreams<br>
         The narrative, experimental, and documentary converge in surrealist cinema<br>
         &ldquo;... (surrealist) cinema could be a means of communication which would bypass the rational distortions of
         verbal language, a mode whose emphasis on the body could reveal those Truths hidden by the abstraction Of
-        language.&quot;<br>
-        8/16/23<br>
+        language.&quot;
+        <br><br><br>
+
+        <span>8/16/23</span><br>
         <i>National Liberation and Culture by Amilcar cabral</i><br>
         <br>
         What is culture? How significant is this force if imperialist bodies Find it necessary to neutralize?<br>
@@ -419,9 +449,10 @@
         must also be able to discern the essential from the secondary, the positive from the negative, the progressive
         from regressive, the strengths from the weaknesses in the total cultural complexity of the people. And converge
         Various cultural and social categories, transforming it to a single force which acts as the basis and foundation
-        for armed Struggle.<br>
-        <br>
-        8/28/23<br>
+        for armed Struggle.
+        <br><br><br>
+
+        <span>8/28/23</span><br>
         <b>Third Cinema</b><br>
         The identification process is more likened to a political and social experience more so than a dream experience.
         (in regard to spectator viewership)<br>
@@ -429,9 +460,10 @@
         pressing social realities of the day; and two that the film achieves its impression of reality not by simply
         mirroring, but transforming the given.<br>
         Third cinema Semiotics move between, and live on, the ambiguity of signifiers (representation) and referent (the
-        real).<br>
-        <br><br>
-        12/12/23<br>
+        real).
+        <br><br><br>
+
+        <span>12/12/23</span><br>
         <i>On Walter Benjamin&rsquo;s Historical Materialism By Alfredo Lucero - Montano</i><br>
         In Benjamin's On the concept of history, he transforms concepts into images<br>
         Traditional Historical materialism: Every historical event derives from a linear cause and effect relationship,
@@ -493,8 +525,9 @@
         artist. Thinking of speculation outside of escapist world-building, as a generative tool for tangibly imagining
         better futures; and also in the nature of being mindful of how might this material be interpreted in the future.
         When I become a part of the past, will the material I left behind be fruitful for the generations to come, for
-        them to continue the act of speculation?<br>
-        <br>
+        them to continue the act of speculation?
+        <br><br><br>
+
         <b>This is the creation of a new kind of myth making.</b>
     </h3>
     <h4>
@@ -507,16 +540,13 @@
 </body>
 <script>
     window.addEventListener('scroll', function () {
-        const threshold = 500; // Adjust this value as needed
-        const scrollPosition = window.scrollY || window.pageYOffset;
+        const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const percentageThreshold = 1; // Adjust this percentage as needed
+        const threshold = windowHeight * percentageThreshold; const scrollPosition = window.scrollY || window.pageYOffset;
         const imageContainer = document.getElementById('imageContainer');
         const currentImage = document.getElementById('currentImage');
 
         if (scrollPosition < threshold) {
-            currentImage.src = './img/jalen-1.jpeg';
-        } else if (scrollPosition < 2 * threshold) {
-            currentImage.src = './img/jalen-1.jpeg';
-        } else if (scrollPosition < 3 * threshold) {
             currentImage.src = './img/jalen-1.jpeg';
         } else {
             currentImage.src = './img/jalen-1.jpeg';

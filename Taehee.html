@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>"Your voice 06:14"</title>
+    <title>Your voice 06:14</title>
     <link rel="icon" href="img/star.gif" type="image/gif" />
 </head>
 <style>
@@ -19,9 +19,11 @@
         background-color: #eee;
         display: flex;
         flex-direction: column;
+        gap: 10px;
         margin: 24px;
     }
 
+    /* title and name */
     h1 {
         width: 90%;
         position: relative;
@@ -34,11 +36,11 @@
 
     h2 {
         position: relative;
-        margin-top: -55px;
+        margin-top: -40px;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 25px;
+        font-size: 34px;
         font-weight: 100;
-        margin-bottom: 48px;
+        margin-bottom: 100px;
     }
 
     /* bio and text */
@@ -50,6 +52,33 @@
         font-family: "Nanum Myeongjo", serif;
         font-weight: 100;
         line-height: 24px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    td {
+        font-size: 18px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 100;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .number1,
+    .number2 {
+        color: #f26830;
+    }
+
+    .number1:hover,
+    .number2:hover {
+        cursor: pointer;
+    }
+
+    .footnote1:hover,
+    .footnote2:hover {
+        cursor: pointer;
     }
 
     h4 {
@@ -113,45 +142,38 @@
 
     #currentImage {
         width: 300px;
-        height: 450px;
     }
 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 720px) {
         body {
             margin: 10px;
             gap: 10px;
         }
 
         h1 {
-            font-size: 36px;
-            line-height: 40px;
-            /* Increase line height for better readability */
-            /* text-align: center; */
+            width: 100%;
+            font-size: 30px;
+            line-height: 36px;
             margin-bottom: 10px;
         }
 
         h2 {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 18px;
-            /* Adjust font size for smaller screens */
-            /* text-align: center; */
-            margin-bottom: 20px;
+            font-size: 20px;
+            margin-bottom: 40px;
             margin-top: 0px;
-
         }
 
         h3 {
-            width: 95%;
-            /* text-align: justify; */
+            width: 100%;
             font-size: 16px;
             line-height: 20px;
         }
 
         h4 {
-            width: 95%;
+            width: 100%;
             margin-top: 20px;
             margin-bottom: 20px;
-            /* text-align: justify; */
             font-size: 14px;
             line-height: 18px;
         }
@@ -165,45 +187,38 @@
 
         .back_btn {
             font-size: 12px;
-            /* Adjust font size for smaller screens */
         }
+
+        .back_btn img {
+            width: 20px;
+            height: 15px;
+            animation: rotation 6s infinite linear;
+            filter: drop-shadow(0px 0px 8px #fac390);
+        }
+
+        #imageContainer {
+            top: 90%;
+            right: 10%;
+            transform: translateY(-100%);
+        }
+
+        #currentImage {
+            width: 200px;
+        }
+
     }
 
-    .back_btn img {
-        width: 20px;
-        height: 15px;
-        animation: rotation 6s infinite linear;
-        filter: drop-shadow(0px 0px 8px #fac390);
-    }
+    @media screen and (min-width: 721px) {
 
-    /* #imageContainer {
-            position: fixed; 
-            top: 60%; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0.5;
-        } */
+        #imageContainer {
+            top: 50%;
+            right: 15%;
+            transform: translateY(-50%);
+        }
 
-    /* #currentImage {
-            width: 0px; 
-            height: 0px;
-        } */
-    sup {
-        color: blue;
-    }
-
-    sup:hover {
-        color: yellow;
-        cursor: pointer;
-    }
-
-    abbr {
-        font-variant: none;
-    }
-
-    #imageContainer {
-        z-index: -1000;
+        #currentImage {
+            width: 300px;
+        }
     }
 </style>
 
@@ -240,19 +255,14 @@
             I never even consented to be born. Especially, of all places, into the Capitalist Empire. Yet, I can&rsquo;t
             give up on this idea that...</p>
 
-        <p>The voice asked, &ldquo;Are your parents supportive?&rdquo;<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;In
-            what sense?</p>
+        <p>The voice asked, &ldquo;Are your parents supportive?&rdquo;</p>
 
-        <p>
-            Oh, in what sense&#8230;<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ldquo;You&#8230;
-            &emsp;&emsp;&emsp;being&#8230; <br>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;queer&#8230;
-            <br>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;trans&#8230;<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;and
-            everything&#8230;&rdquo;</p>
+        <p style="text-align: right; line-height: 20px;">In what sense?</p>
+        <p style="text-align: left; line-height: 8px;">Oh, in what sense...</p>        
+        <p style="text-align: center; line-height: 8px;">“You...&emsp;being...</p>        
+        <p style="text-align: center; line-height: 8px;">queer...</p>
+        <p style="text-align: center; line-height: 8px;">trans...</p>
+        <p style="text-align: center; line-height: 20px;">and everything...”</p>
 
         <p>
             I have a desire to tell my parents who have brought me into this world: &ldquo;You don't have to worry about
@@ -280,12 +290,12 @@
 
         <p>&ldquo;Maybe it is time to give up.&rdquo;<br>
             &ldquo;What do you mean giving up? We can&rsquo;t just leave things like this. It is so
-            irresponsible<sup><abbr
-                    title="I’m not a responsible person/worker/top/dom. I just happened to be conditioned as a Korean eldest “daughter.” ">1</abbr></sup>.&rdquo;
+            irresponsible <span class="number1" onclick="scrollToElement('.footnote1')">[1]</span> .&rdquo;
             <br>
             &ldquo;Don&rsquo;t you think it is time we admit that we are tired?&rdquo;<br>
             &ldquo;Is it a denial?&rdquo; I asked. <br>
-            &ldquo;No, a refusal.&rdquo; I answered back.</p>
+            &ldquo;No, a refusal.&rdquo; I answered back.
+        </p>
 
         <p>There are many forms of giving up.<br>
             The voice told me <br>
@@ -301,7 +311,9 @@
         <p>I think of a bratty friend<br>
             unafraid to speak her mind<br>
             complaining when things don&rsquo;t add up<br>
-            Truly, a phenomenology of brattiness<sup><abbr title="Rabeeha Adnan, 2023">2</abbr></sup></p>
+            Truly, a phenomenology of brattiness <span class="number2"
+                onclick="scrollToElement('.footnote2')">[2]</span>
+        </p>
 
         <p>Then, there is the migrating animal&rsquo;s bravery<br>
             Giving up their seasonal home <br>
@@ -345,6 +357,12 @@
     </h3>
 
     <h4>
+        <span class="footnote1" style="color: #da9377;" onclick="scrollToElement('.number1')">1</span> - I’m not a
+        responsible person/worker/top/dom. I just happened to be conditioned as a Korean eldest “daughter.”
+        side of things.<br>
+        <span class="footnote2" style="color: #da9377;" onclick="scrollToElement('.number2')">2</span> - Rabeeha Adnan,
+        2023
+        <br><br><br><br>
         Taehee (they/them) is a Korean American transdisciplinary artist whose work explores themes related to the
         fluidity of kinship, queer body, and grief with sculptural websites. It’s because they believe that love is
         transdimensional, able to exist in virtual, physical, metaphysical, and even afterlife forms. They are a current
@@ -355,25 +373,11 @@
 
 
     <script>
-        window.addEventListener('scroll', function () {
-            const threshold = 0; // Adjust this value as needed
-            const scrollPosition = window.scrollY || window.pageYOffset;
-            const imageContainer = document.getElementById('imageContainer');
-            const currentImage = document.getElementById('currentImage');
-
-            if (scrollPosition < threshold) {
-                currentImage.src = './img/tae.JPG';
-            } else if (scrollPosition < 2 * threshold) {
-                currentImage.src = './img/tae.JPG';
-            } else if (scrollPosition < 3 * threshold) {
-                currentImage.src = './img/tae.JPGg';
-            } else {
-                currentImage.src = './img/tae.JPG';
+        function scrollToElement(selector) {
+            const element = document.querySelector(selector);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
             }
-
-            // Adjust image container size if needed
-            // imageContainer.style.width = currentImage.width + 'px';
-            // imageContainer.style.height = currentImage.height + 'px';
-        });
+        }
     </script>
 </body>

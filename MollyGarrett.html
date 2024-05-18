@@ -36,11 +36,11 @@
 
     h2 {
         position: relative;
-        margin-top: -55px;
+        margin-top: -40px;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 25px;
+        font-size: 34px;
         font-weight: 100;
-        margin-bottom: 48px;
+        margin-bottom: 100px;
     }
 
     /* bio and text */
@@ -54,16 +54,25 @@
         line-height: 24px;
     }
 
-    .number1, .number2, .number3,.number4 {
+    .number1,
+    .number2,
+    .number3,
+    .number4 {
         color: #f26830;
     }
 
-    .number1:hover, .number2:hover, .number3:hover,.number4:hover {
-        cursor:pointer;
+    .number1:hover,
+    .number2:hover,
+    .number3:hover,
+    .number4:hover {
+        cursor: pointer;
     }
 
-    .footnote1:hover, .footnote2:hover, .footnote3:hover,.footnote4:hover {
-        cursor:pointer;
+    .footnote1:hover,
+    .footnote2:hover,
+    .footnote3:hover,
+    .footnote4:hover {
+        cursor: pointer;
     }
 
     h4 {
@@ -101,7 +110,7 @@
 
     /* Egg rotation above the “about” element @Weitong*/
     .back_btn img {
-        width: 55px; 
+        width: 55px;
         height: 40px;
         animation: rotation 6s infinite linear;
         filter: drop-shadow(0px 0px 8px #fac390);
@@ -118,54 +127,47 @@
     }
 
     #imageContainer {
-        position: fixed; 
-        top: 50%; 
-        right: 15%; 
+        position: fixed;
+        top: 50%;
+        right: 15%;
         transform: translateY(-50%);
         z-index: -1;
     }
 
     #currentImage {
-            width: 300px; 
-            height: 200px;
+        width: 500px;
+    }
+
+    @media screen and (max-width: 720px) {
+        body {
+            margin: 10px;
+            gap: 10px;
         }
 
-    @media screen and (max-width: 700px) {
-            body {
-                margin: 10px;
-                gap: 10px;
-            }
-
-            h1 {
-            font-size: 36px;
-            line-height: 40px;
-            /* Increase line height for better readability */
-            /* text-align: center; */
+        h1 {
+            width: 100%;
+            font-size: 30px;
+            line-height: 36px;
             margin-bottom: 10px;
         }
 
         h2 {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 18px;
-            /* Adjust font size for smaller screens */
-            /* text-align: center; */
-            margin-bottom: 20px;
+            font-size: 20px;
+            margin-bottom: 40px;
             margin-top: 0px;
-
         }
 
         h3 {
-            width: 95%;
-            /* text-align: justify; */
+            width: 100%;
             font-size: 16px;
             line-height: 20px;
         }
 
         h4 {
-            width: 95%;
+            width: 100%;
             margin-top: 20px;
             margin-bottom: 20px;
-            /* text-align: justify; */
             font-size: 14px;
             line-height: 18px;
         }
@@ -178,31 +180,40 @@
         }
 
         .back_btn {
-            font-size: 12px; /* Adjust font size for smaller screens */
+            font-size: 12px;
         }
-        }
-        
+
         .back_btn img {
-            width: 20px; 
+            width: 20px;
             height: 15px;
             animation: rotation 6s infinite linear;
             filter: drop-shadow(0px 0px 8px #fac390);
         }
 
-        /* #imageContainer {
-            position: fixed; 
-            top: 60%; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0.5;
-        } */
+        #imageContainer {
+            top: 90%;
+            right: 10%;
+            transform: translateY(-100%);
+        }
 
-        /* #currentImage {
-            width: 0px; 
-            height: 0px;
-        } */
+        #currentImage {
+            width: 250px;
+        }
 
+    }
+
+    @media screen and (min-width: 721px) {
+
+        #imageContainer {
+            top: 50%;
+            right: 15%;
+            transform: translateY(-50%);
+        }
+
+        #currentImage {
+            width: 500px;
+        }
+    }
 </style>
 
 <body>
@@ -215,9 +226,8 @@
 
     <h1>A View Is Considered Three Seconds</h1>
     <h2>Molly Garrett</h2>
-    <div id="imageContainer" style="position: fixed; top: 50%; right: 15%; transform: translateY(-50%);">
-        <img id="currentImage" src="./img/molly-1.jpeg" alt="Current Image"
-            style="width: 300px; height: 200px;">
+    <div id="imageContainer">
+        <img id="currentImage" src="./img/molly-1.jpeg" alt="Current Image">
     </div>
     <h3>
         The average hug lasts three seconds. In a study of human behavior, researchers watched videos, frame by frame,
@@ -240,12 +250,12 @@
         <br>
         In 2004, researchers started studying attention spans with stopwatches. They found that office workers, on
         average, could achieve focused attention for 2 and a half minutes. In 2012, it shrunk to 1 minute and 15
-        seconds. The most recent data suggests we&rsquo;re now at an average of 47 seconds &mdash; perhaps that&rsquo;s
+        seconds. The most recent data suggests we&rsquo;re now at an average of 47 seconds&mdash;perhaps that&rsquo;s
         generous.<br>
         <br>
         Video on social media has mostly abandoned structure or story, only having one-mississippi two-mississippi
         three-mississippi guaranteed. Shorter, it should always be shorter. The viewer is anxious to see the next thing,
-        the next thing, the next thing &mdash; there&rsquo;s a never ending supply of content. Perhaps people&rsquo;s
+        the next thing, the next thing&mdash;there&rsquo;s a never ending supply of content. Perhaps people&rsquo;s
         anxiety is fueled by the knowledge they can never watch it all, so they&rsquo;re intuitively chasing a video
         that fits their particular niche interests and insecurities&#8230; for certain videos, the odds are forever
         stacked against that happening. The viewer can smell a political advertisement in the first second, something in
@@ -267,7 +277,7 @@
         <br>
         Google Ads Transparency Center is Google&rsquo;s attempt at repentance for the harm they&rsquo;ve caused in
         political advertising. You can now use the technology that uses you to search for money and messaging spent to
-        its greedy hands. I search ads placed June 24 - August 2, 2022, political, shown in Kansas &mdash; the most
+        its greedy hands. I search ads placed June 24 - August 2, 2022, political, shown in Kansas&mdash;the most
         important election for abortion access since Dobbs. <br>
         <br>
         At that time I was living in Kansas City. Although technically in Missouri, my apartment was just two blocks
@@ -275,8 +285,8 @@
         Center, just a half mile away. In June - August of 2022, you couldn&rsquo;t walk one block without seeing a yard
         sign, banner, or bumper sticker about the abortion referendum, bright blue and dull purple rectangles dotting
         the city&rsquo;s yards, windows, and cars. To paraphrase the question up for vote: Should Kansas protect
-        abortion access at the state level? The amendment was called the Value Them Both constitutional amendment
-        &mdash; a YES vote was against abortion access and a NO vote would protect abortion access. Confusing on
+        abortion access at the state level? The amendment was called the Value Them Both constitutional
+        amendment&mdash;a YES vote was against abortion access and a NO vote would protect abortion access. Confusing on
         purpose, of course. <br>
         <br>
         I had been working in politics for seven years at this point. My first federal election was 2016. Donald Trump
@@ -284,7 +294,7 @@
         ducking out of the office election night watch party to cry into our wine glasses. By 2022, I had fully
         acclimatized to that environment. I had learned how to swim upstream, keeping my head above water, despite cause
         for overwhelming dread and despair. There had been big wins and big losses, and I had learned a lot from my
-        coworkers &ndash; a hardened group of young adults ranging from progressive to radical, all faced with the
+        coworkers&ndash;a hardened group of young adults ranging from progressive to radical, all faced with the
         reality of living in a very red state. We moved like a well-oiled machine <span class="number1"
             onclick="scrollToElement('.footnote1')">[1]</span> most
         of
@@ -292,7 +302,7 @@
         place. I often disagreed with platforms or tactics, but progressive politics in Kansas and Missouri isn&rsquo;t
         a great place for idealism. <br>
         <br>
-        The larger the race the less exciting or rewarding I found the work &mdash; working in federal races started to
+        The larger the race the less exciting or rewarding I found the work&mdash;working in federal races started to
         feel horrible and slimy, coated in millions of dollars of lobbyist money and overworkshopped messaging language.
         I found my hope and dedication in working for smaller races and groups: state congressional districts and ballot
         measures, city council races, unions and coalitions. I created ads that alerted voters to a ballot measure that
@@ -314,39 +324,39 @@
         rise to the top. If three seconds is precious, if hundreds of thousands of dollars are spent &mdash; what words
         were said?<br>
         <br>
-        This confusing constitutional amendment is a slippery &mdash;<br>
-        If cars ran on excuses, Joe Biden and Sharice Davids &mdash;<br>
-        Don&rsquo;t be mislead, abortion is already highly regulated &mdash;<br>
-        On the constitutional amendment, here&rsquo;s what you &mdash;<br>
-        The abortion industry and radical left are spending millions &mdash;<br>
-        The radical left gave us high gas prices &mdash;<br>
-        Kansas has become an abortion destination &mdash;<br>
-        Hey, it&rsquo;s Harrison Butker, kicker for the Kansas City Chiefs &mdash;<br>
-        We were expecting our second child when we learned &mdash;<br>
-        Do no harm. That&rsquo;s the oath we &mdash;<br>
-        I&rsquo;ve read the Value Them Both Amendment &mdash;<br>
-        Which Kansas will you choose? Biden and the radical &mdash;<br>
-        Whatever you&rsquo;re doing, stop and listen. &mdash;<br>
-        On the constitutional amendment, here&rsquo;s what you need to know &mdash;<br>
+        This confusing constitutional amendment is a slippery&mdash;<br>
+        If cars ran on excuses, Joe Biden and Sharice Davids&mdash;<br>
+        Don&rsquo;t be mislead, abortion is already highly regulated&mdash;<br>
+        On the constitutional amendment, here&rsquo;s what you&mdash;<br>
+        The abortion industry and radical left are spending millions&mdash;<br>
+        The radical left gave us high gas prices&mdash;<br>
+        Kansas has become an abortion destination&mdash;<br>
+        Hey, it&rsquo;s Harrison Butker, kicker for the Kansas City Chiefs&mdash;<br>
+        We were expecting our second child when we learned&mdash;<br>
+        Do no harm. That&rsquo;s the oath we&mdash;<br>
+        I&rsquo;ve read the Value Them Both Amendment&mdash;<br>
+        Which Kansas will you choose? Biden and the radical&mdash;<br>
+        Whatever you&rsquo;re doing, stop and listen&mdash;<br>
+        On the constitutional amendment, here&rsquo;s what you need to know&mdash;<br>
         Politicians are trying to confuse you &mdash;<br>
-        I won&rsquo;t support putting a woman&rsquo;s life at risk &mdash;<br>
-        Opponents of the Value Them Both Amendment are misleading you &mdash;<br>
-        Growing up Catholic, we didn&rsquo;t talk about &mdash;<br>
-        Confused about this amendment? It could ban &mdash;<br>
+        I won&rsquo;t support putting a woman&rsquo;s life at risk&mdash;<br>
+        Opponents of the Value Them Both Amendment are misleading you&mdash;<br>
+        Growing up Catholic, we didn&rsquo;t talk about&mdash;<br>
+        Confused about this amendment? It could ban&mdash;<br>
         <br>
         Some of those are my words, words I typed. I rattled off the approved language to explain the horrors of a
         person forced to give birth. I searched for the words that keep the message 1) condensed for time, 2) dramatic
         for efficacy, 3) not offensive for approval. <br>
         <br>
-        I think of what I want to say &mdash;<br>
+        I think of what I want to say&mdash;<br>
         <br>
         &ldquo;Keep abortion legal.&rdquo; <br>
         <br>
         1 out of 3, not approved. In the midwest, it has to be more dramatic, and the word abortion can be considered
-        offensive. Try switching to &ldquo;reproductive healthcare&rdquo; &mdash; now it&rsquo;s too long. For more
+        offensive. Try switching to &ldquo;reproductive healthcare&rdquo;&mdash;now it&rsquo;s too long. For more
         attention, it has to be about a woman suffering, or a doctor going to jail. The algorithm doesn&rsquo;t crave
         nuance or clarity, just put the iStock image of a jail door slamming, a woman crying in a hospital bed, add text
-        on screen. Hammer to skull, scream with your text &mdash; <br>
+        on screen. Hammer to skull, scream with your text&mdash; <br>
         <br>
         &ldquo;DOCTORS IN JAIL?&rdquo;<br>
         <br>
@@ -396,7 +406,8 @@
         advocates
         and allied organizations committed to protecting the constitutional rights of Kansans and the right to safe,
         legal abortion.” I pulled that language from their website.<br>
-        <span class="footnote3" style="color: #da9377;" onclick="scrollToElement('.number3')">3</span> - Oliver Twist<br>
+        <span class="footnote3" style="color: #da9377;" onclick="scrollToElement('.number3')">3</span> - Oliver
+        Twist<br>
         <span class="footnote4" style="color: #da9377;" onclick="scrollToElement('.number4')">4</span> - My maternal
         grandmother was a single issue voter. She
         was an incredible, independent woman with a sharp
@@ -415,11 +426,14 @@
     function scrollToElement(selector) {
         const element = document.querySelector(selector);
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest'});
+            element.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
         }
     }
+
     window.addEventListener('scroll', function () {
-        const threshold = 500; // Adjust this value as needed
+        const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const percentageThreshold = 0.166; // Adjust this percentage as needed
+        const threshold = windowHeight * percentageThreshold;
         const scrollPosition = window.scrollY || window.pageYOffset;
         const imageContainer = document.getElementById('imageContainer');
         const currentImage = document.getElementById('currentImage');

@@ -35,11 +35,11 @@
 
     h2 {
         position: relative;
-        margin-top: -55px;
+        margin-top: -40px;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 25px;
+        font-size: 34px;
         font-weight: 100;
-        margin-bottom: 48px;
+        margin-bottom: 100px;
     }
 
     /* bio and text */
@@ -51,6 +51,10 @@
         font-family: "Nanum Myeongjo", serif;
         font-weight: 100;
         line-height: 24px;
+    }
+
+    h3 span {
+        font-weight: 700;
     }
 
     h4 {
@@ -88,7 +92,7 @@
 
     /* Egg rotation above the “about” element @Weitong*/
     .back_btn img {
-        width: 55px; 
+        width: 55px;
         height: 40px;
         animation: rotation 6s infinite linear;
         filter: drop-shadow(0px 0px 8px #fac390);
@@ -105,54 +109,47 @@
     }
 
     #imageContainer {
-        position: fixed; 
-        top: 50%; 
-        right: 15%; 
+        position: fixed;
+        top: 50%;
+        right: 15%;
         transform: translateY(-50%);
         z-index: -1;
     }
 
     #currentImage {
-            width: 300px; 
-            height: 200px;
+        width: 400px;
+    }
+
+    @media screen and (max-width: 720px) {
+        body {
+            margin: 10px;
+            gap: 10px;
         }
 
-    @media screen and (max-width: 700px) {
-            body {
-                margin: 10px;
-                gap: 10px;
-            }
-
-            h1 {
-            font-size: 36px;
-            line-height: 40px;
-            /* Increase line height for better readability */
-            /* text-align: center; */
+        h1 {
+            width: 100%;
+            font-size: 30px;
+            line-height: 36px;
             margin-bottom: 10px;
         }
 
         h2 {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 18px;
-            /* Adjust font size for smaller screens */
-            /* text-align: center; */
-            margin-bottom: 20px;
+            font-size: 20px;
+            margin-bottom: 40px;
             margin-top: 0px;
-
         }
 
         h3 {
-            width: 95%;
-            /* text-align: justify; */
+            width: 100%;
             font-size: 16px;
             line-height: 20px;
         }
 
         h4 {
-            width: 95%;
+            width: 100%;
             margin-top: 20px;
             margin-bottom: 20px;
-            /* text-align: justify; */
             font-size: 14px;
             line-height: 18px;
         }
@@ -165,30 +162,40 @@
         }
 
         .back_btn {
-            font-size: 12px; /* Adjust font size for smaller screens */
+            font-size: 12px;
         }
-        }
-        
+
         .back_btn img {
-            width: 20px; 
+            width: 20px;
             height: 15px;
             animation: rotation 6s infinite linear;
             filter: drop-shadow(0px 0px 8px #fac390);
         }
 
-        /* #imageContainer {
-            position: fixed; 
-            top: 60%; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0.5;
-        } */
+        #imageContainer {
+            top: 90%;
+            right: 10%;
+            transform: translateY(-100%);
+        }
 
-        /* #currentImage {
-            width: 0px; 
-            height: 0px;
-        } */
+        #currentImage {
+            width: 250px;
+        }
+
+    }
+
+    @media screen and (min-width: 721px) {
+
+        #imageContainer {
+            top: 50%;
+            right: 15%;
+            transform: translateY(-50%);
+        }
+
+        #currentImage {
+            width: 400px;
+        }
+    }
 </style>
 
 <body>
@@ -200,7 +207,7 @@
         </div>
     </button>
 
-    <h1>Pink Quilt Sac – My Greenhouse</h1>
+    <h1>Pink Quilt Sac&mdash;My Greenhouse</h1>
 
     <h2>Yangyang Zhang</h2>
 
@@ -209,22 +216,69 @@
     </div>
 
     <h3>
-        <p>If someone were to ask me what the second hardest thing I have to do besides working towards an MFA&#65292; then I would definitely say it&rsquo;s the daily wake-up call. Getting out of bed may not seem like something that needs to be documented in writing for regular people, but for me, it is. If someone were to ask me what the most comfortable thing in the world is, I would say it's a quilt. My quilt, the greenhouse of my limbs, is a comfort zone I can't leave. If I didn&rsquo;t need to eat, if I didn&rsquo;t need to do my homework, if I didn&rsquo;t need to go out and about. Then I would never leave it, and I would spend 24 hours a day inside it.  07:55 AM: Every morning the first rays of sunlight through the blinds collide with my eyes, hitting me straight in the eyes, my head rubbing against the soft edges of the quilted bag, my limbs curled up in the quilt, and then my alarm starts ..... ... ..... ..... ..... ... My fingers clench tightly to rouse the sleeping blood, sleepy eyes linked to thoughts trying to recall the location where I put my phone before bed, reluctantly revealing an ear and a hand to follow the path of the alarm clock sound, fingers following, looking for the cold hard 6.8-inch screen, by intuition, like fingers in the game, as quickly and decisively straight to the &quot;close the alarm&quot; button to turn off the alarm. My brain feels instant silence, but my body is in the quilted greenhouse repeatedly struggling. Then I feel my tendons and bones stretching, muscles freed from the nerve endings, activated and released followed by a hort period of relaxation.</p>
+        <p>If someone were to ask me what the second hardest thing I have to do besides working towards an MFA&#65292;
+            then I would definitely say it&rsquo;s the daily wake-up call. Getting out of bed may not seem like
+            something that needs to be documented in writing for regular people, but for me, it is. If someone were to
+            ask me what the most comfortable thing in the world is, I would say it's a quilt. My quilt, the greenhouse
+            of my limbs, is a comfort zone I can't leave. If I didn&rsquo;t need to eat, if I didn&rsquo;t need to do my
+            homework, if I didn&rsquo;t need to go out and about. Then I would never leave it, and I would spend 24
+            hours a day inside it. 07:55 AM: Every morning the first rays of sunlight through the blinds collide with my
+            eyes, hitting me straight in the eyes, my head rubbing against the soft edges of the quilted bag, my limbs
+            curled up in the quilt, and then my alarm starts ..... ... ..... ..... ..... ... My fingers clench tightly
+            to rouse the sleeping blood, sleepy eyes linked to thoughts trying to recall the location where I put my
+            phone before bed, reluctantly revealing an ear and a hand to follow the path of the alarm clock sound,
+            fingers following, looking for the cold hard 6.8-inch screen, by intuition, like fingers in the game, as
+            quickly and decisively straight to the &quot;close the alarm&quot; button to turn off the alarm. My brain
+            feels instant silence, but my body is in the quilted greenhouse repeatedly struggling. Then I feel my
+            tendons and bones stretching, muscles freed from the nerve endings, activated and released followed by a
+            hort period of relaxation.</p>
 
         <p>My brain floats a weak signal:</p>
 
-        <p>get up? Get up?  Get up? No? Get up? No? get up?  Get up? Get up? No? Get up?  No? get up? Get up?   Get up? No?  Get up?   No!</p>
+        <p>get up? Get up? Get up? No? Get up? No? get up? Get up? Get up? No? Get up? No? get up? Get up? Get up? No?
+            Get up? No!</p>
 
-        <p>Cycling back and forth with only the faintest of intentions, the thoughts become more and more uncontrollable as I slowly begin to return to my dream. My body stops struggling, my forehead retracts back into my blanket, releasing the muscles that have been curled up all night, and I begin to move on to the next sleep.</p>
+        <p>Cycling back and forth with only the faintest of intentions, the thoughts become more and more uncontrollable
+            as I slowly begin to return to my dream. My body stops struggling, my forehead retracts back into my
+            blanket, releasing the muscles that have been curled up all night, and I begin to move on to the next sleep.
+        </p>
 
-        <p>08:30 AM: The alarm starts again at 8:30, the sunlight leaking through the blinds gradually spreads, pouring onto the pink cotton quilt, my limbs wriggle inside it The airflow inside the cotton quilt gets replaced, in the process my limbs gradually warms from the sunlight's displacement, the fluffy cotton on seems to align with the direction of the light and absorbs the warmth of the morning. I can feel my quilt breathing, my limbs relaxing in the greenhouse, and I know that this is the only time of the day when I can get away from the hustle and bustle and return to my inner peace. The quilt becomes a sanctuary for my limbs, and all worries and stresses are kept out of the greenhouse.</p>
+        <p>08:30 AM: The alarm starts again at 8:30, the sunlight leaking through the blinds gradually spreads, pouring
+            onto the pink cotton quilt, my limbs wriggle inside it The airflow inside the cotton quilt gets replaced, in
+            the process my limbs gradually warms from the sunlight's displacement, the fluffy cotton on seems to align
+            with the direction of the light and absorbs the warmth of the morning. I can feel my quilt breathing, my
+            limbs relaxing in the greenhouse, and I know that this is the only time of the day when I can get away from
+            the hustle and bustle and return to my inner peace. The quilt becomes a sanctuary for my limbs, and all
+            worries and stresses are kept out of the greenhouse.</p>
 
-        <p>I like to immerse myself in this greenhouse, meditating and absorbing the energy that the sun gives me. The comfort of the blankets and the environment of the room bring me not only physical relaxation, but also spiritual pleasure and fulfillment. I no longer stay in bed because I am sleepy, but because I need a few minutes to myself with the cotton. 08:35 AM: The third alarm sounded less harsh, perhaps because the fibers in the pink bag absorbed the noise, and I was no longer offended by the third alarm, gently turning it off and enjoying the last two minutes before waking up. At this time, my mind became clearer and I realized that the pink quilt was not only a physical space to hold my body, but also a space to heal my soul. I would lie down in the bag and close my eyes, feeling its soft touch and warmth, because its softness was enough to caress my tiredness, and its warmth was enough to banish the outside world's disturbances, and in the greenhouse environment, I could leave all the outside distractions and troubles behind. In this greenhouse-like environment, I can put aside all external distractions and disturbances, and listen to the deepest voice of my heart. My pink quilt allows me to talk to myself again, listen to my inner voice and feel my true self. It gives me the strength and courage to face the challenges and difficulties in life. In the quilt bag, I can release my inner pressure and burden. In my cotton quilt, I reconnect with my inner self and find peace and strength. It is a magical place for me to heal my soul and a source of renewed strength and energy. The quilt, the home of my soul, is always warm, peaceful and healing.</p>
+        <p>I like to immerse myself in this greenhouse, meditating and absorbing the energy that the sun gives me. The
+            comfort of the blankets and the environment of the room bring me not only physical relaxation, but also
+            spiritual pleasure and fulfillment. I no longer stay in bed because I am sleepy, but because I need a few
+            minutes to myself with the cotton. 08:35 AM: The third alarm sounded less harsh, perhaps because the fibers
+            in the pink bag absorbed the noise, and I was no longer offended by the third alarm, gently turning it off
+            and enjoying the last two minutes before waking up. At this time, my mind became clearer and I realized that
+            the pink quilt was not only a physical space to hold my body, but also a space to heal my soul. I would lie
+            down in the bag and close my eyes, feeling its soft touch and warmth, because its softness was enough to
+            caress my tiredness, and its warmth was enough to banish the outside world's disturbances, and in the
+            greenhouse environment, I could leave all the outside distractions and troubles behind. In this
+            greenhouse-like environment, I can put aside all external distractions and disturbances, and listen to the
+            deepest voice of my heart. My pink quilt allows me to talk to myself again, listen to my inner voice and
+            feel my true self. It gives me the strength and courage to face the challenges and difficulties in life. In
+            the quilt bag, I can release my inner pressure and burden. In my cotton quilt, I reconnect with my inner
+            self and find peace and strength. It is a magical place for me to heal my soul and a source of renewed
+            strength and energy. The quilt, the home of my soul, is always warm, peaceful and healing.</p>
 
-        <p>08:37 AM: At 08:37, lifting the quilt and rotating the blinds' shades to release the light of a new day, I leave my bed, where my quilt continues to lazily cover me, absorbing heat to its fullest, waiting for the sun to set and touch me.</p>
+        <p>08:37 AM: At 08:37, lifting the quilt and rotating the blinds' shades to release the light of a new day, I
+            leave my bed, where my quilt continues to lazily cover me, absorbing heat to its fullest, waiting for the
+            sun to set and touch me.</p>
     </h3>
     <h4>
-        Yangyang Zhang(She/her) is a designer whose work records some cultural symbols left behind in the context of the rapid economic development of contemporary China.  She recorded and enjoyed paying attention to these cultural symbols, exploring the reasons behind them, constructing a narrative about contemporary Chinese cultural symbols by creating a special visual atmosphere in a special period in China, and thus started a discussion on consumerism,tradition and political issues.  She is currently majoring in MFA Graphic design in Virginia Commonwealth University(VCUarts).
+        Yangyang Zhang(She/her) is a designer whose work records some cultural symbols left behind in the context of the
+        rapid economic development of contemporary China. She recorded and enjoyed paying attention to these cultural
+        symbols, exploring the reasons behind them, constructing a narrative about contemporary Chinese cultural symbols
+        by creating a special visual atmosphere in a special period in China, and thus started a discussion on
+        consumerism,tradition and political issues. She is currently majoring in MFA Graphic design in Virginia
+        Commonwealth University(VCUarts).
     </h4>
 
 
@@ -232,7 +286,9 @@
 
 <script>
     window.addEventListener('scroll', function () {
-        const threshold = 100; // Adjust this value as needed
+        const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const percentageThreshold = 0.25; // Adjust this percentage as needed
+        const threshold = windowHeight * percentageThreshold;
         const scrollPosition = window.scrollY || window.pageYOffset;
         const imageContainer = document.getElementById('imageContainer');
         const currentImage = document.getElementById('currentImage');

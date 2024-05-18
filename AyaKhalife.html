@@ -36,11 +36,11 @@
 
     h2 {
         position: relative;
-        margin-top: -55px;
+        margin-top: -40px;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 25px;
+        font-size: 34px;
         font-weight: 100;
-        margin-bottom: 48px;
+        margin-bottom: 100px;
     }
 
     /* bio and text */
@@ -55,16 +55,17 @@
     }
 
     h3 span {
+        font-size: 20px;
         font-weight: 700;
-    }
+        }
 
     #column1 {
-        width: 25%;
+        width: 24%;
     }
 
     #column2 {
-        width: 25%;
-        left: 25%;
+        width: 24%;
+        left: 27%;
     }
 
     h4 {
@@ -119,64 +120,60 @@
     }
 
     #imageContainer {
-        position: fixed; 
-        top: 50%; 
-        right: 15%; 
+        position: fixed;
+        top: 50%;
+        right: 15%;
         transform: translateY(-50%);
         z-index: -1;
-        display: none;
     }
 
     #currentImage {
-            width: 300px; 
-            height: 200px;
-        }
+        width: 400px;
+    }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 720px) {
         body {
             margin: 10px;
             gap: 10px;
         }
 
         h1 {
-            font-size: 36px;
-            line-height: 40px;
-            /* Increase line height for better readability */
-            /* text-align: center; */
+            width: 100%;
+            font-size: 30px;
+            line-height: 36px;
             margin-bottom: 10px;
         }
 
         h2 {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 18px;
-            /* Adjust font size for smaller screens */
-            /* text-align: center; */
-            margin-bottom: 20px;
+            font-size: 20px;
+            margin-bottom: 40px;
             margin-top: 0px;
-
         }
 
         h3 {
-            width: 95%;
-            /* text-align: justify; */
+            width: 100%;
             font-size: 16px;
             line-height: 20px;
         }
 
+        h3 span {
+            font-size: 16px;
+        }
+
         #column1 {
-        width: 70%;
+            width: 70%;
         }
 
         #column2 {
-        width: 70%;
-        left: 20%;
+            width: 70%;
+            left: 20%;
         }
 
         h4 {
-            width: 95%;
+            width: 100%;
             margin-top: 20px;
             margin-bottom: 20px;
-            /* text-align: justify; */
             font-size: 14px;
             line-height: 18px;
         }
@@ -190,33 +187,39 @@
 
         .back_btn {
             font-size: 12px;
-            /* Adjust font size for smaller screens */
         }
-    }
 
-    .back_btn img {
-        width: 20px;
-        height: 15px;
-        animation: rotation 6s infinite linear;
-        filter: drop-shadow(0px 0px 8px #fac390);
-    }
+        .back_btn img {
+            width: 20px;
+            height: 15px;
+            animation: rotation 6s infinite linear;
+            filter: drop-shadow(0px 0px 8px #fac390);
+        }
 
-    /* #imageContainer {
-        display: none;
-    } */
-
-    /* #imageContainer {
-            position: fixed; 
-            top: 60%; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        #imageContainer {
+            top: 90%;
+            right: 10%;
+            transform: translateY(-100%);
         }
 
         #currentImage {
-            z-index: -1;
-            opacity: 0.5;
-        } */
+            width: 200px;
+        }
+    }
+
+
+    @media screen and (min-width: 721px) {
+
+        #imageContainer {
+            top: 50%;
+            right: 15%;
+            transform: translateY(-50%);
+        }
+
+        #currentImage {
+            width: 400px;
+        }
+    }
 </style>
 
 <body>
@@ -232,7 +235,7 @@
     <h2>Aya Khalife</h2>
 
     <div id="imageContainer">
-        <img id="currentImage" src="" alt="Current Image">
+        <img id="currentImage" src="./img/aya/1.png" alt="Current Image">
     </div>
 
     <h3 id="column1">
@@ -412,17 +415,27 @@
 </body>
 <script>
     window.addEventListener('scroll', function () {
-        const threshold = 500; // Adjust this value as needed
+        const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const percentageThreshold = 0.143; // Adjust this percentage as needed
+        const threshold = windowHeight * percentageThreshold;        
         const scrollPosition = window.scrollY || window.pageYOffset;
         const imageContainer = document.getElementById('imageContainer');
         const currentImage = document.getElementById('currentImage');
 
         if (scrollPosition < threshold) {
-            currentImage.src = '';
+            currentImage.src = './img/aya/1.png';
         } else if (scrollPosition < 2 * threshold) {
-            currentImage.src = '';
+            currentImage.src = './img/aya/2.png';
+        } else if (scrollPosition < 3 * threshold) {
+            currentImage.src = './img/aya/3.jpeg';
+        } else if (scrollPosition < 4 * threshold) {
+            currentImage.src = './img/aya/4.jpeg';
+        } else if (scrollPosition < 5 * threshold) {
+            currentImage.src = './img/aya/5.jpeg';
+        } else if (scrollPosition < 6 * threshold) {
+            currentImage.src = './img/aya/6.PNG';
         } else {
-            currentImage.src = '';
+            currentImage.src = './img/aya/7.png';
         }
 
         // Adjust image container size if needed

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>"one roll, flip, two roll, 20x35 / Hand in an intimate grid"</title>
+    <title>one roll, flip, two roll, 20x35 / Hand in an intimate grid</title>
     <link rel="icon" href="img/star.gif" type="image/gif" />
 </head>
 <style>
@@ -19,7 +19,6 @@
         background-color: #eee;
         display: flex;
         flex-direction: column;
-        gap: 10px;
         margin: 24px;
     }
 
@@ -36,11 +35,11 @@
 
     h2 {
         position: relative;
-        margin-top: -55px;
+        margin-top: -40px;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 25px;
+        font-size: 34px;
         font-weight: 100;
-        margin-bottom: 48px;
+        margin-bottom: 100px;
     }
 
     /* bio and text */
@@ -53,9 +52,15 @@
         font-weight: 100;
         line-height: 24px;
     }
+
     span {
         color: darkred;
     }
+
+    hr {
+        border-top: 0.3px dashed grey;
+    }
+
     h4 {
         width: 50%;
         position: relative;
@@ -91,7 +96,7 @@
 
     /* Egg rotation above the “about” element @Weitong*/
     .back_btn img {
-        width: 55px; 
+        width: 55px;
         height: 40px;
         animation: rotation 6s infinite linear;
         filter: drop-shadow(0px 0px 8px #fac390);
@@ -108,54 +113,47 @@
     }
 
     #imageContainer {
-        position: fixed; 
-        top: 50%; 
-        right: 15%; 
+        position: fixed;
+        top: 50%;
+        right: 15%;
         transform: translateY(-50%);
         z-index: -1;
     }
 
     #currentImage {
-            width: 300px; 
-            height: 200px;
+        width: 400px;
+    }
+
+    @media screen and (max-width: 720px) {
+        body {
+            margin: 10px;
+            gap: 10px;
         }
 
-    @media screen and (max-width: 700px) {
-            body {
-                margin: 10px;
-                gap: 10px;
-            }
-
-            h1 {
-            font-size: 36px;
-            line-height: 40px;
-            /* Increase line height for better readability */
-            /* text-align: center; */
+        h1 {
+            width: 100%;
+            font-size: 30px;
+            line-height: 36px;
             margin-bottom: 10px;
         }
 
         h2 {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 18px;
-            /* Adjust font size for smaller screens */
-            /* text-align: center; */
-            margin-bottom: 20px;
+            font-size: 20px;
+            margin-bottom: 40px;
             margin-top: 0px;
-
         }
 
         h3 {
-            width: 95%;
-            /* text-align: justify; */
+            width: 100%;
             font-size: 16px;
             line-height: 20px;
         }
 
         h4 {
-            width: 95%;
+            width: 100%;
             margin-top: 20px;
             margin-bottom: 20px;
-            /* text-align: justify; */
             font-size: 14px;
             line-height: 18px;
         }
@@ -168,31 +166,40 @@
         }
 
         .back_btn {
-            font-size: 12px; /* Adjust font size for smaller screens */
+            font-size: 12px;
         }
-        }
-        
+
         .back_btn img {
-            width: 20px; 
+            width: 20px;
             height: 15px;
             animation: rotation 6s infinite linear;
             filter: drop-shadow(0px 0px 8px #fac390);
         }
 
-        /* #imageContainer {
-            position: fixed; 
-            top: 60%; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0.5;
-        } */
+        #imageContainer {
+            top: 90%;
+            right: 10%;
+            transform: translateY(-100%);
+        }
 
-        /* #currentImage {
-            width: 0px; 
-            height: 0px;
-        } */
+        #currentImage {
+            width: 200px;
+        }
 
+    }
+
+    @media screen and (min-width: 721px) {
+
+        #imageContainer {
+            top: 50%;
+            right: 15%;
+            transform: translateY(-50%);
+        }
+
+        #currentImage {
+            width: 400px;
+        }
+    }
 </style>
 
 <body>
@@ -227,7 +234,7 @@
         grounded walnuts,
         sugar, and just a pinch of cardamom. <br>
         <br>
-        Yesterday, I had no idea how time consuming and hard on the body it was going to be &ndash; I still had 24 steps
+        Yesterday, I had no idea how time consuming and hard on the body it was going to be&mdash;I still had 24 steps
         to follow. My mom always has some kind of protocol in her gridded recipe notebook she has been keeping since she
         was seventeen. Countless rituals in the kitchen are explained in detail, some illegibly written only understood
         by her. When the filling is ready, she tells me to put it into a bowl and set it aside, so I balance it near the
@@ -276,13 +283,13 @@
         says. I flour
         the pin, spreading it through its cylindrical shape. I start rolling. One roll, 9x10. Two rolls, 13x14. Flip,
         Three rolls, 17x15. Four rolls, 18x19. Five rolls, I stretch, Five rolls, 20x22. Six rolls, 21x22. Seven rolls,
-        22x23, Eig- <span>&ldquo;You&rsquo;re pressing too hard, don&rsquo;t put too much pressure or it will
+        22x23, Eig&mdash;<span>&ldquo;You&rsquo;re pressing too hard, don&rsquo;t put too much pressure or it will
             tear,&rdquo;</span> she
         says. Eight rolls, 25x28. Nine rolls, 25x32. I&rsquo;ll cut the excess piece. I roll the sheet onto the pin, my
         arms bringing the pin towards me. The sheet hangs from the pin. Gluten curtain. I lay the curtain onto its
         buttered bed. It folds, I clear its folds. I cut the excess piece and form it into a ball. I mix my hand inside
         the filling, walnut sand on my skin. I spread some onto the sheet. And onto the next sheet. <br><br>
-        <span>Make sure to put the-</span> <br>
+        <span>Make sure to put the&mdash;</span> <br>
         <span>What?</span> I raise the phone&rsquo;s volume, her image shakes a little as I push the volume up button.
         <br>
         <hr>
@@ -376,7 +383,9 @@
 </body>
 <script>
     window.addEventListener('scroll', function () {
-        const threshold = 500; // Adjust this value as needed
+        const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const percentageThreshold = 0.25; // Adjust this percentage as needed
+        const threshold = windowHeight * percentageThreshold;
         const scrollPosition = window.scrollY || window.pageYOffset;
         const imageContainer = document.getElementById('imageContainer');
         const currentImage = document.getElementById('currentImage');
