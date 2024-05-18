@@ -38,9 +38,9 @@
         position: relative;
         margin-top: -55px;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 25px;
+        font-size: 34px;
         font-weight: 100;
-        margin-bottom: 48px;
+        margin-bottom: 100px;
     }
 
     /* bio and text */
@@ -55,8 +55,8 @@
     }
 
     h3 span {
+        font-size: 20px;
         font-weight: 700;
-        font-size: 22px;
     }
 
     table {
@@ -140,54 +140,51 @@
         right: 15%;
         transform: translateY(-50%);
         z-index: -1;
-        display: none;
     }
 
     #currentImage {
         width: 300px;
-        height: 200px;
     }
 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 720px) {
         body {
             margin: 10px;
             gap: 10px;
         }
 
         h1 {
-            font-size: 36px;
-            line-height: 40px;
-            /* Increase line height for better readability */
-            /* text-align: center; */
+            width: 100%;
+            font-size: 30px;
+            line-height: 36px;
             margin-bottom: 10px;
         }
 
         h2 {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 18px;
-            /* Adjust font size for smaller screens */
-            /* text-align: center; */
-            margin-bottom: 20px;
+            font-size: 20px;
+            margin-bottom: 40px;
             margin-top: 0px;
-
         }
 
         h3 {
-            width: 95%;
-            /* text-align: justify; */
+            width: 100%;
             font-size: 16px;
             line-height: 20px;
         }
 
+        h3 span {
+            font-size: 16px;
+        }
+
         table {
-        position: relative;
-        width: 100%;
-        border-collapse: collapse;
-        border-spacing: 0;
-        border: 2px solid rgb(140 140 140);
-        font-size: 13px;
-        line-height: 15px;
-        table-layout: fixed;
+            position: relative;
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 2px solid rgb(140 140 140);
+            font-size: 13px;
+            line-height: 15px;
+            table-layout: fixed;
         }
 
         h4 {
@@ -210,28 +207,38 @@
             font-size: 12px;
             /* Adjust font size for smaller screens */
         }
+
+        .back_btn img {
+            width: 20px;
+            height: 15px;
+            animation: rotation 6s infinite linear;
+            filter: drop-shadow(0px 0px 8px #fac390);
+
+            #imageContainer {
+                top: 90%;
+                right: 10%;
+                transform: translateY(-100%);
+            }
+
+            #currentImage {
+                width: 200px;
+            }
+
+        }
     }
 
-    .back_btn img {
-        width: 20px;
-        height: 15px;
-        animation: rotation 6s infinite linear;
-        filter: drop-shadow(0px 0px 8px #fac390);
+    @media screen and (min-width: 721px) {
+
+        #imageContainer {
+            top: 50%;
+            right: 15%;
+            transform: translateY(-50%);
+        }
+
+        #currentImage {
+            width: 300px;
+        }
     }
-
-    /* #imageContainer {
-            position: fixed; 
-            top: 60%; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0.5;
-        } */
-
-    /* #currentImage {
-            width: 0px; 
-            height: 0px;
-        } */
 </style>
 
 <body>
@@ -246,9 +253,9 @@
 
     <h2>Bradley Sinanan</h2>
 
-    <div id="imageContainer">
+    <!-- <div id="imageContainer">
         <img id="currentImage" src="" alt="Current Image">
-    </div>
+    </div> -->
 
     <h3>
         INT. GALLERY H, THE ANDERSON, RICHMOND, VA
@@ -793,10 +800,10 @@
                 <br>
                 Packs up DJ Controller, Amp and Computer.
                 <br>
-                Repeats to Documenter: 
+                Repeats to Documenter:
                 <br>
                 <i>Did we get it?</i>
-                
+
             </td>
             <td>Video continues.
             </td>
@@ -819,24 +826,28 @@
         identity, immutability, power, and control. They received their BFA in Graphic Design from the University of
         Central Florida in 2019 and their MFA in Visual Communications from Virginia Commonwealth University in 2024.
     </h4>
-</body>
-<script>
-    window.addEventListener('scroll', function () {
-        const threshold = 500; // Adjust this value as needed
-        const scrollPosition = window.scrollY || window.pageYOffset;
-        const imageContainer = document.getElementById('imageContainer');
-        const currentImage = document.getElementById('currentImage');
 
-        if (scrollPosition < threshold) {
-            currentImage.src = '';
-        } else if (scrollPosition < 2 * threshold) {
-            currentImage.src = '';
-        } else {
-            currentImage.src = '';
-        }
+    <script>
 
-        // Adjust image container size if needed
-        imageContainer.style.width = currentImage.width + 'px';
-        imageContainer.style.height = currentImage.height + 'px';
-    });
-</script>
+        // window.addEventListener('scroll', function () {
+        //     const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+        //     const percentageThreshold = 0.33; // Adjust this percentage as needed
+        //     const threshold = windowHeight * percentageThreshold;
+        //     const scrollPosition = window.scrollY || window.pageYOffset;
+        //     const imageContainer = document.getElementById('imageContainer');
+        //     const currentImage = document.getElementById('currentImage');
+
+        //     if (scrollPosition < threshold) {
+        //         currentImage.src = './img/Tariye/IMG_6516.jpg';
+        //     } else if (scrollPosition < 2 * threshold) {
+        //         currentImage.src = './img/Tariye/IMG_6515.jpg';
+        //     } else {
+        //         currentImage.src = './img/Tariye/IMG_6517.jpg';
+        //     }
+
+        //     // Adjust image container size if needed
+        //     imageContainer.style.width = currentImage.width + 'px';
+        //     imageContainer.style.height = currentImage.height + 'px';
+        // });
+
+    </script>
